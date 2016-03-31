@@ -1,0 +1,59 @@
+---
+layout: default
+bodyClass: home
+---
+
+<div class="pageHeader">
+  <h1>Always look twice, and be curious.</h1>
+  <div class="headerOverlay"></div>
+</div>
+
+<div id="intro">
+  <div class="row align-center">
+    <div class="small-12 medium-9 columns">
+      <p class="sectionHeading">About</p>
+
+      <h1>Daniel Hidreth</h1>
+
+      <p>
+        Hello! My name is Daniel Hildreth and this is me, a cat enthusiast,
+        food lover, designer, adventure seeker and lover of colour. I am a curiously
+        driven person, with a passion for clean and intuitive layouts/designs.
+      </p>
+
+      <p>
+        Design is important to me as it's communication and everything revolves around
+        communication; ideas, feelings, birds, interaction and entertainment.
+      </p>
+
+      <p>
+        Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut
+        fermentum massa justo sit amet risus. Aenean eu leo quam. Pellentesque ornare
+        sem lacinia quam venenatis vestibulum.
+      </p>
+      
+      <p>
+        Donec id elit non mi porta gravida at
+        eget metus. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+        Aenean lacinia bibendum nulla sed consectetur.
+      </p>
+    </div>
+  </div>
+</div>
+
+<div id="portfolio" class="row align-center">
+  <div class="small-12 medium-9 columns">
+    <p class="sectionHeading">Portfolio</p>
+  </div>
+  <div class="projects">
+    {% for post in site.projects limit:10 %}
+
+      <a class="projectLink" href="{{ post.url | prepend: site.baseurl }}">
+        <div class="small-12 medium-6 columns">
+          <img src="{{ site.baseurl }}/img/{{ post.image }}">
+        </div>
+      </a>
+
+    {% endfor %}
+  </div>
+</div>

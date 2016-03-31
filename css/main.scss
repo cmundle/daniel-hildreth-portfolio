@@ -1,0 +1,360 @@
+---
+---
+
+/* Foundation */
+@import 'foundation';
+@include foundation-everything;
+@include foundation-flex-classes;
+@include foundation-flex-grid;
+
+/* Montserrat and Open Sans */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700|Montserrat:400,700);
+
+// Minxins
+
+// Vendor Prefixes
+@mixin vendor-prefix($property, $value) {
+  $prefixes: ('o', 'webkit', 'moz', 'ms');
+  @each $prefix in $prefixes {
+    -#{$prefix}-#{$property}: #{$value};
+  }
+
+  #{$property}: #{$value};
+}
+
+// Media Queries
+@mixin at-query($constraint, $viewport1, $viewport2: null) {
+  @if $constraint == $min {
+    @media screen and ($min: $viewport1) {
+      @content;
+    }
+  } @else if $constraint == $max {
+    @media screen and ($max: $viewport1) {
+      @content;
+    }
+  } @else {
+    @media screen and ($min: $viewport1) and ($max: $viewport2) {
+      @content;
+    }
+  }
+}
+
+// Variables
+$colourCopy: #676767;
+$colourHeading: #272727;
+$colourAccent: #F3F4F8;
+$colourSub: #999999;
+$navBackground:#0C0C0C;
+$navText: #7D7D7D;
+$colourFooter: #191919;
+$colourPageHeader: #FFFFFF;
+$colorSectionBackground: #F2F2F2;
+$headingFont: 'Montserrat', sans-serif;
+$bodyFont: 'Open Sans', sans-serif;
+$gutter: 1.875rem;
+$min: min-width;
+$max: max-width;
+$small: 480px;
+$medium: 768px;
+$large: 1024px;
+$xlarge: 1440px;
+$xxlarge: 1920px;
+
+/* Global */
+body {
+  font-family: $bodyFont;
+  font-style: normal;
+  font-weight: 400;
+  color: $colourCopy;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -moz-font-feature-settings: 'liga', 'kern';
+}
+
+/* Typography */
+h1, h2, h3 {
+  font-family: $headingFont;
+  font-style: normal;
+  font-weight: 700;
+  color: $colourHeading;
+}
+
+h4 {
+  font-family: $headingFont;
+  font-style: normal;
+  font-weight: 400;
+  color: $colourHeading;
+}
+
+h5 {
+  font-family: $headingFont;
+  font-style: normal;
+  font-weight: 700;
+  color: $colourSub;
+  text-transform: uppercase;
+}
+
+a {
+  font-family: $headingFont;
+  color: $colourSub;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  &:hover,
+  &:active {
+    color: $colourHeading;
+    text-decoration: none;
+  }
+
+  &:focus,
+  &:visited {
+    color: $colourSub;
+    text-decoration: none;
+  }
+
+}
+
+.sectionHeading {
+  font-family: $headingFont;
+  font-weight: 700;
+  font-size: 0.75em;
+  text-transform: uppercase;
+  color: $colourHeading;
+}
+
+header {
+
+  #mobileNav {
+    padding: 1em 0;
+    background-color: $navBackground;
+
+    #menuIcon {
+      color: $navText;
+      font-style: normal;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    #hiddenCheckbox {
+      display: none;
+    }
+
+    #hiddenCheckbox:checked + ul {
+      display: block;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      overflow: hidden;
+      z-index: 10;
+      background-color: $navBackground;
+    }
+
+    ul {
+      display: none;
+      margin: 0;
+      padding-top: 1em;
+      padding-bottom: 1em;
+      width: 100%;
+
+      li {
+        list-style: none;
+        text-align: center;
+        padding: 1em 0em;
+
+        #closeButton {
+          color: #FFFFFF;
+          font-size: 3em;
+          line-height: 1;
+          cursor: pointer;
+        }
+
+        a {
+          color: #FFFFFF;
+          text-decoration: none;
+        }
+
+      }
+
+    }
+
+  }
+
+  .top-bar {
+
+    #responsive-menu {
+
+      .top-bar-right {
+        @include at-query($min, $medium) {
+          display: none;
+        }
+
+        @include at-query($min, $large) {
+          display: block;
+        }
+      }
+
+    }
+
+  }
+
+}
+
+/* Page Header */
+.pageHeader {
+  height: 200px;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1);
+
+  @include at-query($min, $medium) {
+    height: 250px;
+  }
+
+  @include at-query($min, $large) {
+    height: 300px;
+  }
+
+  @include at-query($min, $xlarge) {
+    height: 350px;
+  }
+
+  h1 {
+    z-index: 20;
+    margin: 0;
+    width: 55%;
+    position: relative;
+    top: 25%;
+    left: 25%;
+    @include vendor-prefix(transform, translate(-25%,-25%));
+    color: $colourPageHeader;
+    font-size: 1.81em;
+
+    @include at-query($min, $medium) {
+      font-size: 3.625em;
+    }
+
+  }
+
+  .headerOverlay {
+    z-index: 10;
+    height: 70vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.7);
+  }
+
+}
+
+/* Home - index.html */
+.home {
+
+  .pageHeader {
+    height: 70vh;
+    background-image: url('../img/homeHeader.JPG');
+    background-repeat: no-repeat;
+    background-size: cover!important;
+    background-position: center center;
+
+    .headerOverlay {
+      top: 57px;
+    }
+
+    @include at-query($min, $medium) {
+      height: 80vh;
+
+      .headerOverlay {
+        top: 54px;
+        height: 80vh;
+      }
+
+    }
+
+    @include at-query($min, $large) {
+      height: 70vh;
+
+      .headerOverlay {
+        top: 54px;
+        height: 70vh;
+      }
+
+    }
+
+    @include at-query($min, $xlarge) {
+      height: 80vh;
+    }
+
+  }
+
+  #intro {
+    padding: 2em 0;
+    background-color: $colorSectionBackground;
+
+    @include at-query($min, $medium) {
+      padding: 4em 0;
+    }
+
+    @include at-query($min, $large) {
+      padding: 6.25em 0;
+    }
+
+  }
+
+  #portfolio {
+    @extend #intro;
+    background-color: $colourPageHeader;
+  }
+
+}
+
+/* Footer - footer.html */
+footer {
+  background-color: $colourFooter;
+
+  #footerContainer {
+    @include grid-row;
+    font-family: $headingFont;
+    font-weight: 700;
+    background-color: $colourFooter;
+    text-align: center;
+    padding: 2em 0;
+
+    #footerTitle {
+
+      h5 {
+        color: $colourAccent;
+        text-transform: uppercase;
+      }
+
+    }
+
+    #socialLinks {
+
+      a {
+        color: $colourSub;
+  			text-transform: uppercase;
+        padding: 0.5em;
+  			display: block;
+      }
+
+    }
+
+    #footerCredit {
+
+      h6 {
+        font-family: $headingFont;
+        font-weight: 700;
+      	font-size: 0.75em;
+      	text-transform: uppercase;
+      }
+
+    }
+
+  }
+
+}

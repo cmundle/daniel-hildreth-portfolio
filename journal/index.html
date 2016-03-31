@@ -1,0 +1,18 @@
+---
+layout: default
+body_class: journal
+---
+
+<div id="journal" class="row align-center">
+  <div class="small-12 medium-9 columns">
+    <p class="sectionHeading">Journal</p>
+  </div>
+  <ul>
+    {% for post in site.posts %}
+      <li>
+        <a href="{{ post.url }}">{{ post.title }}</a>
+        <time>{{ post.date | date: "%B %-d, %Y" }}</time>
+      </li>
+    {% endfor %}
+  </ul>
+</div>

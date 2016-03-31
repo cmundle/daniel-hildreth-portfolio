@@ -1,6 +1,6 @@
 ---
 layout: default
-bodyClass: about
+body_class: about
 title:  "About"
 ---
 # Daniel Hildreth #

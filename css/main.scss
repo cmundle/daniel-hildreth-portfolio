@@ -126,7 +126,7 @@ a {
 header {
 
   #mobileNav {
-    padding: 1em 0;
+    padding: .625em;
     background-color: $navBackground;
 
     #menuIcon {
@@ -193,12 +193,10 @@ header {
       }
 
       .top-bar-right {
+        display: none;
+
         ul {
           background-color: $navBackground;
-        }
-
-        @include at-query($min, $medium) {
-          display: none;
         }
 
         @include at-query($min, $large) {
@@ -273,7 +271,7 @@ header {
     background-position: center center;
 
     .headerOverlay {
-      top: 57px;
+      top: 45px;
     }
 
     @include at-query($min, $medium) {
@@ -350,11 +348,22 @@ footer {
 
     #socialLinks {
 
+      @include at-query($min, $medium) {
+        margin: 2em;
+      }
+
+      div {
+        margin: 0.5em 0;
+
+        @include at-query($min, $medium) {
+          margin: 0;
+        }
+
+      }
+
       a {
         color: $colourSub;
   			text-transform: uppercase;
-        padding: 0.5em;
-  			display: block;
       }
 
     }

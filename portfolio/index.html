@@ -8,14 +8,12 @@ body_class: portfolio
     <p class="sectionHeading">Portfolio</p>
   </div>
   <div class="projects">
-    {% for post in site.projects limit:10 %}
-
+    {% for post in site.projects %}
       <a class="projectLink" href="{{ post.url | prepend: site.baseurl }}">
         <div class="small-12 medium-6 columns">
           <img src="{{ site.baseurl }}/img/{{ post.image }}">
         </div>
       </a>
-
     {% endfor %}
   </div>
 </div>

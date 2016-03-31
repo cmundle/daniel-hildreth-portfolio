@@ -1,6 +1,6 @@
 ---
 layout: project
-title:  "Jump"
+title:  "Project Ten"
 categories: projects
 image: jump.jpg
 type: "UI/UX"

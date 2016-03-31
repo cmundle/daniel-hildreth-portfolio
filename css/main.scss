@@ -182,10 +182,21 @@ header {
   }
 
   .top-bar {
+    background-color: $navBackground;
 
     #responsive-menu {
 
+      .top-bar-left {
+        ul {
+          background-color: $navBackground;
+        }
+      }
+
       .top-bar-right {
+        ul {
+          background-color: $navBackground;
+        }
+
         @include at-query($min, $medium) {
           display: none;
         }
@@ -279,14 +290,18 @@ header {
       height: 70vh;
 
       .headerOverlay {
-        top: 54px;
         height: 70vh;
       }
 
     }
 
     @include at-query($min, $xlarge) {
-      height: 80vh;
+      height: 73vh;
+
+      .headerOverlay {
+        height: 73vh;
+      }
+
     }
 
   }

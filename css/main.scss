@@ -266,9 +266,6 @@ header {
   .pageHeader {
     height: 70vh;
     background-image: url('../img/homeHeader.JPG');
-    background-repeat: no-repeat;
-    background-size: cover!important;
-    background-position: center center;
 
     .headerOverlay {
       top: 45px;
@@ -321,6 +318,52 @@ header {
   #portfolio {
     @extend #intro;
     background-color: $colourPageHeader;
+  }
+
+}
+
+/* About - /_layouts/about.html */
+.about {
+
+  .pageHeader {
+    height: 50vh;
+    background-image: url('../img/aboutHeader.JPG');
+    background-repeat: no-repeat;
+    background-size: cover!important;
+    background-position: center center;
+
+    .headerOverlay {
+      top: 45px;
+      height: 50vh;
+    }
+
+    @include at-query($min, $medium) {
+      h1 {
+        width: 65%;
+        font-size: 2.625em;
+      }
+
+      .headerOverlay {
+        top: 54px;
+      }
+
+    }
+
+    @include at-query($min, $large) {
+      height: 30vh;
+      background-position: 45% 70%;
+
+      h1 {
+        top: 50%;
+        @include vendor-prefix(transform, translate(-25%,-50%));
+      }
+
+      .headerOverlay {
+        height: 30vh;
+      }
+
+    }
+
   }
 
 }

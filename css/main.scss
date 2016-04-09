@@ -1,16 +1,16 @@
 ---
 ---
 
-/* Foundation */
+/* === Foundation === */
 @import 'foundation';
 @include foundation-everything;
 @include foundation-flex-classes;
 @include foundation-flex-grid;
 
-/* Montserrat and Open Sans */
+/* === Montserrat and Open Sans === */
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700|Montserrat:400,700);
 
-// Minxins
+/* === Minxins === */
 
 // Vendor Prefixes
 @mixin vendor-prefix($property, $value) {
@@ -39,7 +39,20 @@
   }
 }
 
-// Variables
+// Section Block
+@mixin sectionBlock {
+  padding: 2em 0;
+
+  @include at-query($min, $medium) {
+    padding: 4em 0;
+  }
+
+  @include at-query($min, $large) {
+    padding: 6.25em 0;
+  }
+}
+
+/* === Variables === */
 $colourCopy: #676767;
 $colourHeading: #272727;
 $colourAccent: #F3F4F8;
@@ -60,11 +73,12 @@ $large: 1024px;
 $xlarge: 1440px;
 $xxlarge: 1920px;
 
-/* Global */
+/* === Global === */
 body {
   font-family: $bodyFont;
   font-style: normal;
   font-weight: 400;
+  background-color: #FFFFFF;
   color: $colourCopy;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -72,7 +86,7 @@ body {
   -moz-font-feature-settings: 'liga', 'kern';
 }
 
-/* Typography */
+// Typography
 h1, h2, h3 {
   font-family: $headingFont;
   font-style: normal;
@@ -210,7 +224,7 @@ header {
 
 }
 
-/* Page Header */
+// Page Header
 .pageHeader {
   height: 200px;
   background-position: center center;
@@ -260,7 +274,7 @@ header {
 
 }
 
-/* Home - index.html */
+/* === Home - index.html === */
 .home {
 
   .pageHeader {
@@ -302,27 +316,17 @@ header {
   }
 
   #intro {
-    padding: 2em 0;
+    @include sectionBlock;
     background-color: $colorSectionBackground;
-
-    @include at-query($min, $medium) {
-      padding: 4em 0;
-    }
-
-    @include at-query($min, $large) {
-      padding: 6.25em 0;
-    }
-
   }
 
   #portfolio {
-    @extend #intro;
-    background-color: $colourPageHeader;
+    @include sectionBlock;
   }
 
 }
 
-/* About - /_layouts/about.html */
+/* === About - /_layouts/about.html === */
 .about {
 
   .pageHeader {
@@ -366,9 +370,14 @@ header {
 
   }
 
+  #aboutMe {
+    @include sectionBlock;
+    background-color: $colorSectionBackground;
+  }
+
 }
 
-/* Footer - footer.html */
+/* === Footer - _includes/footer.html === */
 footer {
   background-color: $colourFooter;
 

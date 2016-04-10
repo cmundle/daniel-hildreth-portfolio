@@ -375,6 +375,20 @@ header {
     background-color: $colorSectionBackground;
   }
 
+  #faceTime {
+    background-image: url(/img/faceTime.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-origin: padding-box;
+    background-repeat: no-repeat;
+    height: 400px;
+  }
+
+  .albumCover {
+    background-color: red;
+    height: 100px;
+  }
+
 }
 
 /* === Footer - _includes/footer.html === */

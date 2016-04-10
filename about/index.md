@@ -3,7 +3,6 @@ layout: about
 body_class: about
 title:  "About"
 ---
-# Daniel Hildreth #
 
 Hello! My name is Daniel Hildreth and this is me, a cat enthusiast, food lover,
 designer, adventure seeker and lover of colour. I am a curiously driven person,

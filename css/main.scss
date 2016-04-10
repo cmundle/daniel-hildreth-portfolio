@@ -57,8 +57,9 @@ $colourCopy: #676767;
 $colourHeading: #272727;
 $colourAccent: #F3F4F8;
 $colourSub: #999999;
-$navBackground:#0C0C0C;
+$navBackground: rgba(0, 0, 0, 0.9);
 $navText: #7D7D7D;
+$navRightText: #464646;
 $colourFooter: #191919;
 $colourPageHeader: #FFFFFF;
 $colorSectionBackground: #F2F2F2;
@@ -201,16 +202,43 @@ header {
     #responsive-menu {
 
       .top-bar-left {
+
         ul {
-          background-color: $navBackground;
+          background-color: transparent;
+
+          li {
+
+            a {
+              padding: 0.75rem 0.75rem 0.9em 1em;
+              color: $navText;
+              font-size: .75em;
+              font-weight: 700;
+              letter-spacing: 0.03em;
+            }
+
+          }
+
         }
+
       }
 
       .top-bar-right {
         display: none;
 
         ul {
-          background-color: $navBackground;
+          background-color: transparent;
+
+          li {
+
+            a {
+              padding: 0.75rem 0.75rem 0.9em 1em;
+              color: $navRightText;
+              font-size: .75em;
+              font-weight: 700;
+              letter-spacing: 0.03em;
+            }
+
+          }
         }
 
         @include at-query($min, $large) {
@@ -269,7 +297,7 @@ header {
     position: absolute;
     top: 0;
     left: 0;
-    background-color: rgba(0,0,0,0.7);
+    background-color: rgba(0,0,0,0.5);
   }
 
 }
@@ -289,7 +317,7 @@ header {
       height: 80vh;
 
       .headerOverlay {
-        top: 54px;
+        top: 51px;
         height: 80vh;
       }
 
@@ -348,7 +376,7 @@ header {
       }
 
       .headerOverlay {
-        top: 54px;
+        top: 51px;
       }
 
     }

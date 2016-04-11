@@ -419,6 +419,24 @@ header {
 
 }
 
+/* === Next Page - _includes/next.html === */
+#next {
+  padding: 2em 0;
+  background-color: #999999;
+
+  a {
+    color: #525252;
+    font-size: 0.75em;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  @include at-query($min, $medium) {
+    text-align: right;
+  }
+
+}
+
 /* === Footer - _includes/footer.html === */
 footer {
   background-color: $colourFooter;

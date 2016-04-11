@@ -419,6 +419,52 @@ header {
 
 }
 
+/* === Portfolio - portfolio/index.html === */
+.portfolio {
+
+  .pageHeader {
+    height: 50vh;
+    background-image: url('../img/portfolioHeader.jpg');
+    background-repeat: no-repeat;
+    background-size: cover!important;
+    background-position: 70%;
+
+    .headerOverlay {
+      top: 45px;
+      height: 50vh;
+    }
+
+    @include at-query($min, $medium) {
+      h1 {
+        width: 65%;
+        font-size: 2.625em;
+      }
+
+      .headerOverlay {
+        top: 51px;
+      }
+
+    }
+
+    @include at-query($min, $large) {
+      height: 30vh;
+      background-position: center top;
+
+      h1 {
+        top: 50%;
+        @include vendor-prefix(transform, translate(-25%,-50%));
+      }
+
+      .headerOverlay {
+        height: 30vh;
+      }
+
+    }
+
+  }
+
+}
+
 /* === Next Page - _includes/next.html === */
 #next {
   padding: 2em 0;

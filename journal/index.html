@@ -4,16 +4,23 @@ body_class: journal
 title: "Journal"
 ---
 
-<div id="journal" class="row align-center">
+<div class="pageHeader">
+  <h1>Risus tellus malesuada sollicitudin purus.</h1>
+  <div class="headerOverlay"></div>
+</div>
+
+<div class="row align-center">
   <div class="small-12 medium-9 columns">
     <p class="sectionHeading">Journal</p>
   </div>
-  <ul>
-    {% for post in site.posts %}
-      <li>
-        <a href="{{ post.url }}">{{ post.title }}</a>
-        <time>{{ post.date | date: "%B %-d, %Y" }}</time>
-      </li>
-    {% endfor %}
-  </ul>
+  {% for post in site.posts limit:6 %}
+    <div class="post small-12 medium-6 columns">
+      <a href="{{ post.url }}">
+        <img src="{{ site.baseurl }}/img/{{ post.image }}">
+      </a>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+      <time>{{ post.date | date: "%B %-d, %Y" }}</time>
+      {{ post.excerpt }}
+    </div>
+  {% endfor %}
 </div>

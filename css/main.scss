@@ -465,6 +465,72 @@ header {
 
 }
 
+/* === Journal - journal/index.html === */
+.journal {
+
+  .pageHeader {
+    height: 50vh;
+    background-image: url('../img/aboutHeader.JPG');
+    background-repeat: no-repeat;
+    background-size: cover!important;
+    background-position: center center;
+
+    .headerOverlay {
+      top: 45px;
+      height: 50vh;
+    }
+
+    @include at-query($min, $medium) {
+      h1 {
+        width: 65%;
+        font-size: 2.625em;
+      }
+
+      .headerOverlay {
+        top: 51px;
+      }
+
+    }
+
+    @include at-query($min, $large) {
+      height: 30vh;
+      background-position: 45% 70%;
+
+      h1 {
+        top: 50%;
+        @include vendor-prefix(transform, translate(-25%,-50%));
+      }
+
+      .headerOverlay {
+        height: 30vh;
+      }
+
+    }
+
+  }
+
+  .post {
+
+    a > img {
+      @include vendor-prefix(transition, .5s ease-in-out);
+      @include vendor-prefix(filter, grayscale(0%));
+
+    }
+
+    a:hover > img {
+      cursor: pointer;
+      @include vendor-prefix(transition, .5s ease-in-out);
+      @include vendor-prefix(filter, grayscale(40%));
+    }
+
+    time {
+      display: block;
+    }
+
+  }
+
+}
+
 /* === Next Page - _includes/next.html === */
 #next {
   padding: 2em 0;

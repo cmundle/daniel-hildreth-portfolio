@@ -59,6 +59,8 @@ $colourAccent: #F3F4F8;
 $colourSub: #999999;
 $navBackground: rgba(0, 0, 0, 0.9);
 $navText: #7D7D7D;
+$navTextActive: #F2F2F2;
+$navTextHover: #BFBFBF;
 $navRightText: #464646;
 $colourFooter: #191919;
 $colourPageHeader: #FFFFFF;
@@ -201,7 +203,18 @@ header {
 
     #responsive-menu {
 
-      .top-bar-left {
+      .menu {
+
+        & .active {
+          a {
+            color: $navTextActive;
+            background-color: transparent;
+          }
+        }
+
+      }
+
+      div[class*="top-bar"] {
 
         ul {
           background-color: transparent;
@@ -210,10 +223,31 @@ header {
 
             a {
               padding: 0.75rem 0.75rem 0.9em 1em;
-              color: $navText;
               font-size: .75em;
               font-weight: 700;
               letter-spacing: 0.03em;
+              @include vendor-prefix(transition, color .1s ease);
+
+              &:hover {
+                color: $navTextHover;
+              }
+
+            }
+
+          }
+
+        }
+
+      }
+
+      .top-bar-left {
+
+        ul {
+
+          li {
+
+            a {
+              color: $navText;
             }
 
           }
@@ -226,24 +260,21 @@ header {
         display: none;
 
         ul {
-          background-color: transparent;
 
           li {
 
             a {
-              padding: 0.75rem 0.75rem 0.9em 1em;
               color: $navRightText;
-              font-size: .75em;
-              font-weight: 700;
-              letter-spacing: 0.03em;
             }
 
           }
+
         }
 
         @include at-query($min, $large) {
           display: block;
         }
+
       }
 
     }

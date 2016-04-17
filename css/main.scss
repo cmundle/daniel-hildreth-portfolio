@@ -10,6 +10,30 @@
 /* === Montserrat and Open Sans === */
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700|Montserrat:400,700);
 
+/* === Variables === */
+$colourCopy: #676767;
+$colourHeading: #272727;
+$colourAccent: #F3F4F8;
+$colourSub: #999999;
+$navBackground: rgba(0, 0, 0, 0.9);
+$navText: #7D7D7D;
+$navTextActive: #F2F2F2;
+$navTextHover: #BFBFBF;
+$navRightText: #464646;
+$colourFooter: #191919;
+$colourPageHeader: #FFFFFF;
+$colorSectionBackground: #F2F2F2;
+$headingFont: 'Montserrat', sans-serif;
+$bodyFont: 'Open Sans', sans-serif;
+$gutter: 1.875rem;
+$min: min-width;
+$max: max-width;
+$small: 0px;
+$medium: 640px;
+$large: 1024px;
+$xlarge: 1440px;
+$xxlarge: 1920px;
+
 /* === Minxins === */
 
 // Vendor Prefixes
@@ -51,30 +75,6 @@
     padding: 6.25em 0;
   }
 }
-
-/* === Variables === */
-$colourCopy: #676767;
-$colourHeading: #272727;
-$colourAccent: #F3F4F8;
-$colourSub: #999999;
-$navBackground: rgba(0, 0, 0, 0.9);
-$navText: #7D7D7D;
-$navTextActive: #F2F2F2;
-$navTextHover: #BFBFBF;
-$navRightText: #464646;
-$colourFooter: #191919;
-$colourPageHeader: #FFFFFF;
-$colorSectionBackground: #F2F2F2;
-$headingFont: 'Montserrat', sans-serif;
-$bodyFont: 'Open Sans', sans-serif;
-$gutter: 1.875rem;
-$min: min-width;
-$max: max-width;
-$small: 480px;
-$medium: 768px;
-$large: 1024px;
-$xlarge: 1440px;
-$xxlarge: 1920px;
 
 /* === Global === */
 body {
@@ -283,25 +283,25 @@ header {
 
 }
 
-// Page Header
+// Page Header and Overlay
 .pageHeader {
-  height: 200px;
+  height: 50vh;
   background-position: center center;
-  background-size: cover;
   background-repeat: no-repeat;
+  background-size: cover;
   -webkit-filter: grayscale(1);
   filter: grayscale(1);
 
   @include at-query($min, $medium) {
-    height: 250px;
+    min-height: 250px;
   }
 
   @include at-query($min, $large) {
-    height: 300px;
+    height: 30vh;
   }
 
   @include at-query($min, $xlarge) {
-    height: 350px;
+    height: 400px;
   }
 
   h1 {
@@ -316,19 +316,39 @@ header {
     font-size: 1.81em;
 
     @include at-query($min, $medium) {
-      font-size: 3.625em;
+      width: 65%;
+      font-size: 2.625em;
+    }
+
+    @include at-query($min, $large) {
+      top: 50%;
+      @include vendor-prefix(transform, translate(-25%,-50%));
     }
 
   }
 
   .headerOverlay {
     z-index: 10;
-    height: 70vh;
+    height: 50vh;
     width: 100%;
     position: absolute;
-    top: 0;
+    top: 45px;
     left: 0;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0, 0, 0, 0.5);
+
+    @include at-query($min, $medium) {
+      top: 51px;
+      min-height: 250px;
+    }
+
+    @include at-query($min, $large) {
+      height: 30vh;
+    }
+
+    @include at-query($min, $xlarge) {
+      height: 400px;
+    }
+
   }
 
 }
@@ -391,48 +411,8 @@ header {
 .about {
 
   .pageHeader {
-    height: 50vh;
-    background-image: url('../img/aboutHeader.JPG');
-    background-repeat: no-repeat;
-    background-size: cover!important;
-    background-position: center center;
-
-    .headerOverlay {
-      top: 45px;
-      height: 50vh;
-    }
-
-    @include at-query($min, $medium) {
-
-      min-height: 250px;
-
-      h1 {
-        width: 65%;
-        font-size: 2.625em;
-      }
-
-      .headerOverlay {
-        top: 51px;
-        min-height: 250px;
-      }
-
-    }
-
-    @include at-query($min, $large) {
-      height: 30vh;
-      background-position: 45% 70%;
-
-      h1 {
-        top: 50%;
-        @include vendor-prefix(transform, translate(-25%,-50%));
-      }
-
-      .headerOverlay {
-        height: 30vh;
-      }
-
-    }
-
+    @extend .pageHeader;
+    background-image: url('../img/aboutHeader.jpg');
   }
 
   #aboutMe {
@@ -460,47 +440,8 @@ header {
 .portfolio {
 
   .pageHeader {
-    height: 50vh;
-    background-image: url('../img/portfolioHeader.jpg');
-    background-repeat: no-repeat;
-    background-size: cover!important;
-    background-position: 70%;
-
-    .headerOverlay {
-      top: 45px;
-      height: 50vh;
-    }
-
-    @include at-query($min, $medium) {
-      min-height: 250px;
-
-      h1 {
-        width: 65%;
-        font-size: 2.625em;
-      }
-
-      .headerOverlay {
-        top: 51px;
-        min-height: 250px;
-      }
-
-    }
-
-    @include at-query($min, $large) {
-      height: 30vh;
-      background-position: center top;
-
-      h1 {
-        top: 50%;
-        @include vendor-prefix(transform, translate(-25%,-50%));
-      }
-
-      .headerOverlay {
-        height: 30vh;
-      }
-
-    }
-
+    @extend .pageHeader;
+    background-image: url('../img/portfolioHeader.jpg')
   }
 
 }
@@ -509,47 +450,8 @@ header {
 .journal {
 
   .pageHeader {
-    height: 50vh;
-    background-image: url('../img/aboutHeader.JPG');
-    background-repeat: no-repeat;
-    background-size: cover!important;
-    background-position: center center;
-
-    .headerOverlay {
-      top: 45px;
-      height: 50vh;
-    }
-
-    @include at-query($min, $medium) {
-      min-height: 250px;
-
-      h1 {
-        width: 65%;
-        font-size: 2.625em;
-      }
-
-      .headerOverlay {
-        top: 51px;
-        min-height: 250px;
-      }
-
-    }
-
-    @include at-query($min, $large) {
-      height: 30vh;
-      background-position: 45% 70%;
-
-      h1 {
-        top: 50%;
-        @include vendor-prefix(transform, translate(-25%,-50%));
-      }
-
-      .headerOverlay {
-        height: 30vh;
-      }
-
-    }
-
+    @extend .pageHeader;
+    background-image: url('../img/aboutHeader.jpg');
   }
 
   .post {

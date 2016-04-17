@@ -346,10 +346,12 @@ header {
 
     @include at-query($min, $medium) {
       height: 80vh;
+      min-height: 350px;
 
       .headerOverlay {
         top: 51px;
         height: 80vh;
+        min-height: 350px;
       }
 
     }
@@ -401,6 +403,9 @@ header {
     }
 
     @include at-query($min, $medium) {
+
+      min-height: 250px;
+
       h1 {
         width: 65%;
         font-size: 2.625em;
@@ -408,6 +413,7 @@ header {
 
       .headerOverlay {
         top: 51px;
+        min-height: 250px;
       }
 
     }
@@ -466,6 +472,8 @@ header {
     }
 
     @include at-query($min, $medium) {
+      min-height: 250px;
+
       h1 {
         width: 65%;
         font-size: 2.625em;
@@ -473,6 +481,7 @@ header {
 
       .headerOverlay {
         top: 51px;
+        min-height: 250px;
       }
 
     }
@@ -512,6 +521,8 @@ header {
     }
 
     @include at-query($min, $medium) {
+      min-height: 250px;
+
       h1 {
         width: 65%;
         font-size: 2.625em;
@@ -519,6 +530,7 @@ header {
 
       .headerOverlay {
         top: 51px;
+        min-height: 250px;
       }
 
     }

@@ -97,6 +97,26 @@ h1, h2, h3 {
   color: $colourHeading;
 }
 
+h1 {
+  font-size: 2.25em;
+  line-height: 1.166666em;
+
+  @include at-query($min, $medium) {
+    font-size: 2.75em;
+    line-height: 1.3em;
+  }
+
+  @include at-query($min, $large) {
+    font-size: 3.15em;
+    line-height: 1.2em;
+  }
+
+  @include at-query($min, $xlarge) {
+    font-size: 3.625em;
+    line-height: 1.2em;
+  }
+}
+
 h4 {
   font-family: $headingFont;
   font-style: normal;

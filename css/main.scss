@@ -117,10 +117,46 @@ h1 {
   }
 }
 
+h2 {
+  font-size: 1.75em;
+  line-height: 1.25em;
+
+  @include at-query($min, $medium) {
+    font-size: 2em;
+  }
+
+  @include at-query($min, $large) {
+    font-size: 2.25em;
+  }
+
+  @include at-query($min, $xlarge) {
+    font-size: 3em;
+  }
+}
+
+h3 {
+  font-size: 1.5em;
+  line-height: 1em;
+
+  @include at-query($min, $medium) {
+    font-size: 1.75em;
+  }
+
+  @include at-query($min, $large) {
+    font-size: 2em;
+  }
+
+  @include at-query($min, $xlarge) {
+    font-size: 2.25em;
+    line-height: 1.166666em;
+  }
+}
+
 h4 {
   font-family: $headingFont;
   font-style: normal;
   font-weight: 400;
+  font-size: 1.125em;
   color: $colourHeading;
 }
 
@@ -128,8 +164,15 @@ h5 {
   font-family: $headingFont;
   font-style: normal;
   font-weight: 700;
+  font-size: 0.75em;
   color: $colourSub;
   text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+p {
+  font-size: 0.875em;
+  line-height: 1.42857em;
 }
 
 a {
@@ -150,14 +193,6 @@ a {
     text-decoration: none;
   }
 
-}
-
-.sectionHeading {
-  font-family: $headingFont;
-  font-weight: 700;
-  font-size: 0.75em;
-  text-transform: uppercase;
-  color: $colourHeading;
 }
 
 header {
@@ -328,7 +363,7 @@ header {
   h1 {
     z-index: 20;
     margin: 0;
-    width: 55%;
+    width: 65%;
     position: relative;
     top: 25%;
     left: 25%;

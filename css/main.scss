@@ -15,11 +15,13 @@ $colorCopy: #676767;
 $colorHeading: #272727;
 $colorAccent: #F3F4F8;
 $colorSub: #999999;
+$colorTitleHeading: #4F4F4F;
 $navBackground: rgba(0, 0, 0, 0.9);
 $navText: #7D7D7D;
 $navTextActive: #F2F2F2;
 $navTextHover: #BFBFBF;
 $navRightText: #464646;
+$headerOverlay: rgba(0, 0, 0, 0.5);
 $colorFooter: #191919;
 $colorFooterHeading: #BABABA;
 $colorFooterLinks: #757575;
@@ -186,7 +188,7 @@ h6 {
   font-style: normal;
   font-weight: 300;
   font-size: 1em;
-  color: #4f4f4f;
+  color: $colorTitleHeading;
 }
 
 p {
@@ -408,7 +410,7 @@ header {
     position: absolute;
     top: 45px;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: $headerOverlay;
 
     @include at-query($min, $medium) {
       top: 51px;
@@ -597,18 +599,15 @@ footer {
         margin: 0.25em 0 1.5em;
       }
 
-      div {
-        margin: 0.5em 0 1em;
-
-        @include at-query($min, $medium) {
-          margin: 0;
-        }
-
-      }
-
       a {
+        margin: 0.75em 1.5em;
         color: $colorFooterLinks;
-  			text-transform: uppercase;
+        font-family: $headingFont;
+        font-size: 0.75em;
+        font-style: normal;
+        font-weight: 700;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
       }
 
     }

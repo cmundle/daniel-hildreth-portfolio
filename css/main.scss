@@ -125,7 +125,7 @@ h1 {
 h2 {
   font-size: 1.75em;
   line-height: 1.25em;
-  margin-bottom: 0;
+  margin-bottom: 1em;
 
   @include at-query($min, $medium) {
     font-size: 2em;
@@ -144,8 +144,8 @@ h2 {
 
 h3 {
   font-size: 1.5em;
-  line-height: 1em;
-  margin-bottom: 0;
+  line-height: 1;
+  margin-bottom: 0.5em;
 
   @include at-query($min, $medium) {
     font-size: 1.75em;
@@ -157,7 +157,7 @@ h3 {
 
   @include at-query($min, $xlarge) {
     font-size: 2.25em;
-    line-height: 1.166666em;
+    line-height: 1.166666;
     margin-bottom: 0.6em;
   }
 }
@@ -173,7 +173,7 @@ h4 {
 
 h5 {
   font-family: $headingFont;
-  margin-bottom: 0.05em;
+  margin-bottom: 0.75em;
   font-style: normal;
   font-weight: 700;
   font-size: 0.75em;
@@ -193,7 +193,7 @@ h6 {
 
 p {
   font-size: 0.75em;
-  line-height: 1.5em;
+  line-height: 1.5;
   margin-bottom: 0.6em;
 }
 
@@ -430,6 +430,13 @@ header {
 
 }
 
+// Multiple Columns
+.multiColumns {
+  @include at-query($min, $medium) {
+    @include vendor-prefix(column-count, 2);
+  }
+}
+
 /* === Home - index.html === */
 .home {
 
@@ -496,6 +503,11 @@ header {
   #aboutMe {
     @include sectionBlock;
     background-color: $colorSectionBackground;
+
+    h5:first-of-type {
+
+    }
+
   }
 
   #faceTime {
@@ -587,6 +599,7 @@ footer {
     #footerTitle {
 
       h5 {
+        margin-bottom: 0.05em;
         color: $colorFooterHeading;
         text-transform: uppercase;
       }

@@ -11,17 +11,20 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,400italic,700|Montserrat:400,700);
 
 /* === Variables === */
-$colourCopy: #676767;
-$colourHeading: #272727;
-$colourAccent: #F3F4F8;
-$colourSub: #999999;
+$colorCopy: #676767;
+$colorHeading: #272727;
+$colorAccent: #F3F4F8;
+$colorSub: #999999;
 $navBackground: rgba(0, 0, 0, 0.9);
 $navText: #7D7D7D;
 $navTextActive: #F2F2F2;
 $navTextHover: #BFBFBF;
 $navRightText: #464646;
-$colourFooter: #191919;
-$colourPageHeader: #FFFFFF;
+$colorFooter: #191919;
+$colorFooterHeading: #BABABA;
+$colorFooterLinks: #757575;
+$colorFooterCredit: #3C3C3C;
+$colorPageHeader: #FFFFFF;
 $colorSectionBackground: #F2F2F2;
 $headingFont: 'Montserrat', sans-serif;
 $bodyFont: 'Open Sans', sans-serif;
@@ -82,7 +85,7 @@ body {
   font-style: normal;
   font-weight: 400;
   background-color: #FFFFFF;
-  color: $colourCopy;
+  color: $colorCopy;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -94,7 +97,7 @@ h1, h2, h3 {
   font-family: $headingFont;
   font-style: normal;
   font-weight: 700;
-  color: $colourHeading;
+  color: $colorHeading;
 }
 
 h1 {
@@ -163,7 +166,7 @@ h4 {
   font-style: normal;
   font-weight: 400;
   font-size: 1.125em;
-  color: $colourHeading;
+  color: $colorHeading;
 }
 
 h5 {
@@ -172,7 +175,7 @@ h5 {
   font-style: normal;
   font-weight: 700;
   font-size: 0.75em;
-  color: $colourSub;
+  color: $colorSub;
   text-transform: uppercase;
   letter-spacing: 0.03em;
 }
@@ -194,19 +197,19 @@ p {
 
 a {
   font-family: $headingFont;
-  color: $colourSub;
+  color: $colorSub;
   text-decoration: none;
   text-transform: uppercase;
 
   &:hover,
   &:active {
-    color: $colourHeading;
+    color: $colorHeading;
     text-decoration: none;
   }
 
   &:focus,
   &:visited {
-    color: $colourSub;
+    color: $colorSub;
     text-decoration: none;
   }
 
@@ -385,7 +388,7 @@ header {
     top: 25%;
     left: 25%;
     @include vendor-prefix(transform, translate(-25%,-25%));
-    color: $colourPageHeader;
+    color: $colorPageHeader;
 
     @include at-query($min, $medium) {
       width: 65%;
@@ -569,20 +572,20 @@ header {
 
 /* === Footer - _includes/footer.html === */
 footer {
-  background-color: $colourFooter;
+  background-color: $colorFooter;
 
   #footerContainer {
     @include grid-row;
     font-family: $headingFont;
     font-weight: 700;
-    background-color: $colourFooter;
+    background-color: $colorFooter;
     text-align: center;
     padding: 2em 0;
 
     #footerTitle {
 
       h5 {
-        color: #bababa;
+        color: $colorFooterHeading;
         text-transform: uppercase;
       }
 
@@ -604,7 +607,7 @@ footer {
       }
 
       a {
-        color: #757575;
+        color: $colorFooterLinks;
   			text-transform: uppercase;
       }
 
@@ -613,7 +616,7 @@ footer {
     #footerCredit {
 
       a {
-        color: #3C3C3C;
+        color: $colorFooterCredit;
       }
 
     }

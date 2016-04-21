@@ -8,7 +8,7 @@
 @include foundation-flex-grid;
 
 /* === Montserrat and Open Sans === */
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700|Montserrat:400,700);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,400italic,700|Montserrat:400,700);
 
 /* === Variables === */
 $colourCopy: #676767;
@@ -120,6 +120,7 @@ h1 {
 h2 {
   font-size: 1.75em;
   line-height: 1.25em;
+  margin-bottom: 0;
 
   @include at-query($min, $medium) {
     font-size: 2em;
@@ -127,16 +128,19 @@ h2 {
 
   @include at-query($min, $large) {
     font-size: 2.25em;
+    margin-bottom: 0.25em;
   }
 
   @include at-query($min, $xlarge) {
     font-size: 3em;
+    margin-bottom: 0.4em;
   }
 }
 
 h3 {
   font-size: 1.5em;
   line-height: 1em;
+  margin-bottom: 0;
 
   @include at-query($min, $medium) {
     font-size: 1.75em;
@@ -149,11 +153,13 @@ h3 {
   @include at-query($min, $xlarge) {
     font-size: 2.25em;
     line-height: 1.166666em;
+    margin-bottom: 0.6em;
   }
 }
 
 h4 {
   font-family: $headingFont;
+  margin-bottom: 0.75em;
   font-style: normal;
   font-weight: 400;
   font-size: 1.125em;
@@ -162,6 +168,7 @@ h4 {
 
 h5 {
   font-family: $headingFont;
+  margin-bottom: 0.05em;
   font-style: normal;
   font-weight: 700;
   font-size: 0.75em;
@@ -170,9 +177,19 @@ h5 {
   letter-spacing: 0.03em;
 }
 
+h6 {
+  font-family: $bodyFont;
+  margin-bottom: 0.5em;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1em;
+  color: #4f4f4f;
+}
+
 p {
-  font-size: 0.875em;
-  line-height: 1.42857em;
+  font-size: 0.75em;
+  line-height: 1.5em;
+  margin-bottom: 0.6em;
 }
 
 a {
@@ -565,7 +582,7 @@ footer {
     #footerTitle {
 
       h5 {
-        color: $colourAccent;
+        color: #bababa;
         text-transform: uppercase;
       }
 
@@ -574,11 +591,11 @@ footer {
     #socialLinks {
 
       @include at-query($min, $medium) {
-        margin: 2em;
+        margin: 0.25em 0 1.5em;
       }
 
       div {
-        margin: 0.5em 0;
+        margin: 0.5em 0 1em;
 
         @include at-query($min, $medium) {
           margin: 0;
@@ -587,7 +604,7 @@ footer {
       }
 
       a {
-        color: $colourSub;
+        color: #757575;
   			text-transform: uppercase;
       }
 
@@ -595,11 +612,8 @@ footer {
 
     #footerCredit {
 
-      h6 {
-        font-family: $headingFont;
-        font-weight: 700;
-      	font-size: 0.75em;
-      	text-transform: uppercase;
+      a {
+        color: #3C3C3C;
       }
 
     }

@@ -8,20 +8,25 @@
 @include foundation-flex-grid;
 
 /* === Montserrat and Open Sans === */
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700|Montserrat:400,700);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,400italic,700|Montserrat:400,700);
 
 /* === Variables === */
-$colourCopy: #676767;
-$colourHeading: #272727;
-$colourAccent: #F3F4F8;
-$colourSub: #999999;
+$colorCopy: #676767;
+$colorHeading: #272727;
+$colorAccent: #F3F4F8;
+$colorSub: #999999;
+$colorTitleHeading: #4F4F4F;
 $navBackground: rgba(0, 0, 0, 0.9);
 $navText: #7D7D7D;
 $navTextActive: #F2F2F2;
 $navTextHover: #BFBFBF;
 $navRightText: #464646;
-$colourFooter: #191919;
-$colourPageHeader: #FFFFFF;
+$headerOverlay: rgba(0, 0, 0, 0.5);
+$colorFooter: #191919;
+$colorFooterHeading: #BABABA;
+$colorFooterLinks: #757575;
+$colorFooterCredit: #3C3C3C;
+$colorPageHeader: #FFFFFF;
 $colorSectionBackground: #F2F2F2;
 $headingFont: 'Montserrat', sans-serif;
 $bodyFont: 'Open Sans', sans-serif;
@@ -82,7 +87,7 @@ body {
   font-style: normal;
   font-weight: 400;
   background-color: #FFFFFF;
-  color: $colourCopy;
+  color: $colorCopy;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -94,7 +99,7 @@ h1, h2, h3 {
   font-family: $headingFont;
   font-style: normal;
   font-weight: 700;
-  color: $colourHeading;
+  color: $colorHeading;
 }
 
 h1 {
@@ -117,47 +122,99 @@ h1 {
   }
 }
 
+h2 {
+  font-size: 1.75em;
+  line-height: 1.25em;
+  margin-bottom: 1em;
+
+  @include at-query($min, $medium) {
+    font-size: 2em;
+  }
+
+  @include at-query($min, $large) {
+    font-size: 2.25em;
+    margin-bottom: 0.25em;
+  }
+
+  @include at-query($min, $xlarge) {
+    font-size: 3em;
+    margin-bottom: 0.4em;
+  }
+}
+
+h3 {
+  font-size: 1.5em;
+  line-height: 1;
+  margin-bottom: 0.5em;
+
+  @include at-query($min, $medium) {
+    font-size: 1.75em;
+  }
+
+  @include at-query($min, $large) {
+    font-size: 2em;
+  }
+
+  @include at-query($min, $xlarge) {
+    font-size: 2.25em;
+    line-height: 1.166666;
+    margin-bottom: 0.6em;
+  }
+}
+
 h4 {
   font-family: $headingFont;
+  margin-bottom: 0.75em;
   font-style: normal;
   font-weight: 400;
-  color: $colourHeading;
+  font-size: 1.125em;
+  color: $colorHeading;
 }
 
 h5 {
   font-family: $headingFont;
+  margin-bottom: 0.75em;
   font-style: normal;
   font-weight: 700;
-  color: $colourSub;
+  font-size: 0.75em;
+  color: $colorSub;
   text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+h6 {
+  font-family: $bodyFont;
+  margin-bottom: 0.5em;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1em;
+  color: $colorTitleHeading;
+}
+
+p {
+  font-size: 0.75em;
+  line-height: 1.5;
+  margin-bottom: 0.6em;
 }
 
 a {
   font-family: $headingFont;
-  color: $colourSub;
+  color: $colorSub;
   text-decoration: none;
   text-transform: uppercase;
 
   &:hover,
   &:active {
-    color: $colourHeading;
+    color: $colorHeading;
     text-decoration: none;
   }
 
   &:focus,
   &:visited {
-    color: $colourSub;
+    color: $colorSub;
     text-decoration: none;
   }
 
-}
-
-.sectionHeading {
-  font-family: $headingFont;
-  font-weight: 700;
-  font-size: 0.75em;
-  text-transform: uppercase;
-  color: $colourHeading;
 }
 
 header {
@@ -328,12 +385,12 @@ header {
   h1 {
     z-index: 20;
     margin: 0;
-    width: 55%;
+    width: 65%;
     position: relative;
     top: 25%;
     left: 25%;
     @include vendor-prefix(transform, translate(-25%,-25%));
-    color: $colourPageHeader;
+    color: $colorPageHeader;
 
     @include at-query($min, $medium) {
       width: 65%;
@@ -353,7 +410,7 @@ header {
     position: absolute;
     top: 45px;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: $headerOverlay;
 
     @include at-query($min, $medium) {
       top: 51px;
@@ -371,6 +428,13 @@ header {
 
   }
 
+}
+
+// Multiple Columns
+.multiColumns {
+  @include at-query($min, $medium) {
+    @include vendor-prefix(column-count, 2);
+  }
 }
 
 /* === Home - index.html === */
@@ -439,6 +503,11 @@ header {
   #aboutMe {
     @include sectionBlock;
     background-color: $colorSectionBackground;
+
+    h5:first-of-type {
+
+    }
+
   }
 
   #faceTime {
@@ -517,20 +586,21 @@ header {
 
 /* === Footer - _includes/footer.html === */
 footer {
-  background-color: $colourFooter;
+  background-color: $colorFooter;
 
   #footerContainer {
     @include grid-row;
     font-family: $headingFont;
     font-weight: 700;
-    background-color: $colourFooter;
+    background-color: $colorFooter;
     text-align: center;
     padding: 2em 0;
 
     #footerTitle {
 
       h5 {
-        color: $colourAccent;
+        margin-bottom: 0.05em;
+        color: $colorFooterHeading;
         text-transform: uppercase;
       }
 
@@ -539,32 +609,26 @@ footer {
     #socialLinks {
 
       @include at-query($min, $medium) {
-        margin: 2em;
-      }
-
-      div {
-        margin: 0.5em 0;
-
-        @include at-query($min, $medium) {
-          margin: 0;
-        }
-
+        margin: 0.25em 0 1.5em;
       }
 
       a {
-        color: $colourSub;
-  			text-transform: uppercase;
+        margin: 0.75em 1.5em;
+        color: $colorFooterLinks;
+        font-family: $headingFont;
+        font-size: 0.75em;
+        font-style: normal;
+        font-weight: 700;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
       }
 
     }
 
     #footerCredit {
 
-      h6 {
-        font-family: $headingFont;
-        font-weight: 700;
-      	font-size: 0.75em;
-      	text-transform: uppercase;
+      a {
+        color: $colorFooterCredit;
       }
 
     }

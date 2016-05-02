@@ -16,6 +16,7 @@ $colorHeading: #272727;
 $colorAccent: #F3F4F8;
 $colorSub: #999999;
 $colorTitleHeading: #4F4F4F;
+$colorDarkGrey: #3d3d3d;
 $navBackground: rgba(0, 0, 0, 0.9);
 $navText: #7D7D7D;
 $navTextActive: #F2F2F2;
@@ -132,40 +133,51 @@ h1 {
 h2 {
   font-size: 1.75em;
   line-height: 1.25em;
-  margin-bottom: 1em;
+  margin-bottom: 1.5em;
+  margin-top: .75em;
 
   @include at-query($min, $medium) {
     font-size: 2em;
+    margin-bottom: 1em;
+    margin-top: 0.6em;
   }
 
   @include at-query($min, $large) {
     font-size: 2.25em;
-    margin-bottom: 0.25em;
+    margin-bottom: 1em;
+    margin-top: 0.6em;
   }
 
   @include at-query($min, $xlarge) {
     font-size: 3em;
-    margin-bottom: 0.4em;
+    margin-bottom: 1em;
+    margin-top: 0.5em;
   }
 }
 
 h3 {
   font-size: 1.5em;
   line-height: 1;
-  margin-bottom: 0.5em;
+  margin-bottom: 1.5em;
+  margin-top: .75em;
 
   @include at-query($min, $medium) {
     font-size: 1.75em;
+    margin-top: 0.75em;
+    margin-bottom: 1.3em;
   }
 
   @include at-query($min, $large) {
     font-size: 2em;
+    margin-top: 0.8em;
+    margin-bottom: 1.25em;
   }
 
   @include at-query($min, $xlarge) {
     font-size: 2.25em;
     line-height: 1.166666;
-    margin-bottom: 0.6em;
+    margin-bottom: 1.5em;
+    margin-top: 0.75em;
   }
 }
 
@@ -175,7 +187,7 @@ h4 {
   font-style: normal;
   font-weight: 400;
   font-size: 1.125em;
-  color: $colorHeading;
+  color: $colorDarkGrey;
 }
 
 h5 {

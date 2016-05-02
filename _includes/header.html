@@ -1,14 +1,42 @@
 <header>
-  <!-- Mobile Nav -->
-  <div id="mobileNav" class="show-for-small-only">
-    <label id="menuIcon" for="hiddenCheckbox">Menu</label>
-    <input id="hiddenCheckbox" type="checkbox">
-    <ul>
+  <!-- Mobile Main Nav -->
+  <div id="mobileNav" class="row align-middle show-for-small-only">
+    <div class="small-6 columns">
+      <div id="menu">Menu</div>
+    </div>
+    <ul id="menuOverlay">
+      <li>
+        <button class="closeButton" aria-label="Close alert" type="button">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </li>
       <li><a href="{{ site.baseurl}}/">Home</a></li>
       <li><a href="{{ site.baseurl}}/about/">About</a></li>
       <li><a href="{{ site.baseurl}}/portfolio/">Portfolio</a></li>
       <li><a href="{{ site.baseurl}}/journal/">Journal</a></li>
       <li><a href="{{ site.baseurl}}/contact/">Contact</a></li>
+    </ul>
+    <div class="small-6 columns">
+      <div id="social">Social</div>
+    </div>
+    <ul id="socialOverlay">
+      <li>
+        <button class="closeButton" aria-label="Close alert" type="button">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </li>
+      <li>
+        <a href="https://ca.linkedin.com/in/danielhildreth" target="_blank">Linkedin</a>
+      </li>
+      <li>
+        <a href="https://twitter.com/danielhildreth" target="_blank">Twitter</a>
+      </li>
+      <li>
+        <a href="https://instagram.com/danielhildreth/" target="_blank">Instagram</a>
+      </li>
+      <li>
+        <a href="https://pinterest.com/danielhildreth/" target="_blank">Pintrest</a>
+      </li>
     </ul>
   </div>
 

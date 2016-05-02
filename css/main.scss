@@ -94,6 +94,13 @@ body {
   -moz-font-feature-settings: 'liga', 'kern';
 }
 
+.noScroll {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  overflow: hidden;
+}
+
 // Typography
 h1, h2, h3 {
   font-family: $headingFont;
@@ -221,44 +228,42 @@ header {
 
   #mobileNav {
     padding: .625em;
+    height: 70px;
     background-color: $navBackground;
 
-    #menuIcon {
-      color: $navText;
+    #menu {
+      color: #FFFFFF;
       font-style: normal;
       font-weight: 700;
       text-transform: uppercase;
     }
 
-    #hiddenCheckbox {
-      display: none;
+    #social {
+      @extend #menu;
+      color: #3D3D3D;
+      text-align: right;
     }
 
-    #hiddenCheckbox:checked + ul {
-      display: block;
-      height: 100vh;
+    #menuOverlay {
+      display: none;
       position: fixed;
       top: 0;
       left: 0;
+      margin: 0;
+      padding: 0.5em 0;
+      width: 100%;
+      height: 100vh;
       overflow: hidden;
       z-index: 10;
       background-color: $navBackground;
-    }
-
-    ul {
-      display: none;
-      margin: 0;
-      padding-top: 1em;
-      padding-bottom: 1em;
-      width: 100%;
 
       li {
         list-style: none;
-        text-align: center;
-        padding: 1em 0em;
+        text-align: left;
+        padding: 1em;
 
-        #closeButton {
-          color: #FFFFFF;
+        .closeButton {
+          color: #3D3D3D;
           font-size: 3em;
           line-height: 1;
           cursor: pointer;
@@ -269,6 +274,24 @@ header {
           text-decoration: none;
         }
 
+        &:first-of-type {
+          padding: 0;
+          text-align: center;
+        }
+
+      }
+
+      &.open {
+        display: block;
+      }
+
+    }
+
+    #socialOverlay {
+      @extend #menuOverlay;
+
+      li {
+        text-align: right;
       }
 
     }
@@ -408,7 +431,7 @@ header {
     height: 45vh;
     width: 100%;
     position: absolute;
-    top: 45px;
+    top: 70px;
     left: 0;
     background-color: $headerOverlay;
 
@@ -445,7 +468,6 @@ header {
     background-image: url('../img/homeHeader.JPG');
 
     .headerOverlay {
-      top: 45px;
       height: 65vh;
     }
 

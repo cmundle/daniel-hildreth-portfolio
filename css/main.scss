@@ -537,11 +537,6 @@ header {
   #aboutMe {
     @include sectionBlock;
     background-color: $colorSectionBackground;
-
-    h5:first-of-type {
-
-    }
-
   }
 
   #faceTime {
@@ -565,7 +560,33 @@ header {
 
   .pageHeader {
     @extend .pageHeader;
-    background-image: url('../img/portfolioHeader.jpg')
+    background-image: url('../img/portfolioHeader.jpg');
+    margin-bottom: 2em;
+  }
+
+  .projects {
+    padding: 1em 0;
+
+    .columns:nth-of-type(odd) {
+      padding: 0.5em 0.5em 0.5em 1em;
+    }
+
+    .columns:nth-of-type(even) {
+      padding: 0.5em 1em 0.5em 0.5em;
+    }
+
+    @include at-query($min, $large) {
+
+      .columns:nth-of-type(odd) {
+        padding: 0.75em;
+      }
+
+      .columns:nth-of-type(even) {
+        padding: 0.75em;
+      }
+
+    }
+
   }
 
 }

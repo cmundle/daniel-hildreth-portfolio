@@ -629,6 +629,78 @@ header {
     background-image: url('../img/contactHeader.jpg');
   }
 
+  .container {
+    @include sectionBlock;
+
+    form {
+      margin-top: 2em;
+
+      input, textarea {
+        background-color: #F2F2F2;
+        border: 1px solid #F2F2F2;
+        box-shadow: none;
+
+        #inner-editor {
+          color: #676767;
+          font-size: 0.750em;
+        }
+
+      }
+
+      input::-webkit-input-placeholder {
+        color: #676767;
+        font-size: 0.750em;
+      }
+
+      input:-moz-placeholder { /* Firefox 18- */
+        color: #676767;
+        font-size: 0.750em;
+      }
+
+      input::-moz-placeholder {  /* Firefox 19+ */
+        color: #676767;
+        font-size: 0.750em;
+      }
+
+      input:-ms-input-placeholder {
+        color: #676767;
+        font-size: 0.750em;
+      }
+
+      textarea {
+        height: 250px;
+      }
+
+      textarea::-webkit-input-placeholder {
+        color: #676767;
+        font-size: 0.750em;
+      }
+
+      textarea:-moz-placeholder { /* Firefox 18- */
+        color: #676767;
+        font-size: 0.750em;
+      }
+
+      textarea::-moz-placeholder {  /* Firefox 19+ */
+        color: #676767;
+        font-size: 0.750em;
+      }
+
+      textarea:-ms-input-placeholder {
+        color: #676767;
+        font-size: 0.750em;
+      }
+
+      button {
+        font-size: 0.750em;
+        font-weight: 600;
+        text-transform: uppercase;
+      }
+
+    }
+
+  }
+
 }
 
 /* === Next Page - _includes/next.html === */

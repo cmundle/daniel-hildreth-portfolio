@@ -447,6 +447,29 @@ header {
 
   }
 
+  h2 {
+    z-index: 20;
+    margin: 0;
+    width: 65%;
+    position: relative;
+    top: 25%;
+    left: 25%;
+    @include vendor-prefix(transform, translate(-25%,-25%));
+    color: $colorPageHeader;
+
+    @include at-query($min, $medium) {
+      width: 55%;
+    }
+
+    @include at-query($min, $large) {
+      width: 42.5%;
+      top: 50%;
+      left: 40%;
+      @include vendor-prefix(transform, translate(-25%,-50%));
+    }
+
+  }
+
   .headerOverlay {
     z-index: 10;
     height: 45vh;

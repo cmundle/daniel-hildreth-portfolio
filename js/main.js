@@ -25,3 +25,21 @@ $(window).on('changed.zf.mediaquery', function(event, newSize, oldSize) {
     $('body').removeClass("noScroll");
   }
 });
+
+// Sticky desktop nav
+function stickyNav() {
+  var windowTop = $(window).scrollTop();
+  var divTop = $('#stickyAnchor').offset().top;
+  if (windowTop > divTop) {
+    $('.top-bar').addClass('stick');
+    $('.headerOverlay').addClass('stick');
+  } else {
+    $('.top-bar').removeClass('stick');
+    $('.headerOverlay').removeClass('stick')
+  }
+}
+
+$(function () {
+  $(window).scroll(stickyNav);
+  stickyNav();
+});

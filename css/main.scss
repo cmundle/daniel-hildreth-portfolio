@@ -322,6 +322,13 @@ header {
   .top-bar {
     background-color: $navBackground;
 
+    &.stick {
+      width: 100%;
+      position: fixed;
+      top: 0;
+      z-index: 9999;
+    }
+
     #responsive-menu {
 
       .menu {
@@ -483,6 +490,11 @@ header {
       top: 51px;
       min-height: 250px;
       height: 30vh;
+
+      &.stick {
+        top: 0;
+      }
+
     }
 
     @include at-query($min, $large) {

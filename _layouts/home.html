@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en-ca">
+  {% include head.html %}
+  <body class="{{page.body_class}}">
+
+    <div class="pageHeader hide-for-small">
+      <h1>Always look twice, and be curious.</h1>
+      <div class="headerOverlay"></div>
+    </div>
+
+    {% include header.html %}
+
+    <main>
+      {{ content }}
+    </main>
+
+    {% include footer.html %}
+
+  </body>
+
+  {% include scripts.html %}
+
+</html>

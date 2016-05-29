@@ -52,32 +52,15 @@ $xxlarge: 1920px;
   #{$property}: #{$value};
 }
 
-// Media Queries
-@mixin at-query($constraint, $viewport1, $viewport2: null) {
-  @if $constraint == $min {
-    @media screen and ($min: $viewport1) {
-      @content;
-    }
-  } @else if $constraint == $max {
-    @media screen and ($max: $viewport1) {
-      @content;
-    }
-  } @else {
-    @media screen and ($min: $viewport1) and ($max: $viewport2) {
-      @content;
-    }
-  }
-}
-
 // Section Block
 @mixin sectionBlock {
   padding: 2em 0;
 
-  @include at-query($min, $medium) {
+  @include breakpoint(medium) {
     padding: 4em 0;
   }
 
-  @include at-query($min, $large) {
+  @include breakpoint(large) {
     padding: 6.25em 0;
   }
 }
@@ -119,17 +102,17 @@ h1 {
   font-size: 2.25em;
   line-height: 1.166666em;
 
-  @include at-query($min, $medium) {
+  @include breakpoint(medium) {
     font-size: 2.75em;
     line-height: 1.3em;
   }
 
-  @include at-query($min, $large) {
+  @include breakpoint(large) {
     font-size: 3.15em;
     line-height: 1.2em;
   }
 
-  @include at-query($min, $xlarge) {
+  @include breakpoint(xlarge) {
     font-size: 3.625em;
     line-height: 1.2em;
   }
@@ -141,19 +124,19 @@ h2 {
   margin-bottom: 1.5em;
   margin-top: .75em;
 
-  @include at-query($min, $medium) {
+  @include breakpoint(medium) {
     font-size: 2em;
     margin-bottom: 1em;
     margin-top: 0.6em;
   }
 
-  @include at-query($min, $large) {
+  @include breakpoint(large) {
     font-size: 2.25em;
     margin-bottom: 1em;
     margin-top: 0.6em;
   }
 
-  @include at-query($min, $xlarge) {
+  @include breakpoint(xlarge) {
     font-size: 3em;
     margin-bottom: 1em;
     margin-top: 0.5em;
@@ -166,19 +149,19 @@ h3 {
   margin-bottom: 1.5em;
   margin-top: .75em;
 
-  @include at-query($min, $medium) {
+  @include breakpoint(medium) {
     font-size: 1.75em;
     margin-top: 0.75em;
     margin-bottom: 1.3em;
   }
 
-  @include at-query($min, $large) {
+  @include breakpoint(large) {
     font-size: 2em;
     margin-top: 0.8em;
     margin-bottom: 1.25em;
   }
 
-  @include at-query($min, $xlarge) {
+  @include breakpoint(xlarge) {
     font-size: 2.25em;
     line-height: 1.166666;
     margin-bottom: 1.5em;
@@ -399,7 +382,7 @@ header {
 
         }
 
-        @include at-query($min, $large) {
+        @include breakpoint(large) {
           display: block;
         }
 
@@ -420,16 +403,16 @@ header {
   -webkit-filter: grayscale(1);
   filter: grayscale(1);
 
-  @include at-query($min, $medium) {
+  @include breakpoint(medium) {
     height: 30vh;
     min-height: 250px;
   }
 
-  @include at-query($min, $large) {
+  @include breakpoint(large) {
     height: 30vh;
   }
 
-  @include at-query($min, $xlarge) {
+  @include breakpoint(xlarge) {
     height: 350px;
   }
 
@@ -443,11 +426,11 @@ header {
     @include vendor-prefix(transform, translate(-25%,-25%));
     color: $colorPageHeader;
 
-    @include at-query($min, $medium) {
+    @include breakpoint(medium) {
       width: 65%;
     }
 
-    @include at-query($min, $large) {
+    @include breakpoint(large) {
       top: 50%;
       @include vendor-prefix(transform, translate(-25%,-50%));
     }
@@ -464,11 +447,11 @@ header {
     @include vendor-prefix(transform, translate(-25%,-25%));
     color: $colorPageHeader;
 
-    @include at-query($min, $medium) {
+    @include breakpoint(medium) {
       width: 55%;
     }
 
-    @include at-query($min, $large) {
+    @include breakpoint(large) {
       width: 42.5%;
       top: 50%;
       left: 40%;
@@ -486,7 +469,7 @@ header {
     left: 0;
     background-color: $headerOverlay;
 
-    @include at-query($min, $medium) {
+    @include breakpoint(medium) {
       top: 51px;
       min-height: 250px;
       height: 30vh;
@@ -497,11 +480,11 @@ header {
 
     }
 
-    @include at-query($min, $large) {
+    @include breakpoint(large) {
       height: 30vh;
     }
 
-    @include at-query($min, $xlarge) {
+    @include breakpoint(xlarge) {
       height: 350px;
     }
 
@@ -514,7 +497,7 @@ header {
   padding-left: .9375rem;
   padding-right: .9375rem;
 
-  @include at-query($min, $medium) {
+  @include breakpoint($medium) {
     display: flex;
     align-content: center;
     padding: 0;
@@ -539,7 +522,7 @@ header {
       height: 65vh;
     }
 
-    @include at-query($min, $medium) {
+    @include breakpoint(medium) {
       height: 65vh;
       min-height: 350px;
 
@@ -551,7 +534,7 @@ header {
 
     }
 
-    @include at-query($min, $large) {
+    @include breakpoint(large) {
       height: 65vh;
 
       .headerOverlay {
@@ -560,7 +543,7 @@ header {
 
     }
 
-    @include at-query($min, $xlarge) {
+    @include breakpoint(xlarge) {
       height: 85vh;
 
       .headerOverlay {
@@ -580,7 +563,7 @@ header {
     @include sectionBlock;
 
     .projects {
-      @include at-query($min, $large) {
+      @include breakpoint(large) {
         div:nth-of-type(1),
         div:nth-of-type(6) {
           margin-left: 8.33333%;
@@ -642,7 +625,7 @@ header {
       padding: 0.5em 1em 0.5em 0.5em;
     }
 
-    @include at-query($min, $large) {
+    @include breakpoint(large) {
 
       .columns:nth-of-type(odd) {
         padding: 0.75em;
@@ -782,7 +765,7 @@ header {
     text-align: center;
   }
 
-  @include at-query($min, $medium) {
+  @include breakpoint(medium) {
     text-align: right;
   }
 
@@ -812,7 +795,7 @@ footer {
 
     #socialLinks {
 
-      @include at-query($min, $medium) {
+      @include breakpoint(medium) {
         margin: 0.25em 0 1.5em;
       }
 

@@ -537,10 +537,10 @@ header {
     }
 
     @include at-query($min, $xlarge) {
-      height: 73vh;
+      height: 85vh;
 
       .headerOverlay {
-        height: 73vh;
+        height: 85vh;
       }
 
     }

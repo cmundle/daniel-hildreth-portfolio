@@ -31,14 +31,6 @@ $colorPageHeader: #FFFFFF;
 $colorSectionBackground: #F2F2F2;
 $headingFont: 'Montserrat', sans-serif;
 $bodyFont: 'Open Sans', sans-serif;
-$gutter: 1.875rem;
-$min: min-width;
-$max: max-width;
-$small: 0px;
-$medium: 640px;
-$large: 1024px;
-$xlarge: 1440px;
-$xxlarge: 1920px;
 
 /* === Minxins === */
 
@@ -497,7 +489,7 @@ header {
   padding-left: .9375rem;
   padding-right: .9375rem;
 
-  @include breakpoint($medium) {
+  @include breakpoint(medium) {
     display: flex;
     align-content: center;
     padding: 0;
@@ -584,23 +576,50 @@ header {
     background-image: url('../img/aboutHeader.jpg');
   }
 
+  @include breakpoint(medium) {
+    .column, .columns {
+      padding-left: 6px;
+      padding-right: 6px;
+    }
+  }
+
   #aboutMe {
     @include sectionBlock;
     background-color: $colorSectionBackground;
+
+    #experience {
+      @include breakpoint(small only) {
+        margin-top: 1em;
+      }
+    }
+
   }
 
-  #faceTime {
-    background-image: url(/img/faceTime.jpg);
-    background-size: cover;
-    background-position: center center;
-    background-origin: padding-box;
-    background-repeat: no-repeat;
-    height: 400px;
+  .photos {
+    @include sectionBlock;
+    @include breakpoint(small only) {
+      img  {
+        margin: 5px 0;
+      }
+    }
+
+    @include breakpoint(medium) {
+
+      .column, .columns {
+        padding-left: 6px;
+        padding-right: 6px;
+      }
+
+      .photo {
+        margin-bottom: 12px;
+      }
+
+    }
+
   }
 
-  .albumCover {
-    background-color: red;
-    height: 100px;
+  #quote {
+    text-align: center;
   }
 
 }
@@ -757,12 +776,12 @@ header {
 #next {
   padding: 2em 0;
   background-color: #999999;
+  text-align: center;
 
   a {
     color: #525252;
     font-size: 0.75em;
     font-weight: 700;
-    text-align: center;
   }
 
   @include breakpoint(medium) {

@@ -8,7 +8,7 @@
 @include foundation-flex-grid;
 
 /* === Montserrat and Open Sans === */
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,400italic,700|Montserrat:400,700);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:700);
 
 /* === Variables === */
 $colorCopy: #676767;
@@ -30,7 +30,7 @@ $colorFooterCredit: #3C3C3C;
 $colorPageHeader: #FFFFFF;
 $colorSectionBackground: #F2F2F2;
 $headingFont: 'Montserrat', sans-serif;
-$bodyFont: 'Open Sans', sans-serif;
+$bodyFont: Georgia, Times, "Times New Roman", serif;
 
 /* === Minxins === */
 
@@ -172,7 +172,7 @@ h4 {
 
 h5 {
   font-family: $headingFont;
-  margin-bottom: 0.75em;
+  margin-bottom: 0.15em;
   font-style: normal;
   font-weight: 700;
   font-size: 0.75em;
@@ -183,17 +183,54 @@ h5 {
 
 h6 {
   font-family: $bodyFont;
-  margin-bottom: 0.5em;
+  margin-bottom: 0.8em;
   font-style: normal;
   font-weight: 300;
-  font-size: 1em;
+  font-size: 1.125em;
   color: $colorTitleHeading;
+
+  a {
+    font-family: $bodyFont;
+    color: inherit;
+    text-transform: inherit;
+
+    &:hover,
+    &:active {
+      color: $colorHeading;
+      text-decoration: none;
+    }
+
+    &:focus,
+    &:visited {
+      color: $colorTitleHeading;
+      text-decoration: none;
+    }
+  }
 }
 
 p {
-  font-size: 0.75em;
+  font-size: 1em;
   line-height: 1.5;
   margin-bottom: 0.6em;
+
+  a {
+    font-style: italic;
+    font-family: $bodyFont;
+    color: inherit;
+    text-transform: inherit;
+
+    &:hover,
+    &:active {
+      color: $colorHeading;
+      text-decoration: none;
+    }
+
+    &:focus,
+    &:visited {
+      color: inherit;
+      text-decoration: none;
+    }
+  }
 }
 
 a {
@@ -222,6 +259,7 @@ header {
     padding: .625em;
     height: 70px;
     background-color: $navBackground;
+    font-family: $headingFont;
 
     #menu {
       color: #FFFFFF;
@@ -775,11 +813,11 @@ header {
 /* === Next Page - _includes/next.html === */
 #next {
   padding: 2em 0;
-  background-color: #999999;
+  background-color: $colorSectionBackground;
   text-align: center;
 
   a {
-    color: #525252;
+    color: $colorCopy;
     font-size: 0.75em;
     font-weight: 700;
   }

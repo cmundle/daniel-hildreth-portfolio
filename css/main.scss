@@ -57,6 +57,16 @@ $bodyFont: Georgia, Times, "Times New Roman", serif;
   }
 }
 
+// Image Fade
+@mixin imgFade {
+  @include vendor-prefix(transition, opacity .5s ease-in-out);
+  opacity: 1;
+
+  &:active, &:focus, &:hover {
+    opacity: 0.7;
+  }
+}
+
 /* === Global === */
 body {
   font-family: $bodyFont;
@@ -592,12 +602,49 @@ header {
   #portfolio {
     @include sectionBlock;
 
-    .projects {
+    h5 {
       @include breakpoint(large) {
-        div:nth-of-type(1),
-        div:nth-of-type(6) {
-          margin-left: 8.33333%;
+        padding-left: 0.5em;
+      }
+    }
+
+    .projects {
+      padding: 1em 0;
+
+      .columns:nth-of-type(odd) {
+        padding: 0.25em 0.25em 0.25em 0.5em;
+      }
+
+      .columns:nth-of-type(even) {
+        padding: 0.25em 0.5em 0.25em 0.25em;
+      }
+
+      @include breakpoint(medium) {
+
+        .columns:nth-of-type(odd) {
+          padding: 0.5em 0.5em 0.5em 1em;
         }
+
+        .columns:nth-of-type(even) {
+          padding: 0.5em 1em 0.5em 0.5em;
+        }
+
+      }
+
+      @include breakpoint(large) {
+
+        .columns:nth-of-type(odd) {
+          padding: 0.5em;
+        }
+
+        .columns:nth-of-type(even) {
+          padding: 0.5em;
+        }
+
+      }
+
+      .projectLink {
+        @include imgFade;
       }
 
     }
@@ -678,29 +725,60 @@ header {
     @extend .pageHeader;
     background-image: url('../img/portfolioHeader.jpg');
     margin-bottom: 2em;
+
+    @include breakpoint(large) {
+      margin-bottom: 5em;
+    }
+
+  }
+
+  h5 {
+
+    @include breakpoint(large) {
+      padding-left: 0.5em;
+    }
+
   }
 
   .projects {
     padding: 1em 0;
+    margin-bottom: 1em;
 
     .columns:nth-of-type(odd) {
-      padding: 0.5em 0.5em 0.5em 1em;
+      padding: 0.25em 0.25em 0.25em 0.5em;
     }
 
     .columns:nth-of-type(even) {
-      padding: 0.5em 1em 0.5em 0.5em;
+      padding: 0.25em 0.5em 0.25em 0.25em;
     }
 
-    @include breakpoint(large) {
+    @include breakpoint(medium) {
 
       .columns:nth-of-type(odd) {
-        padding: 0.75em;
+        padding: 0.5em 0.5em 0.5em 1em;
       }
 
       .columns:nth-of-type(even) {
-        padding: 0.75em;
+        padding: 0.5em 1em 0.5em 0.5em;
       }
 
+    }
+
+    @include breakpoint(large) {
+      margin-bottom: 4em;
+
+      .columns:nth-of-type(odd) {
+        padding: 0.5em;
+      }
+
+      .columns:nth-of-type(even) {
+        padding: 0.5em;
+      }
+
+    }
+
+    .projectLink {
+      @include imgFade;
     }
 
   }
@@ -718,15 +796,7 @@ header {
   .post {
 
     a > img {
-      @include vendor-prefix(transition, .5s ease-in-out);
-      @include vendor-prefix(filter, grayscale(0%));
-
-    }
-
-    a:hover > img {
-      cursor: pointer;
-      @include vendor-prefix(transition, .5s ease-in-out);
-      @include vendor-prefix(filter, grayscale(40%));
+      @include imgFade;
     }
 
     time {

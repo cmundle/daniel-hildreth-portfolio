@@ -633,33 +633,6 @@ header {
 
   }
 
-  .photos {
-    @include sectionBlock;
-    @include breakpoint(small only) {
-      img  {
-        margin: 5px 0;
-      }
-    }
-
-    @include breakpoint(medium) {
-
-      .column, .columns {
-        padding-left: 6px;
-        padding-right: 6px;
-      }
-
-      .photo {
-        margin-bottom: 12px;
-      }
-
-    }
-
-  }
-
-  #quote {
-    text-align: center;
-  }
-
 }
 
 /* === Portfolio - portfolio/index.html === */
@@ -724,6 +697,38 @@ header {
       display: block;
     }
 
+  }
+
+}
+
+/* === Grid Photos Layout - _layout/post-grid-photos.html === */
+.gridPhotos {
+
+  .photos {
+    @include sectionBlock;
+    @include breakpoint(small only) {
+      img  {
+        margin: 5px 0;
+      }
+    }
+
+    @include breakpoint(medium) {
+
+      .column, .columns {
+        padding-left: 6px;
+        padding-right: 6px;
+      }
+
+      .photo {
+        margin-bottom: 12px;
+      }
+
+    }
+
+  }
+
+  #quote {
+    text-align: center;
   }
 
 }

@@ -1,0 +1,52 @@
+---
+layout: default
+body_class: gridPhotos
+---
+
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h2 class="post-title" itemprop="name headline">{{ page.title }}</h2>
+    <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    {{ content }}
+  </div>
+
+  <div class="row photos">
+    <div class="small-12 medium-5 medium-offset-1 columns">
+      <img src="/img/about/daniel-hildreth-about-graphic-designer-toronto.jpg" alt="Daniel" />
+    </div>
+    <div class="small-12 medium-5 columns">
+      <img class="photo" src="/img/about/daniel-hildreth-about-graphic-designer-toronto-england-landscape.jpg" alt="Castle" />
+      <img src="/img/about/daniel-hildreth-about-graphic-designer-toronto-zippling-adventure.jpg" alt="Daniel Zippling" />
+    </div>
+  </div>
+
+  <div id="quote" class="row align-center">
+    <div class="small-11 medium-5 columns">
+      <p>Donec sed odio dui. Aenean lacinia bibendum nulla sed consectetur. Etiam
+        porta sem malesuada magna mollis euismod.</p>
+    </div>
+  </div>
+
+  <div class="row photos">
+    <div class="small-12 medium-10 medium-offset-1 columns">
+      <img class="photo" src="/img/about/daniel-hildreth-about-graphic-designer-toronto-england-lake-district-hike.jpg" alt="Daniel Hiking" />
+    </div>
+    <div class="small-12 medium-5 medium-offset-1 columns">
+      <img class="photo" src="/img/about/daniel-hildreth-about-graphic-designer-toronto-big-sur-mcway-falls-california.jpg" alt="Mcway Falls" />
+    </div>
+    <div class="small-12 medium-5 columns">
+      <img class="photo" src="/img/about/daniel-hildreth-about-graphic-designer-toronto-portrait.jpg" alt="Daniel" />
+    </div>
+    <div class="small-12 medium-5 medium-offset-1 columns">
+      <img src="/img/about/daniel-hildreth-about-graphic-designer-toronto-shopping.jpg" alt="Store" />
+    </div>
+    <div class="small-12 medium-5 columns">
+      <img src="/img/about/daniel-hildreth-about-graphic-designer-toronto-flowers.jpg" alt="Flowers" />
+    </div>
+  </div>
+
+</article>

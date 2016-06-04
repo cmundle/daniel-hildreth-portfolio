@@ -28,7 +28,7 @@ $colorFooterHeading: #BABABA;
 $colorFooterLinks: #757575;
 $colorFooterCredit: #3C3C3C;
 $colorPageHeader: #FFFFFF;
-$colorSectionBackground: #F2F2F2;
+$colorSectionBackground: #FFFFFF;
 $headingFont: 'Montserrat', sans-serif;
 $bodyFont: Georgia, Times, "Times New Roman", serif;
 
@@ -586,7 +586,7 @@ header {
 
   #intro {
     @include sectionBlock;
-    background-color: $colorSectionBackground;
+    background-color: #F2F2F2;
   }
 
   #portfolio {
@@ -611,7 +611,43 @@ header {
 
   .pageHeader {
     @extend .pageHeader;
+    height: 65vh;
     background-image: url('../img/aboutHeader.jpg');
+
+    .headerOverlay {
+      height: 65vh;
+    }
+
+    @include breakpoint(medium) {
+      height: 65vh;
+      min-height: 350px;
+
+      .headerOverlay {
+        height: 65vh;
+        min-height: 65vh;
+        min-height: 350px;
+      }
+
+    }
+
+    @include breakpoint(large) {
+      height: 65vh;
+
+      .headerOverlay {
+        height: 65vh;
+      }
+
+    }
+
+    @include breakpoint(large) {
+      height: 85vh;
+
+      .headerOverlay {
+        height: 85vh;
+      }
+
+    }
+
   }
 
   @include breakpoint(medium) {
@@ -818,7 +854,7 @@ header {
 /* === Next Page - _includes/next.html === */
 #next {
   padding: 2em 0;
-  background-color: $colorSectionBackground;
+  background-color: #F2F2F2;
   text-align: center;
 
   a {

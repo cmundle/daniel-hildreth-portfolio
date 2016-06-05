@@ -1,12 +1,17 @@
 ---
 layout: project
-title:  "Project Five"
+title:  "Spectator Hotel"
 categories: projects
-image: jump.jpg
+featured_image: jump-restaurant-website-featured.jpg
+sub_title: "Nothing short of a phenomenon"
+role: "Design Lead"
 type: "UI/UX"
+year: "2016"
+skills: "Client communication, Project Management, Design"
+visit: http://www.jumprestaurant.com/
+image_desktop: jump-restaurant-website-home.jpg
+image_mobile: jump-restaurant-website-mobile.jpg
 ---
-{{ post.title }}
-{{ post.type }}
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur id iaculis
 tortor. Etiam iaculis est ut nunc malesuada, ut tincidunt turpis facilisis.
 In et mauris hendrerit libero vehicula consequat. Pellentesque ut tortor purus.
@@ -28,5 +33,3 @@ neque. Donec eget mi quis nunc convallis laoreet. Cras efficitur interdum mi,
 quis euismod orci sagittis vel. Etiam bibendum eleifend ex ut congue. Nam
 sagittis nibh tellus, nec dapibus tellus tristique non. Donec eu lobortis arcu.
 Nulla velit dui, consequat non pulvinar malesuada, efficitur sit amet magna.
-
-![Inside Jump]({{ site.baseurl }}/img/jump.jpg)

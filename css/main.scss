@@ -785,6 +785,49 @@ header {
 
 }
 
+/* === Project - _layout/project.html === */
+.project {
+
+  .pageHeader {
+
+    .headerOverlay {
+      background-color: #272727;
+    }
+
+  }
+
+  #projectSubTitle {
+    padding-top: 2em;
+
+    @include breakpoint(medium) {
+      padding-top: 4em;
+    }
+
+    @include breakpoint(large) {
+      padding-top: 6.25em;
+    }
+
+  }
+
+  .projectContent {
+    padding-bottom: 2em;
+
+    @include breakpoint(medium) {
+      padding-bottom: 4em;
+    }
+
+    @include breakpoint(large) {
+      padding-bottom: 6.25em;
+    }
+
+    #projectImg {
+      text-align: center;
+    }
+
+  }
+
+}
+
 /* === Journal - journal/index.html === */
 .journal {
 

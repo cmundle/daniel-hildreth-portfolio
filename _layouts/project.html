@@ -3,12 +3,51 @@ layout: default
 ---
 <article class="project">
 
-  <header class="project-header">
-    <h2 class="project-title">{{ page.title }}</h2>
-  </header>
+  <div class="pageHeader">
+    <h2>{{ page.title }}</h2>
+    <div class="headerOverlay"></div>
+  </div>
 
-  <div class="project-content">
-    {{ content }}
+  <div id="projectSubTitle" class="row">
+    <div class="small-12 medium-6 medium-offset-1 large-5 large-offset-1 columns">
+      {% if page.sub_title %}<h3>{{ page.sub_title }}</h3>{% endif %}
+    </div>
+  </div>
+
+  <div class="row projectContent">
+    <div class="small-12 medium-6 medium-offset-1 large-5 large-offset-1 columns">
+      {{ content }}
+    </div>
+    <div id="projectInfo" class="small-12 medium-4 large-3 large-offset-1 columns">
+      {% if page.role %}
+        <h5>Role</h5>
+        <h6>{{ page.role }}</h6>
+      {% endif %}
+      {% if page.type %}
+        <h5>Type</h5>
+        <h6>{{ page.type }}</h6>
+      {% endif %}
+      {% if page.year %}
+        <h5>Year</h5>
+        <h6>{{ page.year }}</h6>
+      {% endif %}
+      {% if page.skills %}
+        <h5>Skills</h5>
+        <h6>{{ page.skills }}</h6>
+      {% endif %}
+      {% if page.visit %}
+        <h5>Visit</h5>
+        <h6><a href="{{ page.visit }}" target="_blank">{{ page.title }}</a></h6>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="row align-center projectContent">
+    <div class="small-12 medium-12 columns">
+      <a href="{{ page.visit }}" target="_blank">
+        <img id="projectImg" data-interchange="[{{ site.baseurl }}/img/portfolio/{{ page.image_mobile }}, small], [{{ site.baseurl }}/img/portfolio/{{ page.image_desktop }}, medium], [{{ site.baseurl }}/img/portfolio/{{ page.image_desktop }}, large]">
+      </a>
+    </div>
   </div>
 
 </article>

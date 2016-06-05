@@ -1,7 +1,7 @@
 ---
 layout: project
-title:  "Hotel Bethlehem"
-categories: projects
+title:  "Spectator Hotel"
+categories: portfolio
 featured_image: jump-restaurant-website-featured.jpg
 sub_title: "Nothing short of a phenomenon"
 role: "Design Lead"
@@ -12,7 +12,6 @@ visit: http://www.jumprestaurant.com/
 image_desktop: jump-restaurant-website-home.jpg
 image_mobile: jump-restaurant-website-mobile.jpg
 ---
-
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur id iaculis
 tortor. Etiam iaculis est ut nunc malesuada, ut tincidunt turpis facilisis.
 In et mauris hendrerit libero vehicula consequat. Pellentesque ut tortor purus.

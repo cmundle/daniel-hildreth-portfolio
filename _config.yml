@@ -17,7 +17,6 @@ url: "http://danielhildreth.com" # the base hostname & protocol for your site
 permalink: /journal/:title
 timezone: America/Toronto
 exclude: [README.md]
-twitter_username: danielhildreth
 
 # Build settings
 markdown: kramdown
@@ -31,9 +30,9 @@ sass:
 
 # Collection settings
 collections:
-  projects:
+  portfolio:
     output: true
-    permalink: /projects/:title
+    permalink: /portfolio/:title
 
 # Defaults settings
 defaults:

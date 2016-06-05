@@ -1,7 +1,7 @@
 ---
 layout: project
 title:  "Jump Restaurant"
-categories: projects
+categories: portfolio
 featured_image: jump-restaurant-website-featured.jpg
 sub_title: "Nothing short of a phenomenon"
 role: "Design Lead"

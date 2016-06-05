@@ -13,8 +13,8 @@ Run ``` jekyll serve ```
 ## Structure
 - _includes
 - _layouts
-- _posts (Journal posts)
-- _projects (Portfolio)
+- _posts (Journal entries)
+- _portfolio
 - _sass
 - about
 - contact

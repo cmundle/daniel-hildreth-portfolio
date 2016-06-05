@@ -2,35 +2,26 @@
 layout: project
 title:  "Drawing Room Restaurant"
 categories: portfolio
-featured_image: jump-restaurant-website-featured.jpg
-sub_title: "Nothing short of a phenomenon"
+featured_image: drawing-room-restaurant-website-featured.jpg
+sub_title: "Consciously refined, lighthearted, and chic."
 role: "Design Lead"
 type: "UI/UX"
-year: "2016"
-skills: "Client communication, Project Management, Design"
-visit: http://www.jumprestaurant.com/
-image_desktop: jump-restaurant-website-home.jpg
-image_mobile: jump-restaurant-website-mobile.jpg
+year: "2015"
+skills: "Design, Project Management"
+visit: http://www.drawingroomrestaurant.com/
+image_desktop: drawing-room-restaurant-website-home.jpg
+image_mobile: drawing-room-restaurant-website-mobile.jpg
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur id iaculis
-tortor. Etiam iaculis est ut nunc malesuada, ut tincidunt turpis facilisis.
-In et mauris hendrerit libero vehicula consequat. Pellentesque ut tortor purus.
-Vivamus vitae tempor lacus, vel rhoncus risus. Nulla a purus non ligula cursus
-lobortis. Mauris porttitor suscipit iaculis. Nullam malesuada lacus eu odio
-tristique sodales. Nam id erat eu purus tristique ultrices. Maecenas id semper
-risus, sed ultricies turpis. Nunc felis odio, rutrum vitae tristique at,
-pulvinar in elit. Integer libero libero, fermentum eget eros gravida, efficitur
-sollicitudin leo. Aenean lobortis ullamcorper ante. Sed lorem est, faucibus eu
-venenatis eu, vehicula vel lorem. Curabitur vel ornare lacus. Aliquam vitae
-varius sem, id molestie eros.
-
-Nulla facilisi. Vivamus sit amet tortor tristique, mattis purus eu, lacinia
-arcu. Sed tincidunt urna id varius malesuada. Mauris euismod nisi sed urna
-pulvinar, nec lacinia ipsum eleifend. Vivamus vel dolor libero. Pellentesque
-faucibus faucibus justo eget pellentesque. Quisque a mi vestibulum, vestibulum
-magna id, accumsan odio. Quisque eget nisi lacinia, auctor lacus eu, pulvinar
-neque. Donec eget mi quis nunc convallis laoreet. Cras efficitur interdum mi,
-quis euismod orci sagittis vel. Etiam bibendum eleifend ex ut congue. Nam
-sagittis nibh tellus, nec dapibus tellus tristique non. Donec eu lobortis arcu.
-Nulla velit dui, consequat non pulvinar malesuada, efficitur sit amet magna.
+This was my first restaurant website after completing a months work (on and off)
+of research, I collected knowledge about must haves, trends, do's and don't's,
+hierarchy, what customers need, what they want to see, what is important to them
+and also how to showcase all this information. It was a fun process, an important
+one as it set the basis for all of the O&B work Agency Dominion did - I was the
+go to person for any questions or concerns. With the Drawing Room, they really
+wanted to showcase the local art and uniqueness of their restaurant. To do so
+content was carded, joining together where needed, but floating on top of art.
+The art helps to push the depth and scale of the site, it also helps convey the
+message of the Drawing Room. The Drawing Room accomplished a lot off my checklist
+for "Restaurant Websites" some sacrifices were made on the design side to include
+everything, but the site is still beautifully performing.

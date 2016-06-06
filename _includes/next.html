@@ -2,10 +2,13 @@
   <div class="row">
     <div class="small-12 medium-11 columns">
       {% if page.title == "About" %}
-        <a href="{{site.baseurl}}/portfolio/">View My Portfolio</a>
+        <a href="{{ site.baseurl }}/portfolio/">View My Portfolio</a>
       {% endif %}
       {% if page.title == "Portfolio" %}
-        <a href="{{site.baseurl}}/journal/">View My Journal</a>
+        <a href="{{ site.baseurl }}/journal/">View My Journal</a>
+      {% endif %}
+      {% if page.layout == "project" %}
+        <a href="{{ site.baseurl }}/portfolio/">View more portfolio pieces</a>
       {% endif %}
     </div>
   </div>

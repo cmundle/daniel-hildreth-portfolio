@@ -1046,6 +1046,7 @@ body.post {
 
     form {
       margin-top: 2em;
+      font-family: $headingFont;
 
       input, textarea {
         background-color: #F2F2F2;
@@ -1103,7 +1104,10 @@ body.post {
         font-size: 0.750em;
       }
 
-      button {
+      input[type="submit"] {
+        padding: 0;
+        background-color: transparent;
+        border: 0px;
         font-size: 0.750em;
         font-weight: 600;
         text-transform: uppercase;

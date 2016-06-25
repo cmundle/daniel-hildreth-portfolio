@@ -8,6 +8,7 @@ title: "Contact"
   <div class="headerOverlay"></div>
 </div>
 <div class="container">
+
   <div class="row align-center">
     <div class="small-12 medium-7 columns">
       <h5>Contact Me</h5>
@@ -25,26 +26,42 @@ title: "Contact"
       Phone: <a href="tel:+16472391652">(647) 239-1652</a></p>
     </div>
   </div>
-  <form>
+
+  <form action="mailto:christopher.mundle@gmail.com" method="post" enctype="text/plain" autocomplete="on" data-abide novalidate>
     <div class="row align-center">
+      <div class="small-12 medium-7 columns">
+        <div data-abide-error class="alert callout" style="display: none;">
+          <p>Double check the form below. Looks like you may have missed something.</p>
+        </div>
+      </div>
       <div class="small-12 medium-7 columns">
         <h4>Get in Touch:</h4>
       </div>
       <div class="small-12 medium-7 columns">
-        <label for="fullName" class="show-for-sr">Full Name</label>
-        <input type="text" id="fullName" placeholder="Full Name">
+        <label for="fullName" class="show-for-sr">Full Name Reqiured</label>
+        <input type="text" name="Full Name" id="fullName" placeholder="Full Name" required pattern="[a-z]">
+        <span class="form-error">
+          Please let me know who I'm speaking too.
+        </span>
       </div>
       <div class="small-12 medium-7 columns">
-        <label for="emailAddress" class="show-for-sr">Email</label>
-        <input type="text" id="emailAddress" placeholder="Email">
+        <label for="emailAddress" class="show-for-sr">Email Reqiured</label>
+        <input type="text" name="Email" id="emailAddress" placeholder="Email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
+        <span class="form-error">
+          Prefered email address that I may reach you at.
+        </span>
       </div>
       <div class="small-12 medium-7 columns">
-        <label for="message" class="show-for-sr">Message</label>
-        <textarea id="message" placeholder="Message"></textarea>
+        <label for="message" class="show-for-sr">Message Reqiured</label>
+        <textarea name="Message" id="message" placeholder="Message" wrap="hard" required></textarea>
+        <span class="form-error">
+          Let me know what you'd like to talk about. 
+        </span>
       </div>
       <div class="small-12 medium-7 columns">
-        <button type="submit">Submit</button>
+        <input type="submit" value="Send">
       </div>
     </div>
   </form>
+
 </div>

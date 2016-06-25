@@ -334,13 +334,14 @@ header {
   }
 
   .top-bar {
+    position: relative;
     background-color: $navBackground;
+    z-index: 9999;
 
     &.stick {
-      width: 100%;
       position: fixed;
       top: 0;
-      z-index: 9999;
+      width: 100%;
     }
 
     #responsive-menu {
@@ -427,12 +428,13 @@ header {
 
 // Page Header and Overlay
 .pageHeader {
+  position: relative;
+  top: 0px;
   height: 45vh;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  -webkit-filter: grayscale(1);
-  filter: grayscale(1);
+  @include vendor-prefix(filter, grayscale(1));
 
   @include breakpoint(medium) {
     height: 30vh;
@@ -496,12 +498,11 @@ header {
     height: 45vh;
     width: 100%;
     position: absolute;
-    top: 70px;
+    top: 0px;
     left: 0;
     background-color: $headerOverlay;
 
     @include breakpoint(medium) {
-      top: 51px;
       min-height: 250px;
       height: 30vh;
 

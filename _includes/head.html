@@ -1,11 +1,10 @@
 <head>
+  <title>{% if page.title %}{{ site.title }} - {{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <title>{% if page.title %}{{ site.title }} - {{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
-
+  <link rel="author" href="humans.txt" />
   <link rel="apple-touch-icon" sizes="57x57" href="{{ "/img/favicon/apple-icon-57x57.png" | prepend: site.baseurl }}">
   <link rel="apple-touch-icon" sizes="60x60" href="{{ "/img/favicon/apple-icon-60x60.png" | prepend: site.baseurl }}">
   <link rel="apple-touch-icon" sizes="72x72" href="{{ "/img/favicon/apple-icon-72x72.png" | prepend: site.baseurl }}">

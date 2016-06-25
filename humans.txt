@@ -1,0 +1,17 @@
+/* TEAM */
+    Designer: Daniel Hildreth
+    Contact: daniel.john.hildreth [at] gmail.com
+    Twitter: danielhildreth
+    From: Toronto, Ontario, Canada
+
+    Developer: Christopher Mundle
+    Contact: christopher.mundle [at] gmail.com
+    Twitter: chrismundle
+    From: Toronto, Ontario, Canada
+
+/* SITE */
+    Last update: 2015/06/25
+    Language: English
+    Standards: HTML5, CSS3, JavaScript
+    Components: Modernizr, jQuery, Jekyll, Foundation for Sites
+    Tools: Atom, GitHub, Photoshop CS6

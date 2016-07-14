@@ -925,6 +925,7 @@ header {
       }
 
       a {
+        @extend h4;
         color: #262626;
         text-transform: none;
       }
@@ -932,6 +933,7 @@ header {
       time {
         @extend h5;
         display: block;
+        margin: 0.5em 0 1em;
       }
 
     }

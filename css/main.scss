@@ -901,7 +901,7 @@ header {
 
   .pageHeader {
     @extend .pageHeader;
-    background-image: url('../img/aboutHeader.jpg');
+    background-image: url('../img/journalHeader.jpg');
     margin-bottom: 2em;
 
     @include breakpoint(large) {

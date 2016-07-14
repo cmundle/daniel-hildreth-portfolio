@@ -13,15 +13,15 @@ image_desktop: drawing-room-restaurant-website-home.jpg
 image_mobile: drawing-room-restaurant-website-mobile.jpg
 ---
 
-This was my first restaurant website after completing a months work (on and off)
-of research, I collected knowledge about must haves, trends, do's and don't's,
+This was my first restaurant website after completing a months worth of work
+on research (on and off). I collected information about must-haves, trends, do's and don't's,
 hierarchy, what customers need, what they want to see, what is important to them
-and also how to showcase all this information. It was a fun process, an important
-one as it set the basis for all of the O&B work Agency Dominion did - I was the
-go to person for any questions or concerns. With the Drawing Room, they really
-wanted to showcase the local art and uniqueness of their restaurant. To do so
-content was carded, joining together where needed, but floating on top of art.
-The art helps to push the depth and scale of the site, it also helps convey the
-message of the Drawing Room. The Drawing Room accomplished a lot off my checklist
-for "Restaurant Websites" some sacrifices were made on the design side to include
-everything, but the site is still beautifully performing.
+and also, how to showcase all of the above. It was a fun process, and an important
+one – it set the foundation for all of the O&B work Agency Dominion did, and I
+was the go to person for any questions or concerns.
+
+With the Drawing Room, they really wanted to showcase the local art and uniqueness
+of their restaurant. To do so content was carded, joining together where needed,
+but floating on top of art. The art helps to push the depth and scale of the site,
+as well as convey the message of the Drawing Room. The Drawing Room accomplished
+a lot off my checklist for "Restaurant Websites”.

@@ -34,8 +34,8 @@ body_class: home
   </div>
   <div class="row small-collapse medium-collapse large-collapse">
     <div class="small-12 large-10 large-offset-1 columns">
-      <div class="projects small-up-2 medium-up-2 large-up-5 small-collapse">
-        {% for post in site.portfolio limit:10 %}
+      <div class="projects small-up-2 medium-up-2 large-up-4 small-collapse">
+        {% for post in site.portfolio limit:8 %}
         <div class="columns">
           <a class="projectLink" href="{{ post.url | prepend: site.baseurl }}">
             <h5>{{ post.title }}</h5>

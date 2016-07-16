@@ -1051,6 +1051,13 @@ body.post {
       margin-top: 2em;
       font-family: $headingFont;
 
+      .callout {
+        margin: 0 0 1rem 0;
+        padding: 1rem 1.25rem;
+        border: none;
+        color: inherit;
+      }
+
       input, textarea {
         background-color: #F2F2F2;
         border: 1px solid #F2F2F2;

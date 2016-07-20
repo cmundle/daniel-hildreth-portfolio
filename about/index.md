@@ -5,7 +5,7 @@ title:  "About"
 ---
 
 I enjoy working within all mediums of design; from desktop websites to mobile screens,
-branding and editorial pieces, plus anything else I can believe in. I’m best at
+branding and editorial pieces, plus anything else I believe in. I’m best at
 being open minded about all possibilities, paying attention to every point/pixel,
 and figuring out direct solutions for all problems that life throws. I enjoy
 working with global brands and local businesses on large to small design

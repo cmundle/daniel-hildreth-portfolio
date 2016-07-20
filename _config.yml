@@ -6,12 +6,12 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: Daniel Hildreth
+title: Daniel Hildreth a Toronto Based Designer.
 email: daniel.john.hildreth@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  I enjoy working within all mediums of design; from desktop websites 
+  to branding and editorial pieces. I’d love to hear from you and 
+  discuss your next project.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://danielhildreth.com" # the base hostname & protocol for your site
 permalink: /journal/:title

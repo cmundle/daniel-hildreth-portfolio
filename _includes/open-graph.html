@@ -1,7 +1,13 @@
 <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
 <meta property="og:type" content="{% if page.thumbnail %}article{% else %}website{% endif %}">
 <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-<meta property="og:image" content="{% if page.image %}{{ page.image | prepend: site.baseurl | prepend: site.url }}{% else %}{{ site.url }}/img/homeHeader.JPG{% endif %}">
+{% if page.image %}
+    <meta property="og:image" content="{{ site.url }}/img{{ page.image }}">
+{% elsif page.featured_image %}
+  <meta property="og:image" content="{{ site.url }}/img/{{ page.featured_image }}">
+{% else %}
+  <meta property="og:image" content="{{ site.url }}/img/homeHeader.JPG">
+{% endif %}
 <meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% endif %}">
 <meta property="og:site_name" content="{{ site.title }}">
 {% if page.date %}

@@ -4,7 +4,7 @@
 {% if page.image %}
     <meta property="og:image" content="{{ site.url }}/img{{ page.image }}">
 {% elsif page.featured_image %}
-  <meta property="og:image" content="{{ site.url }}/img/{{ page.featured_image }}">
+  <meta property="og:image" content="{{ site.url }}/img/portfolio/{{ page.featured_image }}">
 {% else %}
   <meta property="og:image" content="{{ site.url }}/img/homeHeader.JPG">
 {% endif %}

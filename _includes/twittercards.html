@@ -1,0 +1,22 @@
+<meta name="twitter:card" content="summary">
+<meta name="twitter:creator" content="@danielhildreth">
+{% if page.title %}
+  <meta name="twitter:title" content="{{ page.title }}">
+{% else %}
+  <meta name="twitter:title" content="{{ site.title }}">
+{% endif %}
+{% if page.url %}
+  <meta name="twitter:url" content="{{ site.url }}{{ page.url }}">
+{% endif %}
+{% if page.excerpt %}
+  <meta name="twitter:description" content="{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}">
+{% else %}
+  <meta name="twitter:description" content="{{ site.description }}">
+{% endif %}
+{% if page.image %}
+  <meta name="twitter:image:src" content="{{ page.image | prepend: site.baseurl | prepend: site.url }}">
+{% elsif post.image %}
+  <meta name="twitter:image:src" content="{{ post.image | prepend: site.baseurl | prepend: site.url }}">
+{% else %}
+  <meta name="twitter:image:src" content="{{ site.url }}/img/homeHeader.JPG">
+{% endif %}

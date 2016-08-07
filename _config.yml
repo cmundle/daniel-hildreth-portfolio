@@ -16,9 +16,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://danielhildreth.com" # the base hostname & protocol for your site
 permalink: /journal/:title
 timezone: America/Toronto
-locale: Toronto
 fb_admins: https://www.facebook.com/dan.hildreth
-avatar: /img/homeHeader.JPG
 exclude: [README.md]
 
 # Build settings

@@ -1,0 +1,7 @@
+---
+---
+# www.robotstxt.org/
+User-agent: *
+Disallow: /portfolio/historic-hotel-bethlehem
+Disallow: /portfolio/the-spectator-hotel
+Sitemap: {{ site.url }}/sitemap.xml

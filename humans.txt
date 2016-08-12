@@ -1,3 +1,5 @@
+---
+---
 /* TEAM */
     Designer: Daniel Hildreth
     Contact: daniel.john.hildreth [at] gmail.com
@@ -10,7 +12,7 @@
     From: Toronto, Ontario, Canada
 
 /* SITE */
-    Last update: 2015/06/25
+    Last update: 2015/08/11
     Language: English
     Standards: HTML5, CSS3, JavaScript
     Components: Modernizr, jQuery, Jekyll, Foundation for Sites

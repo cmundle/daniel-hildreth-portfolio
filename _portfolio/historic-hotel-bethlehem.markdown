@@ -11,6 +11,7 @@ skills: "Project Management, Design"
 visit: http://www.hotelbethlehem.com/
 image_desktop: hotel-bethlehem-website-home.jpg
 image_mobile: hotel-bethlehem-website-mobile.jpg
+private: true
 ---
 
 The site for Hotel Bethlehem was a lengthy back and forth process of us fighting

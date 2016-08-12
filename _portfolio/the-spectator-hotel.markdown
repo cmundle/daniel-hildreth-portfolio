@@ -11,6 +11,7 @@ skills: "Project Management, Design"
 visit: http://thespectatorhotel.com/
 image_desktop: the-spectator-website-home.jpg
 image_mobile: the-spectator-website-mobile.jpg
+private: true
 ---
 I wish, plan and hope for the day that I can stay at The Spectator Hotel. This
 website started from a previous landing page of sorts when the hotel was still

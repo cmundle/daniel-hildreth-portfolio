@@ -4,7 +4,7 @@ title:  "Canoe Restaurant"
 categories: portfolio
 featured_image: canoe-restaurant-website-featured.jpg
 sub_title: "Critically acclaimed to be one of Canada's Best Restaurants"
-role: "Design Lead"
+role: "Design Lead at Agency Dominion"
 type: "UI/UX"
 year: "2016"
 skills: "Client communication, Project Management, Design"
@@ -15,15 +15,11 @@ image_mobile: canoe-restaurant-website-mobile.jpg
 
 I have yet to eat at Canoe: I've dined at most of the other O&B restaurants
 and know for a fact that when something is said, they do a good job of living up
-to their word. The O&B Team wanted our concept for Canoe to be simple, not over
-the top like some of the previously designed sites we did for them. They loved
-the idea of putting the focus on photography and big type. To achieve this we
-utilized a non-cluttered approach to the overall design, applied respective image
-heights for different screen sizes, and used big type with large white space
-surround.
+to their word. The O&B Team wanted our concept for Canoe to be simple and clean,
+they loved the idea of putting the focus on photography and big type. To achieve this we
+utilized a non-cluttered approach to the overall design and applied respective image
+heights for different screen sizes. The whole team at Agency Dominion really came
+together to make this site as great as it is.
 
-Being a seasonal and Canadian focused menu means a lot of change and
-turn around: menus, imagery and ideas constantly needing to be updated. We focused on
-the ease of changing the look and feel and making it easy for the O&B Team to do
-it themselves. I cannot wait to celebrate a special occasion at Canoe with their signature
+I cannot wait to celebrate a special occasion at Canoe with their signature
 panoramic city views!

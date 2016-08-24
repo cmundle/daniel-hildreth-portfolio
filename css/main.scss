@@ -754,12 +754,6 @@ header {
   .pageHeader {
     @extend .pageHeader;
     background-image: url('../img/portfolioHeader.jpg');
-    margin-bottom: 2em;
-
-    @include breakpoint(large) {
-      margin-bottom: 5em;
-    }
-
   }
 
   h5 {
@@ -768,6 +762,10 @@ header {
       padding-left: 0.5em;
     }
 
+  }
+
+  #portfolio {
+    @include sectionBlock;
   }
 
   .projects {

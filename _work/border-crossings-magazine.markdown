@@ -1,5 +1,5 @@
 ---
-layout: project
+layout: project-print
 title:  "Border Crossings Magazine Redesign"
 categories: portfolio
 featured_image: border-crossings-magazine-featured.jpg
@@ -10,8 +10,16 @@ type: "School Project"
 year: "2014"
 skills:
 visit:
-image_desktop: border-crossings-magazine-cover.jpg
-image_mobile: beam-local-website-mobile.jpg
+image_one: border-crossings-magazine-cover.jpg
+image_two: border-crossings-magazine-cover.jpg
+image_three: border-crossings-magazine-cover.jpg
+image_four: border-crossings-magazine-cover.jpg
+image_five: border-crossings-magazine-cover.jpg
+image_six: border-crossings-magazine-cover.jpg
+image_seven: border-crossings-magazine-cover.jpg
+image_eight: border-crossings-magazine-cover.jpg
+image_nine: border-crossings-magazine-cover.jpg
+image_ten: border-crossings-magazine-cover.jpg
 ---
 
 During my final year of schooling at Durham College, one of my portfolio projects

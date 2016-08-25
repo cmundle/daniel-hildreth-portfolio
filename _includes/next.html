@@ -8,7 +8,7 @@
         <a href="{{ site.baseurl }}/journal/">View My Journal</a>
       {% endcase %}
       {% case page.layout %}
-      {% when 'project' %}
+      {% when 'project' or 'project-print' %}
         <a href="{{ site.baseurl }}/work/">View more pieces</a>
       {% when 'post' %}
         <a href="{{ site.baseurl }}/journal/">View more journal entries</a>

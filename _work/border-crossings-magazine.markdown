@@ -11,15 +11,15 @@ year: "2014"
 skills:
 visit:
 image_one: border-crossings-magazine-cover.jpg
-image_two: border-crossings-magazine-cover.jpg
-image_three: border-crossings-magazine-cover.jpg
-image_four: border-crossings-magazine-cover.jpg
-image_five: border-crossings-magazine-cover.jpg
-image_six: border-crossings-magazine-cover.jpg
-image_seven: border-crossings-magazine-cover.jpg
-image_eight: border-crossings-magazine-cover.jpg
-image_nine: border-crossings-magazine-cover.jpg
-image_ten: border-crossings-magazine-cover.jpg
+image_two: border-crossings-magazine-spread-1.jpg
+image_three: border-crossings-magazine-spread-2.jpg
+image_four: border-crossings-magazine-spread-3.jpg
+image_five: 
+image_six:
+image_seven:
+image_eight:
+image_nine:
+image_ten:
 ---
 
 During my final year of schooling at Durham College, one of my portfolio projects

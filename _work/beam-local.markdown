@@ -3,6 +3,7 @@ layout: project
 title:  "Beam Local"
 categories: portfolio
 featured_image: beam-local-website-featured.jpg
+header_image: beamLocalHeader.jpg
 sub_title: "Be a better business."
 role: "Design Lead at Beam Local"
 type: "UI/UX"
@@ -14,7 +15,7 @@ image_mobile: beam-local-website-mobile.jpg
 ---
 
 Taking a company which you work for and redesigning their website in it's entirety,
-as well as levelling up it's branding to be more focused and mature, was actually
+as well as leveling up it's branding to be more focused and mature, was actually
 easier than I thought it would be. By simplifying brand elements, colours and
 fonts, a new Beam Local emerged. The new website has continually improved since
 the initial launch of it's single page: it now has fresh new blog posts every week

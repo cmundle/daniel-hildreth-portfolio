@@ -3,6 +3,7 @@ layout: project
 title:  "The Guild Restaurant"
 categories: portfolio
 featured_image: the-guild-restaurant-website-featured.jpg
+header_image: theGuildRestaurantHeader.jpg
 sub_title: "The Guild is a different beast."
 role: "Design Lead at Agency Dominion"
 type: "UI/UX"

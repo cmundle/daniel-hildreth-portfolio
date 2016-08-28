@@ -31,9 +31,9 @@ sass:
 
 # Collection settings
 collections:
-  portfolio:
+  work:
     output: true
-    permalink: /portfolio/:title
+    permalink: /work/:title
 
 # Defaults settings
 defaults:

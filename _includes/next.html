@@ -1,18 +1,18 @@
 <div id="next">
   <div class="row">
     <div class="small-12 medium-11 columns">
-      {% if page.title == "About" %}
-        <a href="{{ site.baseurl }}/portfolio/">View My Portfolio</a>
-      {% endif %}
-      {% if page.title == "Portfolio" %}
+      {% case page.title %}
+      {% when 'About' %}
+        <a href="{{ site.baseurl }}/work/">View My Work</a>
+      {% when 'Work' %}
         <a href="{{ site.baseurl }}/journal/">View My Journal</a>
-      {% endif %}
-      {% if page.layout == "project" %}
-        <a href="{{ site.baseurl }}/portfolio/">View more portfolio pieces</a>
-      {% endif %}
-      {% if page.layout == "post" %}
-        <a href="{{ site.baseurl }}/journal/">View more journal entries</a>
-      {% endif %}
+      {% endcase %}
+      {% case page.layout %}
+      {% when 'project' or 'project-print' %}
+        <a href="{{ site.baseurl }}/work/">Go Back to Work</a>
+      {% when 'post' %}
+        <a href="{{ site.baseurl }}/journal/">Go Back to Journal</a>
+      {% endcase %}
     </div>
   </div>
 </div>

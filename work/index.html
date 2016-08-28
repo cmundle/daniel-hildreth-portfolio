@@ -1,0 +1,36 @@
+---
+layout: default
+body_class: portfolio
+title:  "Work"
+---
+<div class="pageHeader">
+  <h2>Every pixel counts.</h2>
+  <div class="headerOverlay"></div>
+</div>
+
+<div id="portfolio">
+  <div class="row large-collapse">
+    <div class="small-12 medium-9 large-offset-1 columns">
+      <h5>Work</h5>
+    </div>
+  </div>
+  <div class="row small-collapse medium-collapse large-collapse">
+    <div class="small-12 large-10 large-offset-1 columns">
+      <div class="projects small-up-2 medium-up-2 large-up-4 small-collapse">
+        {% for post in site.work %}
+          {% unless post.private == true %}
+            <div class="columns">
+              <a class="projectLink" href="{{ post.url | prepend: site.baseurl }}">
+                <h5>{{ post.title }}</h5>
+                <div class="projectOverlay"></div>
+                <img src="{{ site.baseurl }}/img/work/{{ post.featured_image }}">
+              </a>
+            </div>
+          {% endunless %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% include next.html %}

@@ -3,6 +3,7 @@ layout: project
 title:  "Historic Hotel Bethlehem"
 categories: portfolio
 featured_image: hotel-bethlehem-website-featured.jpg
+header_image: hotelBethlehemHeader.jpg
 sub_title: "Discover Historic Hotel Bethlehem"
 role: "Design Lead at Agency Dominion"
 type: "UI/UX"

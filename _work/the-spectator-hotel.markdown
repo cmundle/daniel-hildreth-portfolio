@@ -3,6 +3,7 @@ layout: project
 title:  "The Spectator Hotel"
 categories: portfolio
 featured_image: the-spectator-website-featured.jpg
+header_image: theSpectatorHotelHeader.jpg
 sub_title: "Unequaled experience. Unmatched location."
 role: "Design Lead at Agency Dominion"
 type: "UI/UX"

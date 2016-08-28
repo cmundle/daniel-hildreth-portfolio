@@ -754,12 +754,6 @@ header {
   .pageHeader {
     @extend .pageHeader;
     background-image: url('../img/portfolioHeader.jpg');
-    margin-bottom: 2em;
-
-    @include breakpoint(large) {
-      margin-bottom: 5em;
-    }
-
   }
 
   h5 {
@@ -768,6 +762,10 @@ header {
       padding-left: 0.5em;
     }
 
+  }
+
+  #portfolio {
+    @include sectionBlock;
   }
 
   .projects {
@@ -859,7 +857,10 @@ header {
   .pageHeader {
 
     .headerOverlay {
-      background-color: $altHeaderOverlay;
+      background-origin: content-box;
+      background-position: center center;
+      background-size: cover;
+      background-repeat: no-repeat;
     }
 
   }
@@ -888,7 +889,7 @@ header {
       padding-bottom: 6.25em;
     }
 
-    #projectImg {
+    .projectImg {
       text-align: center;
     }
 
@@ -988,12 +989,26 @@ body.post {
 
     }
 
-    h6 {
+    h4 {
       @include flex-grid-column(12);
       color: #262626;
       font-family: $headingFont;
       font-weight: normal;
       text-align: center;
+    }
+
+    h5 {
+      @include flex-grid-column(12);
+      margin: 1.5em 0 0.75em 0;
+      color: #262626;
+      font-family: $headingFont;
+      font-weight: normal;
+      text-align: center;
+
+      @include breakpoint(medium) {
+        margin: 4em 0 0.75em 0;
+      }
+
     }
 
     p {
@@ -1007,6 +1022,15 @@ body.post {
         @include flex-grid-column(6);
       }
 
+    }
+
+    ul {
+      @include flex-grid-column(12);
+      margin: 0;
+      font-size: 0.75em;
+      font-weight: normal;
+      list-style-type: none;
+      text-align: center;
     }
 
   }

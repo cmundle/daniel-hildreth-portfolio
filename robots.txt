@@ -1,7 +1,12 @@
 ---
+sitemap:
+  exclude: 'yes'
 ---
 # www.robotstxt.org/
 User-agent: *
-Disallow: /portfolio/historic-hotel-bethlehem
-Disallow: /portfolio/the-spectator-hotel
+{% for post in site.work %}
+  {% if post.private == true %}
+  Disallow: {{ post.url }}
+  {% endif %}
+{% endfor %}
 Sitemap: {{ site.url }}/sitemap.xml

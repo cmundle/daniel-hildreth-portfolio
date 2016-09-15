@@ -171,6 +171,23 @@ h4 {
   font-weight: 400;
   font-size: 1.125em;
   color: $colorDarkGrey;
+
+  a {
+    color: #262626;
+    text-transform: inherit;
+
+    &:hover,
+    &:active {
+      color: $colorTitleHeading;
+      text-decoration: none;
+    }
+
+    &:focus,
+    &:visited {
+      color: #262626;
+      text-decoration: none;
+    }
+  }
 }
 
 h5 {
@@ -917,21 +934,21 @@ header {
     padding-top: 1em;
 
     @include breakpoint(large) {
-      margin-bottom: 5em;
+      margin-bottom: 2em;
     }
 
     .post {
       padding-bottom: 2.5em;
 
       @include breakpoint(large) {
-        padding-bottom: 1em;
+        padding-bottom: 4em;
       }
 
       img {
         margin-bottom: 1em;
 
         @include breakpoint(large) {
-          margin-bottom: 2em;
+          margin-bottom: 1.75em;
         }
 
       }

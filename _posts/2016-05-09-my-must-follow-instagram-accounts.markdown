@@ -64,4 +64,4 @@ Patrick Janelle, otherwise known as “aguynamedpatrick” was the first person 
 - [Kit and Ace](https://www.instagram.com/kitandace/)
 - [Aninn Design](https://www.instagram.com/aninndesign/)
 - [Mission Bicycle](https://www.instagram.com/missionbicycle/)
-- [Ben Johnston](https://www.instagram.com/benjohnston25/)
+- [Ben Johnston](https://www.instagram.com/benjohnstondesign/)

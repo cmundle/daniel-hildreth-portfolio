@@ -5,11 +5,21 @@ sitemap:
 
 /* === Foundation === */
 @import 'foundation';
-@include foundation-everything;
-@include foundation-flex-classes;
+@include foundation-global-styles;
+@include foundation-grid;
 @include foundation-flex-grid;
+@include foundation-flex-classes;
+@include foundation-typography;
+@include foundation-forms;
+@include foundation-menu;
+@include foundation-label;
+@include foundation-sticky;
+@include foundation-switch;
+@include foundation-top-bar;
+@include foundation-visibility-classes;
+@include foundation-float-classes;
 
-/* === Montserrat and Open Sans === */
+/* === Montserrat Font Family === */
 @import url(https://fonts.googleapis.com/css?family=Montserrat:700);
 
 /* === Variables === */
@@ -71,6 +81,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -moz-font-feature-settings: 'liga', 'kern';
+  font-feature-settings: 'liga', 'kern';
 }
 
 .noScroll {

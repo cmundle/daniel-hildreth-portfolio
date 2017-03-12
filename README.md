@@ -14,7 +14,7 @@ Run ``` jekyll serve ```
 ## Credits
 Designed by: [@danielhildreth](https://github.com/danielhildreth)
 
-Developed by: [@cmundle](https://github.com/danielhildreth)
+Developed by: [@cmundle](https://github.com/cmundle)
 
 ## License
 [Attribution-NonCommercial-NoDerivatives 4.0 International](https://creativecommons.org/licenses/by-nc-nd/4.0/)

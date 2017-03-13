@@ -17,7 +17,9 @@ url: "http://danielhildreth.com" # the base hostname & protocol for your site
 permalink: /journal/:title
 timezone: America/Toronto
 fb_admins: https://www.facebook.com/dan.hildreth
-exclude: [README.md]
+exclude: 
+  - README.md
+  - node_modules
 
 # Build settings
 markdown: kramdown

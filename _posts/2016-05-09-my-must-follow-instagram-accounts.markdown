@@ -16,7 +16,7 @@ sub_title: "In addition to family and friends, and even celebrities here is my m
 
 #### Taylor Burke
 
-Taylor’s sense of adventure and genuine aspiration for life gives me life. I’m always curious to see where he is off to next, the next location, and the next adventure. It has been fun to watch his following grow from 10’s of thousands to 100’s of thousands. Taylor also has a great sense of humour, his SnapChat stories while on the road and in-between photo shoots are not one to be missed. Make sure to follow him on Instagram [@taylormichaelburk](https://www.instagram.com/taylormichaelburk/), on Snapchat: taylorburk1991 and also check out his [personal portfolio](http://www.taylorburk.com).
+Taylor’s sense of adventure and genuine aspiration for life gives me life. I’m always curious to see where he is off to next, the next location, and the next adventure. It has been fun to watch his following grow from 10’s of thousands to 100’s of thousands. Taylor also has a great sense of humour, his SnapChat stories while on the road and in-between photo shoots are not one to be missed. Make sure to follow him on Instagram [@taylormichaelburk](https://www.instagram.com/taylormichaelburk/), on Snapchat: taylorburk1991 and also check out his [personal portfolio](https://www.taylorburk.com).
 
 <div class="postImg">
   <a href="https://www.instagram.com/hellomr/">

@@ -9,7 +9,7 @@ role: "Design Lead at Agency Dominion"
 type: "UI/UX"
 year: "2016"
 skills: "Client communication, Project Management, Design"
-visit: http://www.canoerestaurant.com/
+visit: https://www.canoerestaurant.com/
 image_desktop: canoe-restaurant-website-home.jpg
 image_mobile: canoe-restaurant-website-mobile.jpg
 ---

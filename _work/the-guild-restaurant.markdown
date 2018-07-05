@@ -9,7 +9,7 @@ role: "Design Lead at Agency Dominion"
 type: "UI/UX"
 year: "2016"
 skills: "Design, Project Management"
-visit: http://www.theguildrestaurant.com/
+visit: https://www.theguildrestaurant.com/
 image_desktop: the-guild-restaurant-website-home.jpg
 image_mobile: the-guild-restaurant-website-mobile.jpg
 ---

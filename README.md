@@ -3,8 +3,8 @@
 Daniel is a graphic and digital designer based out of Toronto. Visit Daniel's portfolio [here](http://danielhildreth.com).
 
 ## Tools
-- [Jekyll 3](http://jekyllrb.com)
-- [Foundation for Sites 6](http://foundation.zurb.com/sites.html)
+- [Jekyll 3](https://jekyllrb.com)
+- [Foundation for Sites 6](https://foundation.zurb.com/sites.html)
 
 ## Build
 Open your terminal and navigate to the cloned repo.

@@ -9,7 +9,7 @@ sub_title: "What are your daily inspirations? These are mine:"
 ---
 
 <div class="postImg">
-  <a href="http://theinspiration.com">
+  <a href="https://theinspiration.com">
     <img src="/img/postInspirationsSources/my-top-5-online-inspiration-sources-as-a-designer-the-inspiration.jpg" />
   </a>
 </div>
@@ -19,7 +19,7 @@ sub_title: "What are your daily inspirations? These are mine:"
 Unfortunately, I can not remember how I found this site originally but I do know I can not go a day without visiting it. This site is normally my #1 in the morning after getting settled in, they post all types of media from photography, videos, fashion, architecture, design and advertising. I’ve found some great sources for inspiration on this site - items that I’ve shown to everyone, even my parents. They recently added online ads to the site which was a bit of a letdown and eye sore for me but if there is something worth seeing on the internet I normally see it here first. This site serves as an excellent access point to curated media from around the world.
 
 <div class="postImg">
-  <a href="http://mindsparklemag.com/category/website/">
+  <a href="https://mindsparklemag.com/category/website/">
     <img src="/img/postInspirationsSources/my-top-5-online-inspiration-sources-as-a-designer-websites-we-love.jpg" />
   </a>
 </div>
@@ -29,7 +29,7 @@ Unfortunately, I can not remember how I found this site originally but I do know
 Second on my list of go-to inspiration is, Websites We Love done by Designspiration - this site is amazing for web designers. Featuring sites I would never have come across, would never have imagined and wouldn’t have thought could be done. This site is a real inspiration source because it inspires me to create better websites and to hopefully have work featured on it. Love this site, and I hope you will too!
 
 <div class="postImg">
-  <a href="http://designspiration.net/">
+  <a href="https://designspiration.net/">
     <img src="/img/postInspirationsSources/my-top-5-online-inspiration-sources-as-a-designer-designspiration.jpg" />
   </a>
 </div>

@@ -9,7 +9,7 @@ role: "Design Lead at Agency Dominion"
 type: "UI/UX"
 year: "2015"
 skills: "Project Management, Design"
-visit: http://www.hotelbethlehem.com/
+visit: https://www.hotelbethlehem.com/
 image_desktop: hotel-bethlehem-website-home.jpg
 image_mobile: hotel-bethlehem-website-mobile.jpg
 private: true

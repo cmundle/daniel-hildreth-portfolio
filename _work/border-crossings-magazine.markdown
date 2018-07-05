@@ -28,4 +28,4 @@ a featured article spread. I had a lot of fun with this project, pushing boundar
 and trying a looser, free and fun approach to this layout.
 
 All images used are to imply the desired style of photography and are property
-of [Todd Selby.](http://theselby.com/)
+of [Todd Selby.](https://theselby.com/)

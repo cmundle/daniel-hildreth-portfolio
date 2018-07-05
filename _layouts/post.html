@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+<article class="post" itemscope itemtype="https://schema.org/BlogPosting">
 
   <div class="pageHeader">
     <h2 itemprop="name headline">{{ page.title }}</h2>
@@ -12,7 +12,7 @@ layout: default
     <div class="small-12 medium-7 medium-offset-2 large-6 large-offset-2 columns">
       {% if page.sub_title %}<h3>{{ page.sub_title }}</h3>{% endif %}
       {% if page.excerpt %}<p>{{ page.excerpt }}</p>{% endif %}
-      <h5><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">Posted On {{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %}, By <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</h5>
+      <h5><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">Posted On {{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %}, By <span itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</h5>
     </div>
   </div>
 

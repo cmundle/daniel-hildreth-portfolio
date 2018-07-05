@@ -9,7 +9,7 @@ role: "Design Lead at Beam Local"
 type: "UI/UX"
 year: "2016"
 skills: "Design, Branding, Project Management"
-visit: http://www.beamlocal.com/
+visit: https://www.beamlocal.com/
 image_desktop: beam-local-website-home.jpg
 image_mobile: beam-local-website-mobile.jpg
 ---

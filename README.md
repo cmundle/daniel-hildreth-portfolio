@@ -1,19 +1,22 @@
 # Daniel Hildreth's Portfolio
 
-Daniel is a graphic and digital designer based out of Toronto. Visit Daniel's portfolio [here](http://danielhildreth.com).
+Daniel is a graphic and digital designer based out of Toronto. Visit Daniel's portfolio [here](https://danielhildreth.com).
 
 ![Screenshot of Daniel's Portfolio](/img/screenshot-index.gif)
 
 ## Tools
 
 - [Jekyll 3](https://jekyllrb.com)
+- [Bundler](https://bundler.io/)
 - [Foundation for Sites 6](https://foundation.zurb.com/sites.html)
 
-## Build
+## Building
 
-Open your terminal and navigate to the cloned repo.
+Open your terminal and navigate to the cloned repository.
 
-Run ``` jekyll serve ```
+To install all of the required ruby gems we use Bundler. Once you have bundler installed run ```bundle install``` command.
+
+With all of our required ruby gems install you can now run a local Jekyll server with bundler by using this command ```bundle exec jekyll serve```
 
 ## Credits
 

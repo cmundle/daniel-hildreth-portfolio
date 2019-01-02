@@ -3,51 +3,21 @@ layout: home
 body_class: home
 ---
 
-<div class="pageHeader show-for-small-only">
-  <h1>Always look twice, and be curious.</h1>
-  <div class="headerOverlay"></div>
-</div>
-
-<div id="intro">
-  <div class="row">
-    <div class="small-12 medium-9 medium-offset-1 columns">
-      <h5>About</h5>
-      <h2>Hi I’m Daniel, a Graphic <br>and Digital Designer.</h2>
-    </div>
-    <div class="small-12 medium-7 medium-offset-1 large-6 colmuns">
-      <div class="multiColumns">
-        <p>Graduate of Durham College's Advanced Graphic Design program, currently
-				working at AZURE Magazine and their sister publication, Designlines Magazine.
-				I'm the go to designer for all things digital, marketing and promotional material, 
-				in addition to designing editorial layouts for both publications with the rest of the art team.
-				I'm always ready to lend a hand where ever possible, if you'd like to work together
-				or learn more about me and my work, <a href="/about/">view more.</a></p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div id="portfolio">
-  <div class="row large-collapse">
-    <div class="small-12 medium-9 large-offset-1 columns">
-      <h5>Work</h5>
-    </div>
-  </div>
-  <div class="row small-collapse medium-collapse large-collapse">
-    <div class="small-12 large-10 large-offset-1 columns">
-      <div class="projects small-up-2 medium-up-2 large-up-4 small-collapse">
-        {% for post in site.work limit:8 %}
-          {% unless post.private == true %}
-            <div class="columns">
-              <a class="projectLink" href="{{ post.url | prepend: site.baseurl }}">
-                <h5>{{ post.title }}</h5>
-                <div class="projectOverlay"></div>
-                <img src="{{ site.baseurl }}/img/work/{{ post.featured_image }}">
-              </a>
-            </div>
-          {% endunless %}
-        {% endfor %}
-      </div>
-    </div>
-  </div>
-</div>
+<section id="portfolio" class="row">
+	<div class="small-up-1 medium-up-2">
+		{% for post in site.work %}
+			{% unless post.private == true %}
+				<div class="columns project">
+					<a href="{{ post.url | prepend: site.baseurl }}" aria-label="View {{ post.title }} project page">
+						<div class="projectImg" style="background-image:url({{ site.baseurl }}/img/work/{{ post.featured_image }})"></div>
+					</a>
+					<a href="{{ post.url | prepend: site.baseurl }}">
+						<h3>{{ post.title }}</h3>
+					</a>
+					<p>{{ post.excerpt }}</p>
+					<h4>{{ post.type }}</h4>
+				</div>
+			{% endunless %}
+		{% endfor %}
+	</div>
+</section>

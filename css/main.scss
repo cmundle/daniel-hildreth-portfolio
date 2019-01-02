@@ -3,6 +3,9 @@ sitemap:
   exclude: 'yes'
 ---
 
+/* === Montserrat Font Family === */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,700');
+
 /* === Foundation === */
 @import 'foundation';
 @include foundation-global-styles;
@@ -19,12 +22,9 @@ sitemap:
 @include foundation-visibility-classes;
 @include foundation-float-classes;
 
-/* === Montserrat Font Family === */
-@import url(https://fonts.googleapis.com/css?family=Montserrat:700);
-
 /* === Variables === */
-$colorCopy: #676767;
-$colorHeading: #272727;
+$colorCopy: #000000;
+$colorHeading: #262626;
 $colorAccent: #F3F4F8;
 $colorSub: #999999;
 $colorTitleHeading: #4F4F4F;
@@ -477,50 +477,28 @@ header {
 
   @include breakpoint(xlarge) {
     height: 350px;
-  }
+	}
+	
+	.pageHeaderContent {
+		position: absolute;
+		left: 50%;
+		bottom: rem-calc(68);
+		z-index: 20;
+    transform: translateX(-50%);
+		width: 100%;
+		
+		.row {
+			align-items: flex-end;
+		}
+	}
 
   h1 {
-    z-index: 20;
-    margin: 0;
-    width: 65%;
-    position: relative;
-    top: 25%;
-    left: 25%;
-    @include vendor-prefix(transform, translate(-25%,-25%));
     color: $colorPageHeader;
-
-    @include breakpoint(medium) {
-      width: 65%;
-    }
-
-    @include breakpoint(large) {
-      top: 50%;
-      @include vendor-prefix(transform, translate(-25%,-50%));
-    }
-
   }
 
   h2 {
-    z-index: 20;
-    margin: 0;
-    width: 65%;
-    position: relative;
-    top: 25%;
-    left: 25%;
-    @include vendor-prefix(transform, translate(-25%,-25%));
-    color: $colorPageHeader;
-
-    @include breakpoint(medium) {
-      width: 55%;
-    }
-
-    @include breakpoint(large) {
-      width: 42.5%;
-      top: 50%;
-      left: 40%;
-      @include vendor-prefix(transform, translate(-25%,-50%));
-    }
-
+		color: $colorPageHeader;
+		text-align: right;
   }
 
   .headerOverlay {
@@ -578,7 +556,19 @@ header {
 
   .pageHeader {
     height: 65vh;
-    background-image: url('../img/homeHeader.JPG');
+		background-image: url('../img/homeHeader.JPG');
+		
+		h1 {
+			font-size: 3rem;
+			letter-spacing: -0.05px;
+			line-height: 58px;
+		}
+
+		h2 {
+			font-size: 1.25rem;
+			font-weight: 500;
+			letter-spacing: 0.05px;
+		}
 
     .headerOverlay {
       height: 65vh;
@@ -622,94 +612,63 @@ header {
   }
 
   #portfolio {
-    @include sectionBlock;
+		padding: 30px 0px 0px 0px;
 
-    h5 {
-      @include breakpoint(large) {
-        padding-left: 0.65em;
-      }
-    }
+		@include breakpoint(medium) {
+			padding: 64px 0px 0px 0px;
+		}
 
-    .projects {
-      padding: 1em 0;
+		.project {
+			padding-bottom: 80px;
 
-      .columns:nth-of-type(odd) {
-        padding: 0.25em 0.25em 0.25em 0.5em;
-      }
+			@include breakpoint(medium) {
+				padding-bottom: 136px;
 
-      .columns:nth-of-type(even) {
-        padding: 0.25em 0.5em 0.25em 0.25em;
-      }
+				&:nth-of-type(odd) {
+					padding-right: rem-calc(39);
+				}
+	
+				&:nth-of-type(even) {
+					padding-left: rem-calc(39);
+				}
 
-      @include breakpoint(medium) {
+			}
 
-        .columns:nth-of-type(odd) {
-          padding: 0.5em 0.5em 0.5em 1em;
-        }
+			.projectImg {
+				margin-bottom: 36px;
+				width: 100%;
+				height: 100%;
+				min-height: 344px;
+				background-position: center center;
+				background-repeat: no-repeat;
+				background-size: cover;
 
-        .columns:nth-of-type(even) {
-          padding: 0.5em 1em 0.5em 0.5em;
-        }
+				@include breakpoint(medium) {
+					min-height: 647px;
+				}
+			}
 
-      }
+			h3 {
+				margin-bottom: 36px;
+				font-size: rem-calc(18);
+				letter-spacing: 0.05px;
+				text-transform: capitalize;
+			}
 
-      @include breakpoint(large) {
+			p {
+				margin-bottom: 30px;
+			}
 
-        .columns:nth-of-type(odd) {
-          padding: 0.5em;
-        }
+			h4 {
+				font-size: rem-calc(12);
+				font-weight: 500;
+				letter-spacing: -0.05px;
+				text-transform: uppercase;
+			}
 
-        .columns:nth-of-type(even) {
-          padding: 0.5em;
-        }
+		}
 
-      }
-
-      .projectLink {
-        display: block;
-        position: relative;
-
-          h5 {
-            @include vendor-prefix(transition, opacity .25s ease-in-out);
-            opacity: 0;
-            position: absolute;
-            color: #FFFFFF;
-            top: 50%;
-            left: 0;
-            padding-left: 0;
-            width: 80%;
-            margin: 0 20px;
-            text-align: center;
-            transform: translateY(-50%);
-            z-index: 80;
-          }
-
-          .projectOverlay {
-            @include vendor-prefix(transition, background-color .25s ease-in-out);
-            position: absolute;
-            height: 100%;
-            width: 100%;
-            background-color: rgba(0,0,0,0);
-            z-index: 20;
-          }
-
-        &:active, &:focus, &:hover {
-
-          h5 {
-            opacity: 1;
-          }
-
-          .projectOverlay {
-            background-color: rgba(0,0,0,0.5);
-          }
-
-        }
-
-      }
-
-    }
-
-  }
+	}
 
 }
 

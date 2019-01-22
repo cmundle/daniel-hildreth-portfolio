@@ -1,5 +1,24 @@
 <header>
-  <!-- Mobile Main Nav -->
+	<nav id="topNav">
+		<div class="row align-justify align-middle">
+			<div class="small-6 medium-8 large-9 columns">
+				<a href="{{ site.baseurl}}/" aria-label="Home Link">Daniel</a>
+			</div>
+			<div class="small-6 columns show-for-small-only">
+				<button class="float-right" id="mainMenuButton" aria-label="Open main menu">
+					Menu
+				</button>
+			</div>
+			<div class="small-12 medium-4 large-3 columns">
+				<ul id="mainMenu" role="menu">
+					<li role="menuitem"><a href="{{ site.baseurl}}/about/">about</a></li>
+					<li role="menuitem"><a href="{{ site.baseurl}}/ideas/">ideas</a></li>
+					<li role="menuitem"><a href="{{ site.baseurl}}/contact/">contact</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+  {% comment %} <!-- Mobile Main Nav -->
   <div id="mobileNav" class="row align-middle show-for-small-only">
     <div class="small-6 columns">
       <div id="menu">Menu</div>
@@ -42,5 +61,5 @@
         </ul>
 			</div>
     </div>
-  </div>
+  </div> {% endcomment %}
 </header>

@@ -4,17 +4,10 @@ body_class: about
 title:  "About"
 ---
 
-I enjoy working within all mediums of design; from desktop websites to mobile screens,
-editorial pieces to branding. I’m best at being open minded about all possibilities,
-paying attention to every point/pixel, and figuring out direct solutions for all
-problems that life throws. I enjoy working with global brands and local businesses
-on large to small design projects, and I’m always ready to help out in any way.
-When I’m not designing and clicking away the day, you can find me snuggling with
-my cat or binging on the latest Netflix Original, or quite possibly both!
+I’m an experienced team leader and thrive collaborating with multi-disciplinary groups to solve complex problems and create intuitive experiences.
 
-If you want to work together or have any additional questions for me, I’d love
-to hear from you and to talk all things design.
+My skills include product design, interactive design, aesthetic art direction, prototyping, mobile design, branding, front-end development and team leadership. I’m interested in clean aesthetics, minimalism, unusual typography, photography and simplistic UX solutions.
 
+Previously at Agency Dominion and Concrete Design, now working at AZURE Magazine on a range of projects including digital campaigns, print layouts, email marketing, e-commerce solutions, marketing sites, interactive installations and brand development.
 
-Email: [daniel.john.hildreth@gmail.com](mailto:daniel.john.hildreth@gmail.com)<br/>
-Phone: [(647) 239-1652](tel:+16472391652)
+I’m always looking to collaborate on interesting projects with awesome people. Need a hand? I have two – email me.

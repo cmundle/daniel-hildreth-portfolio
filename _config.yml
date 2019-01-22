@@ -14,7 +14,7 @@ description: > # this means to ignore newlines until "baseurl:"
   discuss your next project.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://danielhildreth.com" # the base hostname & protocol for your site
-permalink: /journal/:title
+permalink: /ideas/:title
 timezone: America/Toronto
 fb_admins: https://www.facebook.com/dan.hildreth
 exclude: 
@@ -35,7 +35,7 @@ sass:
 collections:
   work:
     output: true
-    permalink: /work/:title
+    permalink: /:title
 
 # Defaults settings
 defaults:

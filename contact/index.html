@@ -4,63 +4,30 @@ body_class: contact
 title: "Contact"
 ---
 <div class="pageHeader">
-  <h2>Let's connect.</h2>
-  <div class="headerOverlay"></div>
+	<div class="pageHeaderContent">
+		<div class="row">
+			<div class="small-11 medium-9 medium-offset-1 large-9 large-offset-1 columns">
+				<h1>Let's connect.</h1>
+			</div>
+		</div>
+	</div>
+	<div class="headerOverlay"></div>
 </div>
+
 <div class="container">
 
-  <div class="row align-center">
-    <div class="small-12 medium-7 columns">
-      <h5>Contact Me</h5>
+  <div class="row">
+    <div class="small-12 medium-7 medium-offset-1 columns">
+      <h2>Have some questions or want to work together?</h2>
     </div>
-    <div class="small-12 medium-7 columns">
-      <h3>I'm more than happy to answer any questions you may have.</h3>
+    <div class="small-12 medium-7 medium-offset-1 columns">
+      <p>I’m happy to answer any questions you may have - want more design 
+				examples or further explanation on a project? Get in touch.</p>
     </div>
-    <div class="small-12 medium-7 columns">
-      <h6>Interested in seeing more design examples or learning more in depth about
-        a project? Let's chat all things design and go from there.</h6>
-    </div>
-    <div class="small-12 medium-7 columns">
-      <p>Email: <a href="mailto:daniel.john.hildreth@gmail.com">daniel.john.hildreth@gmail.com</a><br/>
-      Phone: <a href="tel:+16472391652">(647) 239-1652</a></p>
+    <div class="small-12 medium-7 medium-offset-1 columns">
+      <p>Email: <a href="mailto:daniel.john.hildreth@gmail.com" aria-label="Email Daniel">
+				daniel.john.hildreth@gmail.com</a><br/>
+      Phone: <a href="tel:+16472391652" aria-label="Call Daniel">(647) 239-1652</a></p>
     </div>
   </div>
-
-  <form method="post" action="https://formspree.io/daniel.john.hildreth@gmail.com" autocomplete="on" data-abide novalidate>
-    <div class="row align-center">
-      <div class="small-12 medium-7 columns">
-        <div data-abide-error class="alert callout" style="display: none;">
-          <p>Please double check the form below, looks like you may have missed something.</p>
-        </div>
-      </div>
-      <div class="small-12 medium-7 columns">
-        <h4>Get in Touch:</h4>
-      </div>
-      <div class="small-12 medium-7 columns">
-        <label for="fullName" class="show-for-sr">Full Name Reqiured</label>
-        <input type="text" name="Full Name" id="fullName" placeholder="Full Name" required pattern="[a-z]">
-        <span class="form-error">
-          Please let me know who I'm speaking too.
-        </span>
-      </div>
-      <div class="small-12 medium-7 columns">
-        <label for="emailAddress" class="show-for-sr">Email Reqiured</label>
-        <input type="text" name="Email" id="emailAddress" placeholder="Email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
-        <span class="form-error">
-          Prefered email address that I may reach you at.
-        </span>
-      </div>
-      <div class="small-12 medium-7 columns">
-        <label for="message" class="show-for-sr">Message Reqiured</label>
-        <textarea name="Message" id="message" placeholder="Message" wrap="hard" required></textarea>
-        <span class="form-error">
-          Let me know what you'd like to talk about.
-        </span>
-      </div>
-      <div class="small-12 medium-7 columns">
-        <input type="hidden" name="_next" value="/contact/thank-you.html" />
-        <input type="submit" value="Send">
-      </div>
-    </div>
-  </form>
 </div>

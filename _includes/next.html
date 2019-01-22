@@ -3,15 +3,15 @@
     <div class="small-12 medium-11 columns">
       {% case page.title %}
       {% when 'About' %}
-        <a href="{{ site.baseurl }}/work/">View My Work</a>
+        <a href="{{ site.baseurl }}/">View my Work</a>
       {% when 'Work' %}
-        <a href="{{ site.baseurl }}/journal/">View My Journal</a>
+        <a href="{{ site.baseurl }}/ideas/">View my Ideas</a>
       {% endcase %}
       {% case page.layout %}
       {% when 'project' or 'project-print' %}
-        <a href="{{ site.baseurl }}/work/">Go Back to Work</a>
+        <a href="{{ site.baseurl }}/">Go Back to Work</a>
       {% when 'post' %}
-        <a href="{{ site.baseurl }}/journal/">Go Back to Journal</a>
+        <a href="{{ site.baseurl }}/ideas/">Go Back to my Ideas</a>
       {% endcase %}
     </div>
   </div>

@@ -286,174 +286,60 @@ a {
 
 header {
 
-  #mobileNav {
-    padding: .625em;
-    height: 70px;
-    background-color: $navBackground;
-    font-family: $headingFont;
+	#topNav {
+		position: absolute;
+		top: 0;
+		left: 0;
+		margin-top: 15px;
+		width: 100%;
+		z-index: 20;
 
-    #menu {
-      color: #FFFFFF;
-      font-style: normal;
-      font-weight: 700;
-      text-transform: uppercase;
-    }
+		@include breakpoint(medium) {
+			margin-top: 38px;
+		}
 
-    #social {
-      @extend #menu;
-      color: #3D3D3D;
-      text-align: right;
-    }
+		&.fixed {
+			position: fixed;
 
-    #menuOverlay {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      margin: 0;
-      padding: 0.5em 0;
-      width: 100%;
-      height: 100vh;
-      overflow: hidden;
-      z-index: 10;
-      background-color: $navBackground;
+			#mainMenuButton,
+			#mainMenu li a {
+				color: #000000;
+			}
+		}
 
-      li {
-        list-style: none;
-        text-align: left;
-        padding: 1em;
+		#mainMenuButton,
+		#mainMenu li a {
+			color: #FFFFFF;
+			font-family: $headingFont;
+			font-size: rem-calc(14);
+			font-weight: 500;
+			letter-spacing: 0.05px;
+			text-align: right;
+			text-transform: lowercase;
+		}
 
-        @media screen and (max-width: 40em) and (orientation: landscape) {
-          padding: 0.75em;
-        }
+		#mainMenu {
+			margin: 0px;
+			display: flex;
+			justify-content: space-between;
+			list-style: none;
 
-        .closeButton {
-          color: #3D3D3D;
-          font-size: 3em;
-          line-height: 1;
-          cursor: pointer;
-        }
+			@include breakpoint(small only) {
+				display: none;
 
-        a {
-          color: #FFFFFF;
-          text-decoration: none;
-        }
+				&.open {
+					display: flex;
+					flex-direction: column;
+					align-items: flex-end;
 
-        &:first-of-type {
-          padding: 0;
-          text-align: center;
-        }
-
-      }
-
-      &.open {
-        display: block;
-      }
-
-    }
-
-    #socialOverlay {
-      @extend #menuOverlay;
-
-      li {
-        text-align: right;
-      }
-
-    }
-
-  }
-
-  .top-bar {
-    position: relative;
-    background-color: $navBackground;
-    z-index: 9999;
-
-    &.stick {
-      position: fixed;
-      top: 0;
-      width: 100%;
-    }
-
-    #responsive-menu {
-
-      .menu {
-
-        & .active {
-          a {
-            color: $navTextActive;
-            background-color: transparent;
-          }
-        }
-
-      }
-
-      div[class*="top-bar"] {
-
-        ul {
-          background-color: transparent;
-
-          li {
-
-            a {
-              padding: 0.75rem 0.75rem 0.9em 1em;
-              font-size: .75em;
-              font-weight: 700;
-              letter-spacing: 0.03em;
-              @include vendor-prefix(transition, color .1s ease);
-
-              &:hover {
-                color: $navTextHover;
-              }
-
-            }
-
-          }
-
-        }
-
-      }
-
-      .top-bar-left {
-
-        ul {
-
-          li {
-
-            a {
-              color: $navText;
-            }
-
-          }
-
-        }
-
-      }
-
-      .top-bar-right {
-        display: none;
-
-        ul {
-
-          li {
-
-            a {
-              color: $navRightText;
-            }
-
-          }
-
-        }
-
-        @include breakpoint(large) {
-          display: block;
-        }
-
-      }
-
-    }
-
-  }
-
+					li {
+						padding: 19px 0px;
+					}
+				}
+			}
+		}
+	}
+	
 }
 
 // Page Header and Overlay
@@ -482,23 +368,23 @@ header {
 	.pageHeaderContent {
 		position: absolute;
 		left: 50%;
-		bottom: rem-calc(68);
+		bottom: 0;
 		z-index: 20;
     transform: translateX(-50%);
 		width: 100%;
-		
+
+		@include breakpoint(medium) {
+			bottom: rem-calc(68);
+		}
+
 		.row {
 			align-items: flex-end;
 		}
+
 	}
 
-  h1 {
+  h1, h2 {
     color: $colorPageHeader;
-  }
-
-  h2 {
-		color: $colorPageHeader;
-		text-align: right;
   }
 
   .headerOverlay {
@@ -532,46 +418,40 @@ header {
 
 }
 
-// Multiple Columns
-.multiColumns {
-  padding-left: .9375rem;
-  padding-right: .9375rem;
-
-  @include breakpoint(medium) {
-    display: flex;
-    align-content: center;
-    padding: 0;
-    @include vendor-prefix(column-count, 2);
-
-    p:first-child {
-      padding-left: .9375rem;
-      padding-right: .9375rem;
-    }
-
-  }
-}
-
 /* === Home - index.html === */
 .home {
 
   .pageHeader {
-    height: 65vh;
+    height: 85vh;
 		background-image: url('../img/homeHeader.JPG');
 		
 		h1 {
-			font-size: 3rem;
+			margin: 0px 0px 28px 0px;
+			font-size: rem-calc(28);
 			letter-spacing: -0.05px;
-			line-height: 58px;
+			line-height: rem-calc(32);
+
+			@include breakpoint(medium) {
+				margin: 0px;
+				font-size: 3rem;
+				line-height: 58px;
+			}
 		}
 
 		h2 {
+			margin: 0px 0px 32px 0px;
 			font-size: 1.25rem;
 			font-weight: 500;
 			letter-spacing: 0.05px;
+
+			@include breakpoint(medium) {
+				margin: 0px;
+				text-align: right;
+			}
 		}
 
     .headerOverlay {
-      height: 65vh;
+      height: 85vh;
     }
 
     @include breakpoint(medium) {
@@ -677,50 +557,44 @@ header {
 
   .pageHeader {
     @extend .pageHeader;
-    height: 65vh;
+		min-height: 250px;
+		max-height: 250px;
     background-image: url('../img/aboutHeader.jpg');
 
+		.pageHeaderContent {
+			@include breakpoint(small only) {
+				bottom: 30px;
+			}
+		}
+
+		.pageHeaderContent h1 {
+			margin: 0px;
+			font-size: rem-calc(28);
+			line-height: 32px;
+
+			@include breakpoint(medium) {
+				font-size: rem-calc(48);
+				line-height: 58px;
+			}
+		}
+
     .headerOverlay {
-      height: 65vh;
+			height: 100%;
+			min-height: 250px;
+			max-height: 250px; 
     }
 
     @include breakpoint(medium) {
-      height: 65vh;
-      min-height: 350px;
+      height: 40vh;
+			min-height: 378px;
 
       .headerOverlay {
-        height: 65vh;
-        min-height: 65vh;
-        min-height: 350px;
+        height: 40vh;
+				min-height: 378px;
       }
 
     }
 
-    @include breakpoint(large) {
-      height: 65vh;
-
-      .headerOverlay {
-        height: 65vh;
-      }
-
-    }
-
-    @include breakpoint(large) {
-      height: 85vh;
-
-      .headerOverlay {
-        height: 85vh;
-      }
-
-    }
-
-  }
-
-  @include breakpoint(medium) {
-    .column, .columns {
-      padding-left: 6px;
-      padding-right: 6px;
-    }
   }
 
   #aboutMe {
@@ -730,7 +604,29 @@ header {
     #experience {
       @include breakpoint(small only) {
         margin-top: 1em;
-      }
+			}
+			
+			h2 {
+				margin: 0px 0px 24px 0px;
+				font-size: rem-calc(18);
+			}
+
+			h3 {
+				margin: 0px 0px 10px 0px;
+				color: $colorDarkGrey;
+				font-size: rem-calc(12);
+				text-transform: uppercase;
+			}
+
+			p {
+				margin: 0px 0px 20px 0px;
+				font-size: rem-calc(18);
+
+				a {
+					font-style: normal;
+				}
+			}
+
     }
 
   }

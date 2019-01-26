@@ -2,7 +2,9 @@
 	<nav id="topNav">
 		<div class="row align-justify align-middle">
 			<div class="small-6 medium-8 large-9 columns">
-				<a href="{{ site.baseurl}}/" aria-label="Home Link">Daniel</a>
+				<a href="{{ site.baseurl}}/" aria-label="Home Link">
+					<div id="signature" aria-label="Daniel Hildreth"></div>
+				</a>
 			</div>
 			<div class="small-6 columns show-for-small-only">
 				<button class="float-right" id="mainMenuButton" aria-label="Open main menu">
@@ -11,55 +13,17 @@
 			</div>
 			<div class="small-12 medium-4 large-3 columns">
 				<ul id="mainMenu" role="menu">
-					<li role="menuitem"><a href="{{ site.baseurl}}/about/">about</a></li>
-					<li role="menuitem"><a href="{{ site.baseurl}}/ideas/">ideas</a></li>
-					<li role="menuitem"><a href="{{ site.baseurl}}/contact/">contact</a></li>
+					<li role="menuitem">
+						<a href="{{ site.baseurl}}/about/">about</a>
+					</li>
+					<li role="menuitem">
+						<a href="{{ site.baseurl}}/ideas/">ideas</a>
+					</li>
+					<li role="menuitem">
+						<a href="{{ site.baseurl}}/contact/">contact</a>
+					</li>
 				</ul>
 			</div>
 		</div>
 	</nav>
-  {% comment %} <!-- Mobile Main Nav -->
-  <div id="mobileNav" class="row align-middle show-for-small-only">
-    <div class="small-6 columns">
-      <div id="menu">Menu</div>
-    </div>
-    <ul id="menuOverlay">
-      <li>
-        <button class="closeButton" aria-label="Close Menu" type="button">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </li>
-      <li><a href="{{ site.baseurl}}/" aria-label="Home Link">Daniel</a></li>
-      <li><a href="{{ site.baseurl}}/about/">about</a></li>
-      <li><a href="{{ site.baseurl}}/journal/">ideas</a></li>
-      <li><a href="{{ site.baseurl}}/contact/">contact</a></li>
-    </ul>
-  </div>
-
-  <!-- Desktop Nav -->
-  <div id="stickyAnchor"></div>
-  <div class="top-bar show-for-medium">
-    <div id="responsive-menu">
-      <div class="top-bar-left">
-        <ul class="dropdown menu" data-dropdown-menu>
-          <li {% if page.url == '/' %} class="active"{% endif %}>
-						<a href="{{ site.baseurl}}/" aria-label="Home Link">Daniel</a>
-					</li>
-        </ul>
-      </div>
-			<div class="top-bar-right">
-				<ul class="dropdown menu" data-dropdown-menu>
-          <li {% if page.url == '/about/' %} class="active"{% endif %}>
-						<a href="{{ site.baseurl}}/about/">about</a>
-					</li>
-          <li {% if page.url contains '/journal/' %} class="active"{% endif %}>
-						<a href="{{ site.baseurl }}/journal/">ideas</a>
-					</li>
-          <li {% if page.url == '/contact/' %} class="active"{% endif %}>
-						<a href="{{ site.baseurl }}/contact/">contact</a>
-					</li>
-        </ul>
-			</div>
-    </div>
-  </div> {% endcomment %}
 </header>

@@ -301,10 +301,24 @@ header {
 		&.fixed {
 			position: fixed;
 
+			#signature {
+				background-image: url('../img/signature/black.svg');
+			}
+
 			#mainMenuButton,
 			#mainMenu li a {
 				color: #000000;
 			}
+
+		}
+
+		#signature {
+			height: 48px;
+			background-image: url('../img/signature/white.svg');
+			background-origin: content-box;
+			background-position: left center;
+			background-repeat: no-repeat;
+			background-size: contain;
 		}
 
 		#mainMenuButton,

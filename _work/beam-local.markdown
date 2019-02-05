@@ -4,7 +4,6 @@ title:  "Beam Local"
 categories: portfolio
 featured_image: beam-local-website-featured.jpg
 header_image: beamLocalHeader.jpg
-sub_title: "Be a better business."
 role: "Design Lead at Beam Local"
 type: "UI/UX"
 year: "2016"

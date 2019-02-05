@@ -4,7 +4,6 @@ title:  "Drawing Room Restaurant"
 categories: portfolio
 featured_image: drawing-room-restaurant-website-featured.jpg
 header_image: drawingRoomRestaurantHeader.jpg
-sub_title: "Consciously refined, lighthearted, and chic."
 role: "Design Lead at Agency Dominion"
 type: "UI/UX"
 year: "2015"

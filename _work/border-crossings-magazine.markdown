@@ -4,7 +4,6 @@ title:  "Border Crossings Magazine Redesign"
 categories: portfolio
 featured_image: border-crossings-magazine-featured.jpg
 header_image: borderCrossingsMagazineHeader.jpg
-sub_title: "Redesigning Border Crossings Magazine."
 role:
 type: "School Project"
 year: "2014"

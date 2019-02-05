@@ -4,7 +4,6 @@ title:  "Jump Restaurant"
 categories: portfolio
 featured_image: jump-restaurant-website-featured.jpg
 header_image: jumpRestaurantHeader.jpg
-sub_title: "Nothing short of a phenomenon"
 role: "Design Lead at Agency Dominion"
 type: "UI/UX"
 year: "2016"

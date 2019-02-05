@@ -4,7 +4,6 @@ title:  "Canoe Restaurant"
 categories: portfolio
 featured_image: canoe-restaurant-website-featured.jpg
 header_image: canoeRestaurantHeader.jpg
-sub_title: "Critically acclaimed to be one of Canada's Best Restaurants"
 role: "Design Lead at Agency Dominion"
 type: "UI/UX"
 year: "2016"

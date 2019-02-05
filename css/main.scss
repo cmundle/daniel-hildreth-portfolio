@@ -24,7 +24,7 @@ sitemap:
 
 /* === Variables === */
 $colorCopy: #000000;
-$colorHeading: #262626;
+$colorHeading: #000000;
 $colorAccent: #F3F4F8;
 $colorSub: #999999;
 $colorTitleHeading: #4F4F4F;
@@ -45,7 +45,7 @@ $colorSectionBackground: #FFFFFF;
 $headingFont: 'Montserrat', sans-serif;
 $bodyFont: Georgia, Times, "Times New Roman", serif;
 
-/* === Minxins === */
+/* === Mixins === */
 
 // Vendor Prefixes
 @mixin vendor-prefix($property, $value) {
@@ -105,70 +105,70 @@ h1, h2, h3 {
 }
 
 h1 {
-  font-size: 2.25em;
+  font-size: 2.25rem;
   line-height: 1.166666em;
 
   @include breakpoint(medium) {
-    font-size: 2.75em;
+    font-size: 2.75rem;
     line-height: 1.3em;
   }
 
   @include breakpoint(large) {
-    font-size: 3.15em;
+    font-size: 3.15rem;
     line-height: 1.2em;
   }
 
   @include breakpoint(xlarge) {
-    font-size: 3.625em;
+    font-size: 3.625rem;
     line-height: 1.2em;
   }
 }
 
 h2 {
-  font-size: 1.75em;
+  font-size: 1.75rem;
   line-height: 1.25em;
   margin-bottom: 1.5em;
   margin-top: .75em;
 
   @include breakpoint(medium) {
-    font-size: 2em;
+    font-size: 2rem;
     margin-bottom: 1em;
     margin-top: 0.6em;
   }
 
   @include breakpoint(large) {
-    font-size: 2.25em;
+    font-size: 2.25rem;
     margin-bottom: 1em;
     margin-top: 0.6em;
   }
 
   @include breakpoint(xlarge) {
-    font-size: 3em;
+    font-size: 3rem;
     margin-bottom: 1em;
     margin-top: 0.5em;
   }
 }
 
 h3 {
-  font-size: 1.5em;
+  font-size: 1.5rem;
   line-height: 1.25;
   margin-bottom: 1.5em;
   margin-top: .75em;
 
   @include breakpoint(medium) {
-    font-size: 1.75em;
+    font-size: 1.75rem;
     margin-top: 0.75em;
     margin-bottom: 1.3em;
   }
 
   @include breakpoint(large) {
-    font-size: 2em;
+    font-size: 2rem;
     margin-top: 0.8em;
     margin-bottom: 1.25em;
   }
 
   @include breakpoint(xlarge) {
-    font-size: 2.25em;
+    font-size: 2.25rem;
     line-height: 1.166666;
     margin-bottom: 1.5em;
     margin-top: 0.75em;
@@ -180,11 +180,11 @@ h4 {
   margin-bottom: 0.75em;
   font-style: normal;
   font-weight: 400;
-  font-size: 1.125em;
+  font-size: 1.125rem;
   color: $colorDarkGrey;
 
   a {
-    color: #262626;
+    color: #000000;
     text-transform: inherit;
 
     &:hover,
@@ -195,7 +195,7 @@ h4 {
 
     &:focus,
     &:visited {
-      color: #262626;
+      color: #000000;
       text-decoration: none;
     }
   }
@@ -206,7 +206,7 @@ h5 {
   margin-bottom: 0.15em;
   font-style: normal;
   font-weight: 700;
-  font-size: 0.75em;
+  font-size: 0.75rem;
   color: $colorSub;
   text-transform: uppercase;
   letter-spacing: 0.03em;
@@ -217,7 +217,7 @@ h6 {
   margin-bottom: 0.8em;
   font-style: normal;
   font-weight: 300;
-  font-size: 1.125em;
+  font-size: 1.125rem;
   color: $colorTitleHeading;
 
   a {
@@ -240,9 +240,13 @@ h6 {
 }
 
 p {
-  font-size: 1em;
+  font-size: 1rem;
   line-height: 1.5;
-  margin-bottom: 0.6em;
+	margin-bottom: 0.6em;
+	
+	&.intro-paragraph {
+		font-size: rem-calc(18);
+	}
 
   a {
     font-style: italic;
@@ -796,7 +800,7 @@ header {
 
 }
 
-/* === Journal - journal/index.html === */
+/* === Journal - ideas/index.html === */
 .journal {
 
   .pageHeader {
@@ -833,17 +837,19 @@ header {
 
       }
 
-      a {
-        @extend h4;
-        color: #262626;
+			a,
+			h2 {
+				margin-top: 0px; 
+				color: #000000;
+        font-size: rem-calc(18);
         text-transform: none;
-      }
-
-      time {
-        @extend h5;
-        display: block;
-        margin: 0.5em 0 1em;
-      }
+			}
+			
+			p {
+				margin-bottom: 0px;
+				font-family: $bodyFont;
+				
+			}
 
     }
 
@@ -871,14 +877,19 @@ body.post {
 
     @include breakpoint(large) {
       padding-top: 6.25em;
-    }
+		}
+		
+		h2 {
+			font-family: $bodyFont;
+			font-size: rem-calc(18);
+			
+		}
   }
 
   .postContent {
     @include sectionBlock;
 
     .postImg {
-      @include flex-grid-column(12);
       margin: 4.5em 0 2.5em;
       text-align: center;
 
@@ -888,20 +899,22 @@ body.post {
 
     }
 
-    h4 {
+		h4,
+		h4 a {
       @include flex-grid-column(12);
-      color: #262626;
+      color: #000000;
       font-family: $headingFont;
-      font-weight: normal;
+      font-weight: 700;
       text-align: center;
     }
 
-    h5 {
+		h5,
+		h5 a {
       @include flex-grid-column(12);
       margin: 1.5em 0 0.75em 0;
-      color: #262626;
+      color: #000000;
       font-family: $headingFont;
-      font-weight: normal;
+      font-weight: 700;
       text-align: center;
 
       @include breakpoint(medium) {
@@ -914,11 +927,13 @@ body.post {
       @include flex-grid-column(12);
 
       @include breakpoint(medium) {
-        @include flex-grid-column(8);
+				@include flex-grid-column(8);
+				margin: 0 auto;
       }
 
       @include breakpoint(large) {
-        @include flex-grid-column(6);
+				@include flex-grid-column(6);
+				margin: 0 auto;
       }
 
     }
@@ -929,7 +944,15 @@ body.post {
       font-size: 0.75em;
       font-weight: normal;
       list-style-type: none;
-      text-align: center;
+			text-align: center;
+			
+			li,
+			li a {
+				color: #676767;
+				font-family: $bodyFont;
+				font-size: rem-calc(16);
+				font-style: italic;
+			}
     }
 
   }
@@ -977,7 +1000,7 @@ body.post {
   }
 
   .container {
-    @include sectionBlock;
+		@include sectionBlock;
 
     form {
       margin-top: 2em;

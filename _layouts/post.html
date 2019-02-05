@@ -15,15 +15,16 @@ layout: default
 	</div>
 
   <div id="postSubTitle" class="row">
-    <div class="small-12 medium-7 medium-offset-2 large-6 large-offset-2 columns">
-      {% if page.sub_title %}<h3>{{ page.sub_title }}</h3>{% endif %}
+    <div class="small-12 medium-7 medium-offset-1 columns">
+      {% if page.sub_title %}<h2>{{ page.sub_title }}</h2>{% endif %}
       {% if page.excerpt %}<p>{{ page.excerpt }}</p>{% endif %}
-      <h5><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">Posted On {{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %}, By <span itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</h5>
     </div>
   </div>
 
   <div class="row align-center postContent" itemprop="articleBody">
-    {{ content }}
+		<div class="small-12 medium-10 columns">
+			{{ content }}
+		</div>
   </div>
 
 </article>

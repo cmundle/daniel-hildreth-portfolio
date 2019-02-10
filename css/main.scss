@@ -314,7 +314,20 @@ header {
 				color: #000000;
 			}
 
-		}
+    }
+    
+    &.fixed.white {
+
+			#signature {
+				background-image: url('../img/signature/white.svg');
+			}
+
+      #mainMenuButton,
+			#mainMenu li a {
+				color: #FFFFFF;
+      }
+      
+    }
 
 		#signature {
 			height: 48px;
@@ -340,7 +353,7 @@ header {
 			margin: 0px;
 			display: flex;
 			justify-content: space-between;
-			list-style: none;
+      list-style: none;
 
 			@include breakpoint(small only) {
 				display: none;
@@ -355,7 +368,16 @@ header {
 					}
 				}
 			}
-		}
+    }
+    
+    #mainMenu #projectsLink {
+      position: absolute;
+      left: 10px;
+
+      @include breakpoint(medium up) {
+        display: none;
+      }
+    }
 	}
 	
 }

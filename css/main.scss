@@ -406,11 +406,11 @@ header {
   }
 
   @include breakpoint(large) {
-    height: 30vh;
+    height: 400px;
   }
 
   @include breakpoint(xlarge) {
-    height: 350px;
+    height: 400px;
 	}
 	
 	.pageHeaderContent {
@@ -455,11 +455,11 @@ header {
     }
 
     @include breakpoint(large) {
-      height: 30vh;
+      height: 400px;
     }
 
     @include breakpoint(xlarge) {
-      height: 350px;
+      height: 400px;
     }
 
   }
@@ -1109,6 +1109,14 @@ body.post {
   }
 
 }
+
+.about .pageHeader, 
+.portfolio .pageHeader,
+.journal .pageHeader, 
+.contact .pageHeader {
+  background-position: bottom;
+}
+
 
 /* === Next Page - _includes/next.html === */
 #next {

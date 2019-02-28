@@ -12,14 +12,4 @@ visit: https://www.drawingroomrestaurant.com/
 image_desktop: drawing-room-restaurant-website-home.jpg
 image_mobile: drawing-room-restaurant-website-mobile.jpg
 ---
-
-This was my first restaurant website after completing a month's worth of research
-(on and off) along side the team at Agency Dominion. We collected information about
-must-haves, trends, do's and don't's, hierarchy, what customers need, what they
-want to see, what is important to them and also, how to showcase all of the above.
-It was a fun process, and an important one.
-
-With the Drawing Room, we really wanted to showcase the local art and uniqueness
-of their restaurant. To do so content was carded, joining together where needed,
-but floating on top of art. The art helps to push the depth and scale of the site,
-as well as convey the message of the Drawing Room.
+Art direction, UX & UI design for Everpress, a new fashion start-up that allows you to create and crowd-fund, custom apparel. I designed the product from the ground up to be an intuitive, simple experience.

@@ -19,6 +19,7 @@ image_seven:
 image_eight:
 image_nine:
 image_ten:
+private: true
 ---
 
 During my final year of schooling at Durham College, one of my portfolio projects

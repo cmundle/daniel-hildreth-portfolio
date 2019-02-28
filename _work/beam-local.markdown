@@ -11,6 +11,7 @@ skills: "Design, Branding, Project Management"
 visit: https://www.beamlocal.com/
 image_desktop: beam-local-website-home.jpg
 image_mobile: beam-local-website-mobile.jpg
+private: true
 ---
 
 Taking a company which you work for and redesigning their website in it's entirety,

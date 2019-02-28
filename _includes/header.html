@@ -2,9 +2,16 @@
 	<nav id="topNav" aria-label="Primary Navigation">
 		<div class="row align-justify align-middle">
 			<div class="small-6 medium-8 large-9 columns">
-				<a href="{{ site.baseurl}}/" aria-label="Home Link">
-					<div id="signature" aria-label="Daniel Hildreth"></div>
-				</a>
+				{% if page.url =='/' %}
+					<a href="{{ site.baseurl}}/" aria-label="Home Link">
+						<div id="signature" aria-label="Daniel Hildreth"></div>
+					</a>
+				{% endif %}
+				{% unless page.url =='/' %}
+					<a href="{{ site.baseurl}}/" id="projectsLink">
+						back to projects
+					</a>
+				{% endunless %}
 			</div>
 			<div class="small-6 columns show-for-small-only">
 				<button class="float-right" id="mainMenuButton" aria-label="Open main menu">
@@ -13,11 +20,6 @@
 			</div>
 			<div class="small-12 medium-4 large-3 columns">
 				<ul id="mainMenu" role="menu">
-					{% unless page.url =='/' %}
-						<li role="menuitem" id="projectsLink">
-							<a href="{{ site.baseurl}}/">projects</a>
-						</li>
-					{% endunless %}
 					<li role="menuitem">
 						<a href="{{ site.baseurl}}/about/">about</a>
 					</li>

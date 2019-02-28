@@ -20,9 +20,7 @@ function isHeaderVisible() {
 	var header = document.getElementById('pageHeader');
 
 	if (isVisible(header)){
-		nav.classList.add('white');
-	} else {
-		nav.classList.remove('white');
+		nav.classList.remove('fixed');
 	}
 }
 

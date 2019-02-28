@@ -311,30 +311,18 @@ header {
 		}
 
 		&.fixed {
-			position: fixed;
+      position: fixed;
+      margin-top: 0px;
+      padding: 8px 0px;
+      background-color: #000000;
 
-			#signature {
-				background-image: url('../img/signature/black.svg');
-			}
-
-			#mainMenuButton,
-			#mainMenu li a {
-				color: #000000;
-			}
-
-    }
-    
-    &.fixed.white {
-
-			#signature {
-				background-image: url('../img/signature/white.svg');
-			}
-
-      #mainMenuButton,
-			#mainMenu li a {
-				color: #FFFFFF;
+      @include breakpoint(medium) {
+        height: 50px;
       }
-      
+
+      #signature {
+        height: 28px;
+      }
     }
 
 		#signature {
@@ -344,7 +332,16 @@ header {
 			background-position: left center;
 			background-repeat: no-repeat;
 			background-size: contain;
-		}
+    }
+    
+    #projectsLink {
+      color: #FFFFFF;
+			font-family: $headingFont;
+			font-size: rem-calc(14);
+			font-weight: 500;
+			letter-spacing: 0.05px;
+			text-transform: lowercase;
+    }
 
 		#mainMenuButton,
 		#mainMenu li a {
@@ -377,15 +374,7 @@ header {
 				}
 			}
     }
-    
-    #mainMenu #projectsLink {
-      position: absolute;
-      left: 10px;
 
-      @include breakpoint(medium up) {
-        display: none;
-      }
-    }
 	}
 	
 }
@@ -433,6 +422,7 @@ header {
 
   h1, h2 {
     color: $colorPageHeader;
+    letter-spacing: -0.5px;
   }
 
   .headerOverlay {

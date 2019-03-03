@@ -20,75 +20,77 @@ layout: default
     </div>
     <div id="projectInfo" class="small-12 medium-4 large-3 large-offset-1 columns">
       {% if page.role %}
-        <h5>Role</h5>
-        <h6>{{ page.role }}</h6>
+        <span class="projectInfoHeading">Role</span>
+        <span class="projectInfoItem">{{ page.role }}</span>
       {% endif %}
       {% if page.type %}
-        <h5>Type</h5>
-        <h6>{{ page.type }}</h6>
+        <span class="projectInfoHeading">Type</span>
+        <span class="projectInfoItem">{{ page.type }}</span>
       {% endif %}
       {% if page.year %}
-        <h5>Year</h5>
-        <h6>{{ page.year }}</h6>
+        <span class="projectInfoHeading">Year</span>
+        <span class="projectInfoItem">{{ page.year }}</span>
       {% endif %}
       {% if page.skills %}
-        <h5>Skills</h5>
-        <h6>{{ page.skills }}</h6>
+        <span class="projectInfoHeading">Skills</span>
+        <span class="projectInfoItem">{{ page.skills }}</span>
       {% endif %}
       {% if page.visit %}
-        <h5>Visit</h5>
-        <h6><a href="{{ page.visit }}" target="_blank">{{ page.title }}</a></h6>
+        <span class="projectInfoHeading">Visit</span>
+        <span class="projectInfoItem">
+          <a href="{{ page.visit }}" target="_blank">{{ page.title }}</a>
+        </span>
       {% endif %}
     </div>
   </div>
 
   <div class="row align-center projectContent">
     <div class="small-12 medium-10 columns">
-        <img class="projectImg" src="{{ site.baseurl }}/img/work/{{ page.image_one }}">
+        <img class="projectImg" src="{{ site.baseurl }}/img/work/{{ page.image_one }}" alt="">
     </div>
     {% if page.image_two %}
       <div class="small-12 medium-10 columns">
-          <img class="projectImg" src="{{ site.baseurl }}/img/work/{{ page.image_two }}">
+          <img class="projectImg" src="{{ site.baseurl }}/img/work/{{ page.image_two }}" alt="">
       </div>
     {% endif %}
     {% if page.image_three %}
       <div class="small-12 medium-10 columns">
-          <img class="projectImg" src="{{ site.baseurl }}/img/work/{{ page.image_three }}">
+          <img class="projectImg" src="{{ site.baseurl }}/img/work/{{ page.image_three }}" alt="">
       </div>
     {% endif %}
     {% if page.image_four %}
       <div class="small-12 medium-10 columns">
-          <img class="projectImg" src="{{ site.baseurl }}/img/work/{{ page.image_four }}">
+          <img class="projectImg" src="{{ site.baseurl }}/img/work/{{ page.image_four }}" alt="">
       </div>
     {% endif %}
     {% if page.image_five %}
       <div class="small-12 medium-10 columns">
-          <img class="projectImg" src="{{ site.baseurl }}/img/work/{{ page.image_five }}">
+          <img class="projectImg" src="{{ site.baseurl }}/img/work/{{ page.image_five }}" alt="">
       </div>
     {% endif %}
     {% if page.image_six %}
       <div class="small-12 medium-10 columns">
-          <img class="projectImg" src="{{ site.baseurl }}/img/work/{{ page.image_six }}">
+          <img class="projectImg" src="{{ site.baseurl }}/img/work/{{ page.image_six }}" alt="">
       </div>
     {% endif %}
     {% if page.image_seven %}
       <div class="small-12 medium-10 columns">
-          <img class="projectImg" src="{{ site.baseurl }}/img/work/{{ page.image_seven }}">
+          <img class="projectImg" src="{{ site.baseurl }}/img/work/{{ page.image_seven }}" alt="">
       </div>
     {% endif %}
     {% if page.image_eight %}
       <div class="small-12 medium-10 columns">
-          <img class="projectImg" src="{{ site.baseurl }}/img/work/{{ page.image_eight }}">
+          <img class="projectImg" src="{{ site.baseurl }}/img/work/{{ page.image_eight }}" alt="">
       </div>
     {% endif %}
     {% if page.image_nine %}
       <div class="small-12 medium-10 columns">
-          <img class="projectImg" src="{{ site.baseurl }}/img/work/{{ page.image_nine }}">
+          <img class="projectImg" src="{{ site.baseurl }}/img/work/{{ page.image_nine }}" alt="">
       </div>
     {% endif %}
     {% if page.image_ten %}
       <div class="small-12 medium-10 columns">
-          <img class="projectImg" src="{{ site.baseurl }}/img/work/{{ page.image_ten }}">
+          <img class="projectImg" src="{{ site.baseurl }}/img/work/{{ page.image_ten }}" alt="">
       </div>
     {% endif %}
   </div>

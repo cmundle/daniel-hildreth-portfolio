@@ -834,6 +834,40 @@ header {
       padding-bottom: 6.25em;
     }
 
+    #projectInfo {
+
+      span {
+        display: block;
+      }
+
+      .projectInfoHeading {
+        margin-bottom: 0.15em;
+        color: #999;
+        font-family: $headingFont;
+        font-size: 0.75rem;
+        font-style: normal;
+        font-weight: 700;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+      }
+
+      .projectInfoItem {
+        margin-bottom: 0.8em;
+        color: #4F4F4F;
+        font-family: $bodyFont;
+        font-size: 1.125rem;
+        font-style: normal;
+        font-weight: 300;
+
+        a {
+          color: #4F4F4F;
+          font-family: $bodyFont;
+          text-transform: capitalize;
+        }
+      }
+
+    }
+
     .projectImg {
       text-align: center;
     }
@@ -886,7 +920,7 @@ header {
         font-size: rem-calc(18);
         text-transform: none;
 			}
-			
+
 			p {
 				margin-bottom: 0px;
 				font-family: $bodyFont;
@@ -939,6 +973,16 @@ body.post {
         margin-top: 0;
       }
 
+    }
+
+    h3,
+    h3 a {
+      @include flex-grid-column(12);
+      color: #000000;
+      font-family: $headingFont;
+      font-size: rem-calc(18);
+      font-weight: 700;
+      text-align: center;
     }
 
 		h4,

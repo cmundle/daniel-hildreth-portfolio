@@ -39,7 +39,7 @@ $altHeaderOverlay: #272727;
 $colorFooter: #000000;
 $colorFooterHeading: #BABABA;
 $colorFooterLinks: #999999;
-$colorFooterCredit: #999999;
+$colorFooterCredit: #676767;
 $colorPageHeader: #FFFFFF;
 $colorSectionBackground: #FFFFFF;
 $headingFont: 'Montserrat', sans-serif;
@@ -101,7 +101,7 @@ h1,
 h2 {
   font-family: $headingFont;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 600;
   color: $colorHeading;
 }
 
@@ -320,16 +320,16 @@ header {
       background-color: #000000;
 
       @include breakpoint(medium) {
-        height: 50px;
+        height: 45px;
       }
 
       #signature {
-        height: 28px;
+        height: 25px;
       }
     }
 
 		#signature {
-			height: 34px;
+			height: 30px;
 			background-image: url('../img/signature/white.svg');
 			background-origin: content-box;
 			background-position: left center;
@@ -386,23 +386,27 @@ header {
 .pageHeader {
   position: relative;
   top: 0px;
-  height: 45vh;
+	height: 100%;
+	min-height: 250px;
+	max-height: 250px;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   @include vendor-prefix(filter, grayscale(1));
 
   @include breakpoint(medium) {
-    height: 30vh;
-    min-height: 250px;
+		min-height: 378px;
+		max-height: 378px;
   }
 
   @include breakpoint(large) {
-    height: 400px;
+		min-height: 400px;
+		max-height: 400px;
   }
 
   @include breakpoint(xlarge) {
-    height: 400px;
+		min-height: 400px;
+		max-height: 400px;
 	}
 	
 	.pageHeaderContent {
@@ -423,6 +427,17 @@ header {
 
 	}
 
+	.pageHeaderContent h1 {
+		margin: 0px;
+		font-size: rem-calc(28);
+		line-height: 32px;
+
+		@include breakpoint(medium) {
+			font-size: rem-calc(48);
+			line-height: 58px;
+		}
+	}
+
   h1, h2 {
     color: $colorPageHeader;
     letter-spacing: -0.5px;
@@ -430,29 +445,28 @@ header {
 
   .headerOverlay {
     z-index: 10;
-    height: 45vh;
+		height: 100%;
+		min-height: 250px;
+		max-height: 250px; 
     width: 100%;
     position: absolute;
     top: 0px;
     left: 0;
-    background-color: $headerOverlay;
-
+		background-color: $headerOverlay;
+		
     @include breakpoint(medium) {
-      min-height: 250px;
-      height: 30vh;
-
-      &.stick {
-        top: 0;
-      }
-
+			min-height: 378px;
+			max-height: 378px;
     }
 
     @include breakpoint(large) {
-      height: 400px;
+			min-height: 400px;
+			max-height: 400px;
     }
 
     @include breakpoint(xlarge) {
-      height: 400px;
+			min-height: 400px;
+			max-height: 400px;
     }
 
   }
@@ -463,7 +477,8 @@ header {
 .home {
 
   .pageHeader {
-    height: 85vh;
+		min-height: 500px;
+		max-height: 500px;
 		background-image: url('../img/homeHeader.JPG');
 		
 		h1 {
@@ -481,7 +496,7 @@ header {
 
 		h2 {
 			margin: 0px 0px 32px 0px;
-			font-size: 1.25rem;
+			font-size: 1.125rem;
 			font-weight: 500;
 			letter-spacing: 0.05px;
 
@@ -492,12 +507,13 @@ header {
 		}
 
     .headerOverlay {
-      height: 85vh;
+			min-height: 500px;
+			max-height: 500px;
     }
 
     @include breakpoint(medium) {
-      height: 65vh;
-      min-height: 350px;
+			min-height: 650px;
+			max-height: 650px;
 
       .headerOverlay {
         top: 0px;
@@ -508,19 +524,23 @@ header {
     }
 
     @include breakpoint(large) {
-      height: 65vh;
+			min-height: 800px;
+			max-height: 800px;
 
       .headerOverlay {
-        height: 65vh;
+				min-height: 800px;
+				max-height: 800px;
       }
 
     }
 
     @include breakpoint(xlarge) {
-      height: 85vh;
+			min-height: 800px;
+			max-height: 800px;
 
       .headerOverlay {
-        height: 85vh;
+				min-height: 800px;
+				max-height: 800px;
       }
 
     }
@@ -540,7 +560,7 @@ header {
 		}
 
 		.project {
-			padding-bottom: 100px;
+			padding-bottom: 60px;
 
 			@include breakpoint(medium) {
 				padding-bottom: 136px;
@@ -556,7 +576,7 @@ header {
 			}
 
 			.projectImg {
-				margin-bottom: 36px;
+				margin-bottom: 1.7em;
 				width: 100%;
 				height: 100%;
 				min-height: 344px;
@@ -590,10 +610,10 @@ header {
 			}
 
 			h3 {
-				margin-bottom: 16px;
+				margin-bottom: 1em;
 				font-size: rem-calc(18);
 				letter-spacing: 0.05px;
-				text-transform: capitalize;
+				text-transform: none;
 			}
 
 			p {
@@ -621,15 +641,7 @@ header {
 
   .pageHeader {
     @extend .pageHeader;
-		min-height: 250px;
-		max-height: 250px;
     background-image: url('../img/aboutHeader.jpg');
-
-		.pageHeaderContent {
-			@include breakpoint(small only) {
-				bottom: 30px;
-			}
-		}
 
 		.pageHeaderContent h1 {
 			margin: 0px;
@@ -641,23 +653,6 @@ header {
 				line-height: 58px;
 			}
 		}
-
-    .headerOverlay {
-			height: 100%;
-			min-height: 250px;
-			max-height: 250px; 
-    }
-
-    @include breakpoint(medium) {
-      height: 40vh;
-			min-height: 378px;
-
-      .headerOverlay {
-        height: 40vh;
-				min-height: 378px;
-      }
-
-    }
 
   }
 
@@ -905,20 +900,15 @@ header {
       }
 
       img {
-        margin-bottom: 1em;
-
-        @include breakpoint(large) {
-          margin-bottom: 1.75em;
-        }
-
+        margin-bottom: 1.5em;
       }
 
 			a,
 			h2 {
-				margin-top: 0px; 
+				margin: 0px 0px 1em 0px;
 				color: #000000;
-        font-size: rem-calc(18);
-        text-transform: none;
+				font-size: rem-calc(18);
+				text-transform: none;
 			}
 
 			p {
@@ -981,7 +971,7 @@ body.post {
       color: #000000;
       font-family: $headingFont;
       font-size: rem-calc(18);
-      font-weight: 700;
+      font-weight: 600;
       text-align: center;
     }
 
@@ -1172,9 +1162,17 @@ body.post {
 
 .about .pageHeader, 
 .portfolio .pageHeader,
-.journal .pageHeader, 
+.project .pageHeader,
+.journal .pageHeader,
+.post .pageHeader,
 .contact .pageHeader {
-  background-position: bottom;
+	background-position: bottom;
+	
+	.pageHeaderContent {
+		@include breakpoint(small only) {
+			bottom: 20px;
+		}
+	}
 }
 
 
@@ -1202,7 +1200,7 @@ footer {
   background-color: $colorFooter;
 
   @include breakpoint(large) {
-    padding: 64px 0px 290px 0px;
+		padding: 64px 0px;
   }
 
   h3 {
@@ -1221,7 +1219,7 @@ footer {
   }
 
   p {
-    margin-bottom: 35px;
+    margin-bottom: 15px;
     color: #FFFFFF;
     font-size: rem-calc(16);
     line-height: rem-calc(24);

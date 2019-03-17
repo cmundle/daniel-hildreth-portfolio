@@ -1,0 +1,20 @@
+{
+  "short_name": "Daniel Hildreth",
+  "name": "Daniel Hildreth Portfolio",
+  "icons": [
+    {
+      "src": "/img/favicon/android-icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/img/favicon/apple-icon.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#ffffff",
+  "display": "browser",
+  "theme_color": "#ffffff"
+}

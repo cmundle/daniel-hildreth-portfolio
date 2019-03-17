@@ -21,6 +21,8 @@ function isHeaderVisible() {
 
 	if (isVisible(header)){
 		nav.classList.remove('fixed');
+	} else {
+		nav.classList.add('fixed');
 	}
 }
 
@@ -28,9 +30,9 @@ window.addEventListener('scroll', function() {
 	var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
 	if (scrollTop < lastScrollTop) {
-		nav.setAttribute('class','fixed');
+		nav.setAttribute('class','show');
 	} else {
-		nav.removeAttribute('class','fixed');
+		nav.removeAttribute('class','show');
 	}
 	lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
 }, false);

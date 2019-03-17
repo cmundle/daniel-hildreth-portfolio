@@ -306,7 +306,8 @@ header {
 		left: 0;
 		margin-top: 15px;
 		width: 100%;
-		z-index: 20;
+    z-index: 20;
+    transition: all 150ms linear;
 
 		@include breakpoint(medium) {
       margin-top: 38px;
@@ -315,6 +316,8 @@ header {
 
 		&.fixed {
       position: fixed;
+      top: -100%;
+      transform: translateY(-100%);
       margin-top: 0px;
       padding: 8px 0px;
       background-color: #000000;
@@ -326,6 +329,11 @@ header {
       #signature {
         height: 25px;
       }
+    }
+
+    &.fixed.show {
+      top: 0px; 
+      transform: translateY(0%);
     }
 
 		#signature {
@@ -1203,7 +1211,7 @@ footer {
 		padding: 64px 0px;
   }
 
-  h3 {
+  h1 {
     margin: 0;
     color: $colorPageHeader;
     font-size: rem-calc(18);
@@ -1211,7 +1219,7 @@ footer {
     line-height: rem-calc(24);
   }
 
-  h4 {
+  h2 {
     color: $colorSub;
     font-size: rem-calc(18);
     font-weight: 600;

@@ -301,39 +301,31 @@ a {
 header {
 
 	#topNav {
-		position: absolute;
+		position: fixed;
 		top: 0;
 		left: 0;
-		margin-top: 15px;
-		width: 100%;
+    width: 100%;
     z-index: 20;
-    transition: all 150ms linear;
 
 		@include breakpoint(medium) {
-      margin-top: 38px;
-      height: 34px;
-		}
-
-		&.fixed {
-      position: fixed;
-      top: -100%;
-      transform: translateY(-100%);
-      margin-top: 0px;
-      padding: 8px 0px;
-      background-color: #000000;
+      height: 68px;
+    }
+    
+    #navRow {
+      margin: 15px 0px;
+      width: 100%;
 
       @include breakpoint(medium) {
-        height: 45px;
-      }
-
-      #signature {
-        height: 25px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin: 0px;
       }
     }
 
-    &.fixed.show {
-      top: 0px; 
-      transform: translateY(0%);
+		&.dark-bg {
+      background-color: #000000;
     }
 
 		#signature {

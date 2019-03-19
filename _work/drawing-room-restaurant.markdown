@@ -8,7 +8,6 @@ role: "Design Lead at Agency Dominion"
 type: "UI/UX"
 year: "2015"
 skills: "Design, Project Management"
-visit: https://www.drawingroomrestaurant.com/
 image_desktop: drawing-room-restaurant-website-home.jpg
 image_mobile: drawing-room-restaurant-website-mobile.jpg
 ---

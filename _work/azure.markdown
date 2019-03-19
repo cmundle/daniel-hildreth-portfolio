@@ -9,10 +9,10 @@ type: "Print"
 year: "2019"
 skills:
 visit:
-image_one: border-crossings-magazine-cover.jpg
-image_two: border-crossings-magazine-spread-1.jpg
-image_three: border-crossings-magazine-spread-2.jpg
-image_four: border-crossings-magazine-spread-3.jpg
+image_one: azure-jf19-1.jpg
+image_two: azure-jf19-2.jpg
+image_three: azure-jf19-3.jpg
+image_four:
 image_five: 
 image_six:
 image_seven:

@@ -11,4 +11,4 @@ skills: "Design, Project Management"
 image_desktop: drawing-room-restaurant-website-home.jpg
 image_mobile: drawing-room-restaurant-website-mobile.jpg
 ---
-Art direction, UX & UI design for Everpress, a new fashion start-up that allows you to create and crowd-fund, custom apparel. I designed the product from the ground up to be an intuitive, simple experience.
+UX & UI design for Charleston’s latest restaurant Drawing Room, a new art focused restaurant. Working with the managers and owners to create the same atmosphere with their website as with the restaurant. Putting a focus on art, customizable and featuring new artists monthly, but at the basis, a high functioning restaurant website

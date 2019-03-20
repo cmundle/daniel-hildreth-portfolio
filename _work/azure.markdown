@@ -2,8 +2,8 @@
 layout: project-print
 title:  "AZURE and Designlines Magazines"
 categories: portfolio
-featured_image: border-crossings-magazine-featured.jpg
-header_image: borderCrossingsMagazineHeader.jpg
+featured_image: azure-designlines-magazine-featured.jpg
+header_image: azureMagazineHeader.jpg
 role: "Designer"
 type: "Print"
 skills:

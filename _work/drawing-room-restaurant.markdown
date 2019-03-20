@@ -6,7 +6,6 @@ featured_image: drawing-room-restaurant-website-featured.jpg
 header_image: drawingRoomRestaurantHeader.jpg
 role: "Design Lead at Agency Dominion"
 type: "UI/UX"
-year: "2015"
 skills: "Design, Project Management"
 image_desktop: drawing-room-restaurant-website-home.jpg
 image_mobile: drawing-room-restaurant-website-mobile.jpg

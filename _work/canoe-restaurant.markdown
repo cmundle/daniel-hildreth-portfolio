@@ -6,7 +6,6 @@ featured_image: canoe-restaurant-website-featured.jpg
 header_image: canoeRestaurantHeader.jpg
 role: "Design Lead at Agency Dominion"
 type: "UI/UX"
-year: "2016"
 skills: "Client communication, Project Management, Design"
 visit: https://www.canoerestaurant.com/
 image_desktop: canoe-restaurant-website-home.jpg

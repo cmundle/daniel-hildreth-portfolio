@@ -6,7 +6,6 @@ featured_image: border-crossings-magazine-featured.jpg
 header_image: borderCrossingsMagazineHeader.jpg
 role:
 type: "School Project"
-year: "2014"
 skills:
 visit:
 image_one: border-crossings-magazine-cover.jpg

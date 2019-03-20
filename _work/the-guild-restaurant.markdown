@@ -6,7 +6,6 @@ featured_image: the-guild-restaurant-website-featured.jpg
 header_image: theGuildRestaurantHeader.jpg
 role: "Design Lead at Agency Dominion"
 type: "UI/UX"
-year: "2016"
 skills: "Design, Project Management"
 visit: https://www.theguildrestaurant.com/
 image_desktop: the-guild-restaurant-website-home.jpg

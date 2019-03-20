@@ -4,19 +4,18 @@ title:  "AZURE and Designlines Magazines"
 categories: portfolio
 featured_image: border-crossings-magazine-featured.jpg
 header_image: borderCrossingsMagazineHeader.jpg
-role:
+role: "Designer"
 type: "Print"
-year: "2019"
 skills:
 visit:
-image_one: azure-jf19-1.jpg
-image_two: azure-jf19-2.jpg
-image_three: azure-jf19-3.jpg
-image_four:
-image_five: 
-image_six:
-image_seven:
-image_eight:
+image_one: azure-01.jpg
+image_two: azure-02.jpg
+image_three: azure-03.jpg
+image_four: azure-04.jpg
+image_five: azure-05.jpg
+image_six: azure-06.jpg
+image_seven: azure-07.jpg
+image_eight: azure-08.jpg
 image_nine:
 image_ten:
 ---

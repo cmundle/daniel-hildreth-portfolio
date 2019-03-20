@@ -6,7 +6,6 @@ featured_image: jump-restaurant-website-featured.jpg
 header_image: jumpRestaurantHeader.jpg
 role: "Design Lead at Agency Dominion"
 type: "UI/UX"
-year: "2016"
 skills: "Client communication, Project Management, Design"
 visit: https://www.jumprestaurant.com/
 image_desktop: jump-restaurant-website-home.jpg

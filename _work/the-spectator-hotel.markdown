@@ -6,7 +6,6 @@ featured_image: the-spectator-website-featured.jpg
 header_image: theSpectatorHotelHeader.jpg
 role: "Design Lead at Agency Dominion"
 type: "UI/UX"
-year: "2015"
 skills: "Project Management, Design"
 image_desktop: the-spectator-website-home.jpg
 image_mobile: the-spectator-website-mobile.jpg

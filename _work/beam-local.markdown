@@ -6,7 +6,6 @@ featured_image: beam-local-website-featured.jpg
 header_image: beamLocalHeader.jpg
 role: "Design Lead at Beam Local"
 type: "UI/UX"
-year: "2016"
 skills: "Design, Branding, Project Management"
 visit: https://www.beamlocal.com/
 image_desktop: beam-local-website-home.jpg

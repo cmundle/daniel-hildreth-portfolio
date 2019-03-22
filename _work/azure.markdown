@@ -1,8 +1,8 @@
 ---
 layout: project-print
-title:  "AZURE and Designlines Magazines"
+title:  "AZURE Magazine"
 categories: portfolio
-featured_image: azure-designlines-magazine-featured.jpg
+featured_image: azure-magazine-featured.jpg
 header_image: azureMagazineHeader.jpg
 role: "Designer"
 type: "Print"

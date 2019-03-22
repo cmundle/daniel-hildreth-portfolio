@@ -1,8 +1,6 @@
 # Daniel Hildreth's Portfolio
 
-Daniel is a graphic and digital designer based out of Toronto. Visit Daniel's portfolio [here](https://danielhildreth.com).
-
-![Screenshot of Daniel's Portfolio](/img/screenshot-index.gif)
+Daniel is a digital designer(d) based out of Toronto. Visit Daniel's portfolio [here](https://danielhildreth.com).
 
 ## Tools
 

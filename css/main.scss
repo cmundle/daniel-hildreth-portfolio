@@ -3,6 +3,9 @@ sitemap:
   exclude: 'yes'
 ---
 
+/* === Montserrat Font Family === */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700');
+
 /* === Foundation === */
 @import 'foundation';
 @include foundation-global-styles;
@@ -19,12 +22,9 @@ sitemap:
 @include foundation-visibility-classes;
 @include foundation-float-classes;
 
-/* === Montserrat Font Family === */
-@import url(https://fonts.googleapis.com/css?family=Montserrat:700);
-
 /* === Variables === */
-$colorCopy: #676767;
-$colorHeading: #272727;
+$colorCopy: #000000;
+$colorHeading: #000000;
 $colorAccent: #F3F4F8;
 $colorSub: #999999;
 $colorTitleHeading: #4F4F4F;
@@ -36,16 +36,16 @@ $navTextHover: #BFBFBF;
 $navRightText: #464646;
 $headerOverlay: rgba(0, 0, 0, 0.5);
 $altHeaderOverlay: #272727;
-$colorFooter: #191919;
+$colorFooter: #000000;
 $colorFooterHeading: #BABABA;
-$colorFooterLinks: #757575;
-$colorFooterCredit: #3C3C3C;
+$colorFooterLinks: #999999;
+$colorFooterCredit: #676767;
 $colorPageHeader: #FFFFFF;
 $colorSectionBackground: #FFFFFF;
 $headingFont: 'Montserrat', sans-serif;
 $bodyFont: Georgia, Times, "Times New Roman", serif;
 
-/* === Minxins === */
+/* === Mixins === */
 
 // Vendor Prefixes
 @mixin vendor-prefix($property, $value) {
@@ -97,78 +97,86 @@ body {
 }
 
 // Typography
-h1, h2, h3 {
+h1, 
+h2 {
   font-family: $headingFont;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 600;
+  color: $colorHeading;
+}
+
+h3 {
+  font-family: $headingFont;
+  font-style: normal;
+  font-weight: 600;
   color: $colorHeading;
 }
 
 h1 {
-  font-size: 2.25em;
+  font-size: 2.25rem;
   line-height: 1.166666em;
 
   @include breakpoint(medium) {
-    font-size: 2.75em;
+    font-size: 2.75rem;
     line-height: 1.3em;
   }
 
   @include breakpoint(large) {
-    font-size: 3.15em;
+    font-size: 3.15rem;
     line-height: 1.2em;
   }
 
   @include breakpoint(xlarge) {
-    font-size: 3.625em;
+    font-size: 3.625rem;
     line-height: 1.2em;
   }
 }
 
 h2 {
-  font-size: 1.75em;
+  font-size: 1.75rem;
   line-height: 1.25em;
   margin-bottom: 1.5em;
   margin-top: .75em;
 
   @include breakpoint(medium) {
-    font-size: 2em;
+    font-size: 2rem;
     margin-bottom: 1em;
     margin-top: 0.6em;
   }
 
   @include breakpoint(large) {
-    font-size: 2.25em;
+    font-size: 2.25rem;
     margin-bottom: 1em;
     margin-top: 0.6em;
   }
 
   @include breakpoint(xlarge) {
-    font-size: 3em;
+    font-size: 3rem;
     margin-bottom: 1em;
     margin-top: 0.5em;
   }
 }
 
 h3 {
-  font-size: 1.5em;
+  font-size: 1.5rem;
   line-height: 1.25;
   margin-bottom: 1.5em;
   margin-top: .75em;
 
   @include breakpoint(medium) {
-    font-size: 1.75em;
+    font-size: 1.75rem;
     margin-top: 0.75em;
     margin-bottom: 1.3em;
   }
 
   @include breakpoint(large) {
-    font-size: 2em;
+    font-size: 2rem;
     margin-top: 0.8em;
     margin-bottom: 1.25em;
   }
 
   @include breakpoint(xlarge) {
-    font-size: 2.25em;
+    font-size: 2.25rem;
     line-height: 1.166666;
     margin-bottom: 1.5em;
     margin-top: 0.75em;
@@ -180,11 +188,11 @@ h4 {
   margin-bottom: 0.75em;
   font-style: normal;
   font-weight: 400;
-  font-size: 1.125em;
+  font-size: 1.125rem;
   color: $colorDarkGrey;
 
   a {
-    color: #262626;
+    color: #000000;
     text-transform: inherit;
 
     &:hover,
@@ -195,7 +203,7 @@ h4 {
 
     &:focus,
     &:visited {
-      color: #262626;
+      color: #000000;
       text-decoration: none;
     }
   }
@@ -206,7 +214,7 @@ h5 {
   margin-bottom: 0.15em;
   font-style: normal;
   font-weight: 700;
-  font-size: 0.75em;
+  font-size: 0.75rem;
   color: $colorSub;
   text-transform: uppercase;
   letter-spacing: 0.03em;
@@ -217,7 +225,7 @@ h6 {
   margin-bottom: 0.8em;
   font-style: normal;
   font-weight: 300;
-  font-size: 1.125em;
+  font-size: 1.125rem;
   color: $colorTitleHeading;
 
   a {
@@ -240,9 +248,9 @@ h6 {
 }
 
 p {
-  font-size: 1em;
+  font-size: 1rem;
   line-height: 1.5;
-  margin-bottom: 0.6em;
+	margin-bottom: 0.6em;
 
   a {
     font-style: italic;
@@ -284,309 +292,228 @@ a {
 
 }
 
+.intro-paragraph {
+  font-family: $bodyFont;
+  font-size: rem-calc(18);
+  font-weight: 400;
+}
+
 header {
 
-  #mobileNav {
-    padding: .625em;
-    height: 70px;
-    background-color: $navBackground;
-    font-family: $headingFont;
+	#topNav {
+		position: fixed;
+		top: 0;
+		left: 0;
+    width: 100%;
+    z-index: 20;
 
-    #menu {
+		@include breakpoint(medium) {
+      height: 68px;
+    }
+    
+    #navRow {
+      margin: 15px 0px;
+      width: 100%;
+
+      @include breakpoint(medium) {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin: 0px;
+      }
+    }
+
+		&.dark-bg {
+      background-color: #000000;
+    }
+
+		#signature {
+			height: 30px;
+			background-image: url('../img/signature/white.svg');
+			background-origin: content-box;
+			background-position: left center;
+			background-repeat: no-repeat;
+			background-size: contain;
+    }
+    
+    #projectsLink {
       color: #FFFFFF;
-      font-style: normal;
-      font-weight: 700;
-      text-transform: uppercase;
+			font-family: $headingFont;
+			font-size: rem-calc(14);
+			font-weight: 500;
+			letter-spacing: 0.05px;
+			text-transform: lowercase;
     }
 
-    #social {
-      @extend #menu;
-      color: #3D3D3D;
-      text-align: right;
+		#mainMenuButton,
+		#mainMenu li a {
+			color: #FFFFFF;
+			font-family: $headingFont;
+			font-size: rem-calc(14);
+			font-weight: 500;
+			letter-spacing: 0.05px;
+			text-align: right;
+			text-transform: lowercase;
+		}
+
+		#mainMenu {
+			margin: 0px;
+			display: flex;
+			justify-content: space-between;
+      list-style: none;
+
+			@include breakpoint(small only) {
+				display: none;
+
+				&.open {
+					display: flex;
+					flex-direction: column;
+					align-items: flex-end;
+
+					li {
+						padding: 19px 0px;
+					}
+				}
+			}
     }
 
-    #menuOverlay {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      margin: 0;
-      padding: 0.5em 0;
-      width: 100%;
-      height: 100vh;
-      overflow: hidden;
-      z-index: 10;
-      background-color: $navBackground;
-
-      li {
-        list-style: none;
-        text-align: left;
-        padding: 1em;
-
-        @media screen and (max-width: 40em) and (orientation: landscape) {
-          padding: 0.75em;
-        }
-
-        .closeButton {
-          color: #3D3D3D;
-          font-size: 3em;
-          line-height: 1;
-          cursor: pointer;
-        }
-
-        a {
-          color: #FFFFFF;
-          text-decoration: none;
-        }
-
-        &:first-of-type {
-          padding: 0;
-          text-align: center;
-        }
-
-      }
-
-      &.open {
-        display: block;
-      }
-
-    }
-
-    #socialOverlay {
-      @extend #menuOverlay;
-
-      li {
-        text-align: right;
-      }
-
-    }
-
-  }
-
-  .top-bar {
-    position: relative;
-    background-color: $navBackground;
-    z-index: 9999;
-
-    &.stick {
-      position: fixed;
-      top: 0;
-      width: 100%;
-    }
-
-    #responsive-menu {
-
-      .menu {
-
-        & .active {
-          a {
-            color: $navTextActive;
-            background-color: transparent;
-          }
-        }
-
-      }
-
-      div[class*="top-bar"] {
-
-        ul {
-          background-color: transparent;
-
-          li {
-
-            a {
-              padding: 0.75rem 0.75rem 0.9em 1em;
-              font-size: .75em;
-              font-weight: 700;
-              letter-spacing: 0.03em;
-              @include vendor-prefix(transition, color .1s ease);
-
-              &:hover {
-                color: $navTextHover;
-              }
-
-            }
-
-          }
-
-        }
-
-      }
-
-      .top-bar-left {
-
-        ul {
-
-          li {
-
-            a {
-              color: $navText;
-            }
-
-          }
-
-        }
-
-      }
-
-      .top-bar-right {
-        display: none;
-
-        ul {
-
-          li {
-
-            a {
-              color: $navRightText;
-            }
-
-          }
-
-        }
-
-        @include breakpoint(large) {
-          display: block;
-        }
-
-      }
-
-    }
-
-  }
-
+	}
+	
 }
 
 // Page Header and Overlay
 .pageHeader {
   position: relative;
   top: 0px;
-  height: 45vh;
+	height: 100%;
+	min-height: 250px;
+	max-height: 250px;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   @include vendor-prefix(filter, grayscale(1));
 
   @include breakpoint(medium) {
-    height: 30vh;
-    min-height: 250px;
+		min-height: 378px;
+		max-height: 378px;
   }
 
   @include breakpoint(large) {
-    height: 30vh;
+		min-height: 400px;
+		max-height: 400px;
   }
 
   @include breakpoint(xlarge) {
-    height: 350px;
-  }
+		min-height: 400px;
+		max-height: 400px;
+	}
+	
+	.pageHeaderContent {
+		position: absolute;
+		left: 50%;
+		bottom: 0;
+		z-index: 20;
+    transform: translateX(-50%);
+		width: 100%;
 
-  h1 {
-    z-index: 20;
-    margin: 0;
-    width: 65%;
-    position: relative;
-    top: 25%;
-    left: 25%;
-    @include vendor-prefix(transform, translate(-25%,-25%));
+		@include breakpoint(medium) {
+			bottom: rem-calc(68);
+		}
+
+		.row {
+			align-items: flex-end;
+		}
+
+	}
+
+	.pageHeaderContent h1 {
+		margin: 0px;
+		font-size: rem-calc(28);
+		line-height: 32px;
+
+		@include breakpoint(medium) {
+			font-size: rem-calc(48);
+			line-height: 58px;
+		}
+	}
+
+  h1, h2 {
     color: $colorPageHeader;
-
-    @include breakpoint(medium) {
-      width: 65%;
-    }
-
-    @include breakpoint(large) {
-      top: 50%;
-      @include vendor-prefix(transform, translate(-25%,-50%));
-    }
-
-  }
-
-  h2 {
-    z-index: 20;
-    margin: 0;
-    width: 65%;
-    position: relative;
-    top: 25%;
-    left: 25%;
-    @include vendor-prefix(transform, translate(-25%,-25%));
-    color: $colorPageHeader;
-
-    @include breakpoint(medium) {
-      width: 55%;
-    }
-
-    @include breakpoint(large) {
-      width: 42.5%;
-      top: 50%;
-      left: 40%;
-      @include vendor-prefix(transform, translate(-25%,-50%));
-    }
-
+    letter-spacing: -0.5px;
   }
 
   .headerOverlay {
     z-index: 10;
-    height: 45vh;
+		height: 100%;
+		min-height: 250px;
+		max-height: 250px; 
     width: 100%;
     position: absolute;
     top: 0px;
     left: 0;
-    background-color: $headerOverlay;
-
+		background-color: $headerOverlay;
+		
     @include breakpoint(medium) {
-      min-height: 250px;
-      height: 30vh;
-
-      &.stick {
-        top: 0;
-      }
-
+			min-height: 378px;
+			max-height: 378px;
     }
 
     @include breakpoint(large) {
-      height: 30vh;
+			min-height: 400px;
+			max-height: 400px;
     }
 
     @include breakpoint(xlarge) {
-      height: 350px;
+			min-height: 400px;
+			max-height: 400px;
     }
 
   }
 
-}
-
-// Multiple Columns
-.multiColumns {
-  padding-left: .9375rem;
-  padding-right: .9375rem;
-
-  @include breakpoint(medium) {
-    display: flex;
-    align-content: center;
-    padding: 0;
-    @include vendor-prefix(column-count, 2);
-
-    p:first-child {
-      padding-left: .9375rem;
-      padding-right: .9375rem;
-    }
-
-  }
 }
 
 /* === Home - index.html === */
 .home {
 
   .pageHeader {
-    height: 65vh;
-    background-image: url('../img/homeHeader.JPG');
+		min-height: 500px;
+		max-height: 500px;
+		background-image: url('../img/homeHeader.JPG');
+		
+		h1 {
+			margin: 0px 0px 28px 0px;
+			font-size: rem-calc(28);
+			letter-spacing: -0.05px;
+			line-height: rem-calc(32);
+
+			@include breakpoint(medium) {
+				margin: 0px;
+				font-size: 3rem;
+				line-height: 58px;
+			}
+		}
+
+		h2 {
+			margin: 0px 0px 32px 0px;
+			font-size: 1.125rem;
+			font-weight: 500;
+			letter-spacing: 0.05px;
+
+			@include breakpoint(medium) {
+				margin: 0px;
+				text-align: right;
+			}
+		}
 
     .headerOverlay {
-      height: 65vh;
+			min-height: 500px;
+			max-height: 500px;
     }
 
     @include breakpoint(medium) {
-      height: 65vh;
-      min-height: 350px;
+			min-height: 650px;
+			max-height: 650px;
 
       .headerOverlay {
         top: 0px;
@@ -597,19 +524,23 @@ header {
     }
 
     @include breakpoint(large) {
-      height: 65vh;
+			min-height: 800px;
+			max-height: 800px;
 
       .headerOverlay {
-        height: 65vh;
+				min-height: 800px;
+				max-height: 800px;
       }
 
     }
 
     @include breakpoint(xlarge) {
-      height: 85vh;
+			min-height: 800px;
+			max-height: 800px;
 
       .headerOverlay {
-        height: 85vh;
+				min-height: 800px;
+				max-height: 800px;
       }
 
     }
@@ -622,94 +553,86 @@ header {
   }
 
   #portfolio {
-    @include sectionBlock;
+		padding: 30px 0px 0px 0px;
 
-    h5 {
-      @include breakpoint(large) {
-        padding-left: 0.65em;
-      }
-    }
+		@include breakpoint(medium) {
+			padding: 64px 0px 0px 0px;
+		}
 
-    .projects {
-      padding: 1em 0;
+		.project {
+			padding-bottom: 60px;
 
-      .columns:nth-of-type(odd) {
-        padding: 0.25em 0.25em 0.25em 0.5em;
-      }
+			@include breakpoint(medium) {
+				padding-bottom: 136px;
 
-      .columns:nth-of-type(even) {
-        padding: 0.25em 0.5em 0.25em 0.25em;
-      }
+				&:nth-of-type(odd) {
+					padding-right: rem-calc(39);
+				}
+	
+				&:nth-of-type(even) {
+					padding-left: rem-calc(39);
+				}
 
-      @include breakpoint(medium) {
+			}
 
-        .columns:nth-of-type(odd) {
-          padding: 0.5em 0.5em 0.5em 1em;
+			.projectImg {
+				margin-bottom: 1.7em;
+				width: 100%;
+				height: 100%;
+				min-height: 344px;
+				background-position: center center;
+				background-repeat: no-repeat;
+        background-size: cover;
+        
+        @include breakpoint(368px) {
+          min-height: 420px;
         }
 
-        .columns:nth-of-type(even) {
-          padding: 0.5em 1em 0.5em 0.5em;
+        @include breakpoint(400px) {
+          min-height: 520px;
         }
 
-      }
-
-      @include breakpoint(large) {
-
-        .columns:nth-of-type(odd) {
-          padding: 0.5em;
+        @include breakpoint(500px) {
+          min-height: 620px;
         }
 
-        .columns:nth-of-type(even) {
-          padding: 0.5em;
+        @include breakpoint(medium) {
+          min-height: 420px;
         }
 
-      }
+        @include breakpoint(900px) {
+          min-height: 520px;
+        }
 
-      .projectLink {
-        display: block;
-        position: relative;
+				@include breakpoint(large) {
+					min-height: 647px;
+				}
+			}
 
-          h5 {
-            @include vendor-prefix(transition, opacity .25s ease-in-out);
-            opacity: 0;
-            position: absolute;
-            color: #FFFFFF;
-            top: 50%;
-            left: 0;
-            padding-left: 0;
-            width: 80%;
-            margin: 0 20px;
-            text-align: center;
-            transform: translateY(-50%);
-            z-index: 80;
-          }
+			h3 {
+				margin-bottom: 1em;
+				font-size: rem-calc(18);
+				letter-spacing: 0.05px;
+				text-transform: none;
+			}
 
-          .projectOverlay {
-            @include vendor-prefix(transition, background-color .25s ease-in-out);
-            position: absolute;
-            height: 100%;
-            width: 100%;
-            background-color: rgba(0,0,0,0);
-            z-index: 20;
-          }
-
-        &:active, &:focus, &:hover {
-
-          h5 {
-            opacity: 1;
-          }
-
-          .projectOverlay {
-            background-color: rgba(0,0,0,0.5);
-          }
-
+			p {
+				margin-bottom: 20px;
+        
+        &.postType {
+          color: $colorSub;
+          font-family: $headingFont;
+          font-size: rem-calc(12);
+          font-weight: 700;
+          letter-spacing: -0.05px;
+          text-transform: uppercase;
         }
 
       }
 
     }
 
-  }
+	}
 
 }
 
@@ -718,50 +641,19 @@ header {
 
   .pageHeader {
     @extend .pageHeader;
-    height: 65vh;
     background-image: url('../img/aboutHeader.jpg');
 
-    .headerOverlay {
-      height: 65vh;
-    }
+		.pageHeaderContent h1 {
+			margin: 0px;
+			font-size: rem-calc(28);
+			line-height: 32px;
 
-    @include breakpoint(medium) {
-      height: 65vh;
-      min-height: 350px;
+			@include breakpoint(medium) {
+				font-size: rem-calc(48);
+				line-height: 58px;
+			}
+		}
 
-      .headerOverlay {
-        height: 65vh;
-        min-height: 65vh;
-        min-height: 350px;
-      }
-
-    }
-
-    @include breakpoint(large) {
-      height: 65vh;
-
-      .headerOverlay {
-        height: 65vh;
-      }
-
-    }
-
-    @include breakpoint(large) {
-      height: 85vh;
-
-      .headerOverlay {
-        height: 85vh;
-      }
-
-    }
-
-  }
-
-  @include breakpoint(medium) {
-    .column, .columns {
-      padding-left: 6px;
-      padding-right: 6px;
-    }
   }
 
   #aboutMe {
@@ -771,7 +663,29 @@ header {
     #experience {
       @include breakpoint(small only) {
         margin-top: 1em;
-      }
+			}
+			
+			h2 {
+				margin: 0px 0px 24px 0px;
+				font-size: rem-calc(18);
+			}
+
+			h3 {
+				margin: 0px 0px 2px 0px;
+				color: $colorDarkGrey;
+				font-size: rem-calc(12);
+				text-transform: uppercase;
+			}
+
+			p {
+				margin: 0px 0px 20px 0px;
+				font-size: rem-calc(18);
+
+				a {
+					font-style: normal;
+				}
+			}
+
     }
 
   }
@@ -885,25 +799,21 @@ header {
 .project {
 
   .pageHeader {
+		margin-bottom: 2em;
+
+    @include breakpoint(medium) {
+      margin-bottom: 4em;
+    }
+
+    @include breakpoint(large) {
+      margin-bottom: 6.25em;
+    }
 
     .headerOverlay {
       background-origin: content-box;
       background-position: center center;
       background-size: cover;
       background-repeat: no-repeat;
-    }
-
-  }
-
-  #projectSubTitle {
-    padding-top: 2em;
-
-    @include breakpoint(medium) {
-      padding-top: 4em;
-    }
-
-    @include breakpoint(large) {
-      padding-top: 6.25em;
     }
 
   }
@@ -919,6 +829,39 @@ header {
       padding-bottom: 6.25em;
     }
 
+    #projectInfo {
+
+      span {
+        display: block;
+      }
+
+      .projectInfoHeading {
+        color: $colorDarkGrey;
+        font-family: $headingFont;
+        font-size: 0.75rem;
+        font-style: normal;
+        font-weight: 600;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+      }
+
+      .projectInfoItem {
+        margin-bottom: 0.8em;
+        color: #4F4F4F;
+        font-family: $bodyFont;
+        font-size: 1.125rem;
+        font-style: normal;
+        font-weight: 300;
+
+        a {
+          color: #4F4F4F;
+          font-family: $bodyFont;
+          text-transform: capitalize;
+        }
+      }
+
+    }
+
     .projectImg {
       text-align: center;
     }
@@ -927,7 +870,7 @@ header {
 
 }
 
-/* === Journal - journal/index.html === */
+/* === Journal - ideas/index.html === */
 .journal {
 
   .pageHeader {
@@ -956,25 +899,22 @@ header {
       }
 
       img {
-        margin-bottom: 1em;
-
-        @include breakpoint(large) {
-          margin-bottom: 1.75em;
-        }
-
+        margin-bottom: 1.5em;
       }
 
-      a {
-        @extend h4;
-        color: #262626;
-        text-transform: none;
-      }
+			a,
+			h2 {
+				margin: 0px 0px 1em 0px;
+				color: #000000;
+				font-size: rem-calc(18);
+				text-transform: none;
+			}
 
-      time {
-        @extend h5;
-        display: block;
-        margin: 0.5em 0 1em;
-      }
+			p {
+				margin-bottom: 0px;
+				font-family: $bodyFont;
+				
+			}
 
     }
 
@@ -1002,14 +942,19 @@ body.post {
 
     @include breakpoint(large) {
       padding-top: 6.25em;
-    }
+		}
+		
+		h2 {
+			font-family: $bodyFont;
+			font-size: rem-calc(18);
+			
+		}
   }
 
   .postContent {
     @include sectionBlock;
 
     .postImg {
-      @include flex-grid-column(12);
       margin: 4.5em 0 2.5em;
       text-align: center;
 
@@ -1019,20 +964,32 @@ body.post {
 
     }
 
-    h4 {
+    h3,
+    h3 a {
       @include flex-grid-column(12);
-      color: #262626;
+      color: #000000;
       font-family: $headingFont;
-      font-weight: normal;
+      font-size: rem-calc(18);
+      font-weight: 600;
       text-align: center;
     }
 
-    h5 {
+		h4,
+		h4 a {
+      @include flex-grid-column(12);
+      color: #000000;
+      font-family: $headingFont;
+      font-weight: 700;
+      text-align: center;
+    }
+
+		h5,
+		h5 a {
       @include flex-grid-column(12);
       margin: 1.5em 0 0.75em 0;
-      color: #262626;
+      color: #000000;
       font-family: $headingFont;
-      font-weight: normal;
+      font-weight: 700;
       text-align: center;
 
       @include breakpoint(medium) {
@@ -1045,11 +1002,13 @@ body.post {
       @include flex-grid-column(12);
 
       @include breakpoint(medium) {
-        @include flex-grid-column(8);
+				@include flex-grid-column(8);
+				margin: 0 auto;
       }
 
       @include breakpoint(large) {
-        @include flex-grid-column(6);
+				@include flex-grid-column(6);
+				margin: 0 auto;
       }
 
     }
@@ -1060,7 +1019,15 @@ body.post {
       font-size: 0.75em;
       font-weight: normal;
       list-style-type: none;
-      text-align: center;
+			text-align: center;
+			
+			li,
+			li a {
+				color: #676767;
+				font-family: $bodyFont;
+				font-size: rem-calc(16);
+				font-style: italic;
+			}
     }
 
   }
@@ -1108,7 +1075,7 @@ body.post {
   }
 
   .container {
-    @include sectionBlock;
+		@include sectionBlock;
 
     form {
       margin-top: 2em;
@@ -1192,6 +1159,22 @@ body.post {
 
 }
 
+.about .pageHeader, 
+.portfolio .pageHeader,
+.project .pageHeader,
+.journal .pageHeader,
+.post .pageHeader,
+.contact .pageHeader {
+	background-position: bottom;
+	
+	.pageHeaderContent {
+		@include breakpoint(small only) {
+			bottom: 20px;
+		}
+	}
+}
+
+
 /* === Next Page - _includes/next.html === */
 #next {
   padding: 2em 0;
@@ -1212,51 +1195,70 @@ body.post {
 
 /* === Footer - _includes/footer.html === */
 footer {
+  padding: 40px 0px 70px 0px;
   background-color: $colorFooter;
 
-  #footerContainer {
-    @include grid-row;
-    font-family: $headingFont;
+  @include breakpoint(large) {
+		padding: 64px 0px;
+  }
+
+  h1 {
+    margin: 0;
+    color: $colorPageHeader;
+    font-size: rem-calc(18);
+    font-weight: 600;
+    line-height: rem-calc(24);
+  }
+
+  h2 {
+    color: $colorSub;
+    font-size: rem-calc(18);
+    font-weight: 600;
+    line-height: rem-calc(24);
+  }
+
+  p {
+    margin-bottom: 15px;
+    color: #FFFFFF;
+    font-size: rem-calc(16);
+    line-height: rem-calc(24);
+
+    a {
+      font-style: normal;
+    }
+  }
+
+  ul {
+    margin: 0px;
+    list-style: none;
+  }
+
+  #footerMenu li a,
+  #socialLinks li a {
+    font-size: rem-calc(12);
     font-weight: 700;
-    background-color: $colorFooter;
-    text-align: center;
-    padding: 2em 0;
+    letter-spacing: -0.5px;
+    line-height: rem-calc(22);
+  }
 
-    #footerTitle {
+  #footerMenu li a {
+    color: #FFFFFF;
+  }
 
-      h5 {
-        margin-bottom: 0.05em;
-        color: $colorFooterHeading;
-        text-transform: uppercase;
-      }
+  #socialLinks li a {
+    color: $colorFooterLinks;
+  }
 
-    }
 
-    #socialLinks {
+  #footerCredit {
+    margin-top: 40px;
 
-      @include breakpoint(medium) {
-        margin: 0.25em 0 1.5em;
-      }
-
-      a {
-        margin: 0.75em 1.5em;
-        color: $colorFooterLinks;
-        font-family: $headingFont;
-        font-size: 0.75em;
-        font-style: normal;
-        font-weight: 700;
-        letter-spacing: 0.03em;
-        text-transform: uppercase;
-      }
-
-    }
-
-    #footerCredit {
-
-      a {
-        color: $colorFooterCredit;
-      }
-
+    a {
+      color: $colorFooterCredit;
+      font-family: $bodyFont;
+      font-size: rem-calc(16);
+      line-height: rem-calc(24);
+      text-transform: none;
     }
 
   }

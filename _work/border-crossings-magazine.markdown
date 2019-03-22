@@ -4,10 +4,8 @@ title:  "Border Crossings Magazine Redesign"
 categories: portfolio
 featured_image: border-crossings-magazine-featured.jpg
 header_image: borderCrossingsMagazineHeader.jpg
-sub_title: "Redesigning Border Crossings Magazine."
 role:
 type: "School Project"
-year: "2014"
 skills:
 visit:
 image_one: border-crossings-magazine-cover.jpg
@@ -20,6 +18,7 @@ image_seven:
 image_eight:
 image_nine:
 image_ten:
+private: true
 ---
 
 During my final year of schooling at Durham College, one of my portfolio projects

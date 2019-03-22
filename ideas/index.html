@@ -1,0 +1,36 @@
+---
+layout: default
+body_class: journal
+title: "Ideas"
+---
+
+<div class="pageHeader" id="pageHeader"> 
+	<div class="pageHeaderContent">
+		<div class="row">
+			<div class="small-11 medium-9 medium-offset-1 large-9 large-offset-1 columns">
+				<h1>Ideas, happenings and interests.</h1>
+			</div>
+		</div>
+	</div>
+	<div class="headerOverlay"></div>
+</div>
+
+<div class="posts row align-center">
+	<div class="small-12 medium-10 large columns">
+		<div class="row">
+			{% for post in site.posts limit:6 %}
+				<div class="post small-12 medium-6 large-6 column">
+					<a href="{{ post.url }}">
+						<div aria-hidden="true" role="presentation">
+								<img src="{{ site.baseurl }}/img/{{ post.image }}" alt="">
+						</div>
+						<h2>{{ post.title }}</h2>
+						<p>
+							{{ post.excerpt }}
+						</p>
+					</a>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+</div>

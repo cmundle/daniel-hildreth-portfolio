@@ -6,7 +6,7 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: Daniel Hildreth is a Toronto Based Designer.
+title: Daniel Hildreth - Digital Designer(d).
 email: daniel.john.hildreth@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   I enjoy working within all mediums of design; from desktop websites
@@ -14,7 +14,7 @@ description: > # this means to ignore newlines until "baseurl:"
   discuss your next project.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://danielhildreth.com" # the base hostname & protocol for your site
-permalink: /journal/:title
+permalink: /ideas/:title
 timezone: America/Toronto
 fb_admins: https://www.facebook.com/dan.hildreth
 exclude: 
@@ -35,7 +35,7 @@ sass:
 collections:
   work:
     output: true
-    permalink: /work/:title
+    permalink: /:title
 
 # Defaults settings
 defaults:

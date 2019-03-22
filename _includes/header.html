@@ -1,74 +1,36 @@
-<header>
-  <!-- Mobile Main Nav -->
-  <div id="mobileNav" class="row align-middle show-for-small-only">
-    <div class="small-6 columns">
-      <div id="menu">Menu</div>
-    </div>
-    <ul id="menuOverlay">
-      <li>
-        <button class="closeButton" aria-label="Close alert" type="button">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </li>
-      <li><a href="{{ site.baseurl}}/">Home</a></li>
-      <li><a href="{{ site.baseurl}}/about/">About</a></li>
-      <li><a href="{{ site.baseurl}}/work/">Work</a></li>
-      <li><a href="{{ site.baseurl}}/journal/">Journal</a></li>
-      <li><a href="{{ site.baseurl}}/contact/">Contact</a></li>
-    </ul>
-    <div class="small-6 columns">
-      <div id="social">Social</div>
-    </div>
-    <ul id="socialOverlay">
-      <li>
-        <button class="closeButton" aria-label="Close alert" type="button">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </li>
-      <li>
-        <a href="https://ca.linkedin.com/in/danielhildreth" target="_blank">Linkedin</a>
-      </li>
-      <li>
-        <a href="https://twitter.com/danielhildreth" target="_blank">Twitter</a>
-      </li>
-      <li>
-        <a href="https://instagram.com/danielhildreth/" target="_blank">Instagram</a>
-      </li>
-      <li>
-        <a href="https://pinterest.com/danielhildreth/" target="_blank">Pinterest</a>
-      </li>
-    </ul>
-  </div>
-
-  <!-- Desktop Nav -->
-  <div id="stickyAnchor"></div>
-  <div class="top-bar show-for-medium">
-    <div id="responsive-menu">
-      <div class="top-bar-left">
-        <ul class="dropdown menu" data-dropdown-menu>
-          <li {% if page.url == '/' %} class="active"{% endif %}><a href="{{ site.baseurl}}/">Home</a></li>
-          <li {% if page.url == '/about/' %} class="active"{% endif %}><a href="{{ site.baseurl}}/about/">About</a></li>
-          <li {% if page.url contains 'work' %} class="active"{% endif %}><a href="{{ site.baseurl }}/work/">Work</a></li>
-          <li {% if page.url contains '/journal/' %} class="active"{% endif %}><a href="{{ site.baseurl }}/journal/">Journal</a></li>
-          <li {% if page.url == '/contact/' %} class="active"{% endif %}><a href="{{ site.baseurl }}/contact/">Contact</a></li>
-        </ul>
-      </div>
-      <div class="top-bar-right">
-        <ul class="menu">
-          <li>
-            <a href="https://ca.linkedin.com/in/danielhildreth" target="_blank">Linkedin</a>
-          </li>
-          <li>
-            <a href="https://twitter.com/danielhildreth" target="_blank">Twitter</a>
-          </li>
-          <li>
-            <a href="https://instagram.com/danielhildreth/" target="_blank">Instagram</a>
-          </li>
-          <li>
-            <a href="https://pinterest.com/danielhildreth/" target="_blank">Pinterest</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
+<header role="banner">
+	<nav class="header" id="topNav" aria-label="Primary Navigation">
+		<div class="row align-justify align-middle" id="navRow">
+			<div class="small-6 medium-8 large-9 columns">
+				{% if page.url =='/' %}
+					<a href="{{ site.baseurl}}/" aria-label="Home Link">
+						<div id="signature" aria-label="Daniel Hildreth"></div>
+					</a>
+				{% endif %}
+				{% unless page.url =='/' %}
+					<a href="{{ site.baseurl}}/" id="projectsLink">
+						back to projects
+					</a>
+				{% endunless %}
+			</div>
+			<div class="small-6 columns show-for-small-only">
+				<button class="float-right" id="mainMenuButton" aria-label="Open main menu">
+					Menu
+				</button>
+			</div>
+			<div class="small-12 medium-4 large-3 columns">
+				<ul id="mainMenu" role="menu">
+					<li role="menuitem">
+						<a href="{{ site.baseurl}}/about/">about</a>
+					</li>
+					<li role="menuitem">
+						<a href="{{ site.baseurl}}/ideas/">ideas</a>
+					</li>
+					<li role="menuitem">
+						<a href="{{ site.baseurl}}/contact/">contact</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
 </header>

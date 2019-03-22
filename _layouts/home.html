@@ -3,12 +3,21 @@
   {% include head.html %}
   <body class="{{page.body_class}}">
 
-    <div class="pageHeader hide-for-small-only">
-      <h1>Always look twice, and be curious.</h1>
+		{% include header.html %}
+		
+    <div class="pageHeader" id="pageHeader">
+			<div class="pageHeaderContent">
+				<div class="row">
+					<div class="small-12 medium-6 large-6 columns">
+						<h1>Always look twice, and be curious.</h1>
+					</div>
+					<div class="columns">
+						<h2>Digital Designer(d)</h2>
+					</div>
+				</div>
+			</div>
       <div class="headerOverlay"></div>
     </div>
-
-    {% include header.html %}
 
     <main>
       {{ content }}

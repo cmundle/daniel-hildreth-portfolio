@@ -4,10 +4,8 @@ title:  "Historic Hotel Bethlehem"
 categories: portfolio
 featured_image: hotel-bethlehem-website-featured.jpg
 header_image: hotelBethlehemHeader.jpg
-sub_title: "Discover Historic Hotel Bethlehem"
 role: "Design Lead at Agency Dominion"
 type: "UI/UX"
-year: "2015"
 skills: "Project Management, Design"
 visit: https://www.hotelbethlehem.com/
 image_desktop: hotel-bethlehem-website-home.jpg
